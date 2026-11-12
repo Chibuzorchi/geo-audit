@@ -1,10 +1,12 @@
-# Retain every default detector. This single prose token is not a credential.
+# Keep every default detector. One documented prose token is exempt from one rule.
 [extend]
 useDefault = true
 
-[[allowlists]]
-description = "Verified documentation false positive; exact token and exact file only"
+[[rules]]
+id = "generic-api-key"
+[[rules.allowlists]]
+description = "Prose 'duplicate/missing' in docs/phase2_evidence.md is not a credential"
 condition = "AND"
-paths = ['^docs/phase2_evidence\.md$']
+paths = ['''^docs/phase2_evidence\.md$''']
 regexTarget = "secret"
-regexes = ['^duplicate/missing$']
+regexes = ['''^duplicate/missing$''']
