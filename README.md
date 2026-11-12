@@ -1,7 +1,8 @@
 # GeoAudit
 
-Phase 1 provides deterministic primitives for synthetic GPS auditing. It does
-not yet generate datasets, select duplicates, calculate bills or compare fixes.
+GeoAudit audits distance billing on **synthetic** GPS pings. Phase 2 adds a
+deterministic dataset generator, a deliberately wrong legacy calculation, and a
+blind QA checker. No corrected calculation exists yet.
 
 Requires Python 3.12 and make on POSIX. Install and verify:
 
@@ -19,8 +20,28 @@ then install the project with `.venv/bin/python -m pip install --no-deps --no-bu
 The lock pins runtime, transitive, testing and build dependencies. Updating it
 is a deliberate dependency resolution step, not part of routine installation.
 
-`python -m geo_audit` and `geo-audit` show help. `generate`, `check`, `compare`
-and `demo` exit 2 with an unavailable message. No empty success reports are produced.
+Reproduce the baseline and discovery in one step:
+
+```sh
+make baseline            # writes .scratch/baseline/{data,results}
+```
+
+That runs:
+
+```sh
+geo-audit generate --output DIR/data           # synthetic CSV, geometry, labels, manifest
+geo-audit check --input DIR/data/SYNTHETIC_gps_pings.csv \
+  --roads DIR/data/roads.geojson --zone DIR/data/zone.geojson --output DIR/results
+python scripts/discover_baseline.py --data DIR/data --results DIR/results \
+  --expectations tests/expectations/analytic.json
+```
+
+`check` exits 0 with findings, 1 with `--gate` and findings, and 2 on bad input.
+It writes `findings.json` (observation conditions), `decision_conflicts.json`
+(legacy segment decisions that break a rule), `segments_legacy.json`,
+`legacy_totals.json` and `quarantine.json`. `compare` and `demo` still exit 2.
+Reference outputs are in `data/synthetic/` and `results/phase2/`; see
+`docs/phase2_evidence.md`.
 
 ## Contracts
 

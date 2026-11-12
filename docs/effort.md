@@ -26,3 +26,18 @@ remain unknown. Final documentation/staging timestamp is recorded below.
 Documentation and staging checks completed at 14:38:30 UTC: 2 minutes
 46 seconds elapsed from the recorded remediation start. Final report
 preparation is additional and is not included in this measured interval.
+
+## Phase 2 — 2026-11-12
+
+Earlier assistant drafting: generator/legacy/expectation files dated 15:01–15:02 UTC.
+This session: scratch workspace created 15:35:31 UTC; reference baseline and full
+suite completed by about 15:45 UTC. These are assistant wall-clock intervals,
+not measured human effort. Human review time and the deadline remain unknown.
+
+## Phase 2 audit remediation
+
+Assistant work included code review, F1–F6 changes, 16 regression cases, isolated
+baseline regeneration, evidence reconciliation and staging/privacy review.
+The start was not clock-instrumented, so no precise focused-hour duration is claimed.
+Command logs and scratch artifact timestamps support execution order only.
+Human effort, acceptance time and exact submission deadline remain unknown.

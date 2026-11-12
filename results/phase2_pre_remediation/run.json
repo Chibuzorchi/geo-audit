@@ -1,0 +1,10 @@
+{
+  "calculator": "legacy",
+  "input_rows": 3327,
+  "input_sha256": "04795f4c5bbb19aef1b272b3c7d48d05b4741646a809cd076f603fac838720df",
+  "parsed_rows": 3315,
+  "quarantined_rows": 12,
+  "segments": 3252,
+  "synthetic": true,
+  "total_m": 263099.457927
+}

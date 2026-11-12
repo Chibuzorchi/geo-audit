@@ -1,0 +1,194 @@
+[
+  {
+    "assignable": true,
+    "raw": {
+      "driver_id": "SYN-S12-00",
+      "is_synthetic": "true",
+      "lat": "",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-00-Q0",
+      "received_at_utc": "2026-11-04T03:00:01+00:00",
+      "ts_utc": "2026-11-04T03:00:00+00:00"
+    },
+    "reasons": [
+      "BAD_COORDINATE"
+    ],
+    "row": 1101
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "SYN-S12-00",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-00-Q1",
+      "received_at_utc": "2026-11-04T03:00:01+00:00",
+      "ts_utc": "invalid"
+    },
+    "reasons": [
+      "ts_utc:BAD_TIMESTAMP"
+    ],
+    "row": 1102
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "SYN-S12-00",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-00-Q2",
+      "received_at_utc": "2026-11-04T03:00:01+00:00",
+      "ts_utc": "2026-11-04T03:00:00"
+    },
+    "reasons": [
+      "ts_utc:NAIVE_TIMESTAMP"
+    ],
+    "row": 1103
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-00-Q3",
+      "received_at_utc": "2026-11-04T03:00:01+00:00",
+      "ts_utc": "2026-11-04T03:00:00+00:00"
+    },
+    "reasons": [
+      "BAD_DRIVER_ID"
+    ],
+    "row": 1104
+  },
+  {
+    "assignable": true,
+    "raw": {
+      "driver_id": "SYN-S12-01",
+      "is_synthetic": "true",
+      "lat": "",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-01-Q0",
+      "received_at_utc": "2026-11-05T03:00:01+00:00",
+      "ts_utc": "2026-11-05T03:00:00+00:00"
+    },
+    "reasons": [
+      "BAD_COORDINATE"
+    ],
+    "row": 2210
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "SYN-S12-01",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-01-Q1",
+      "received_at_utc": "2026-11-05T03:00:01+00:00",
+      "ts_utc": "invalid"
+    },
+    "reasons": [
+      "ts_utc:BAD_TIMESTAMP"
+    ],
+    "row": 2211
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "SYN-S12-01",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-01-Q2",
+      "received_at_utc": "2026-11-05T03:00:01+00:00",
+      "ts_utc": "2026-11-04T03:00:00"
+    },
+    "reasons": [
+      "ts_utc:NAIVE_TIMESTAMP"
+    ],
+    "row": 2212
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-01-Q3",
+      "received_at_utc": "2026-11-05T03:00:01+00:00",
+      "ts_utc": "2026-11-05T03:00:00+00:00"
+    },
+    "reasons": [
+      "BAD_DRIVER_ID"
+    ],
+    "row": 2213
+  },
+  {
+    "assignable": true,
+    "raw": {
+      "driver_id": "SYN-S12-02",
+      "is_synthetic": "true",
+      "lat": "",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-02-Q0",
+      "received_at_utc": "2026-11-06T03:00:01+00:00",
+      "ts_utc": "2026-11-06T03:00:00+00:00"
+    },
+    "reasons": [
+      "BAD_COORDINATE"
+    ],
+    "row": 3319
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "SYN-S12-02",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-02-Q1",
+      "received_at_utc": "2026-11-06T03:00:01+00:00",
+      "ts_utc": "invalid"
+    },
+    "reasons": [
+      "ts_utc:BAD_TIMESTAMP"
+    ],
+    "row": 3320
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "SYN-S12-02",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-02-Q2",
+      "received_at_utc": "2026-11-06T03:00:01+00:00",
+      "ts_utc": "2026-11-04T03:00:00"
+    },
+    "reasons": [
+      "ts_utc:NAIVE_TIMESTAMP"
+    ],
+    "row": 3321
+  },
+  {
+    "assignable": false,
+    "raw": {
+      "driver_id": "",
+      "is_synthetic": "true",
+      "lat": "37.4795748908",
+      "lon": "126.9755474482",
+      "ping_id": "SYN-S12-02-Q3",
+      "received_at_utc": "2026-11-06T03:00:01+00:00",
+      "ts_utc": "2026-11-06T03:00:00+00:00"
+    },
+    "reasons": [
+      "BAD_DRIVER_ID"
+    ],
+    "row": 3322
+  }
+]

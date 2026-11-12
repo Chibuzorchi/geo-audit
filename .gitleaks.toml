@@ -1,0 +1,10 @@
+# Retain every default detector. This single prose token is not a credential.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Verified documentation false positive; exact token and exact file only"
+condition = "AND"
+paths = ['^docs/phase2_evidence\.md$']
+regexTarget = "secret"
+regexes = ['^duplicate/missing$']

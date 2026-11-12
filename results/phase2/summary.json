@@ -1,0 +1,72 @@
+[
+  {
+    "count": 3,
+    "kind": "condition",
+    "rule": "GAP"
+  },
+  {
+    "count": 39,
+    "kind": "condition",
+    "rule": "R3"
+  },
+  {
+    "count": 6,
+    "kind": "condition",
+    "rule": "R4_LATE"
+  },
+  {
+    "count": 6,
+    "kind": "condition",
+    "rule": "R4_ORDER"
+  },
+  {
+    "count": 3,
+    "kind": "condition",
+    "rule": "R5_CROSS"
+  },
+  {
+    "count": 81,
+    "kind": "condition",
+    "rule": "R6"
+  },
+  {
+    "count": 18,
+    "kind": "decision_conflict",
+    "rule": "R1_OFF_ROAD"
+  },
+  {
+    "count": 42,
+    "kind": "decision_conflict",
+    "rule": "R3_R4_FILE_ORDER"
+  },
+  {
+    "count": 264,
+    "kind": "decision_conflict",
+    "rule": "R5_UTC_DATE"
+  },
+  {
+    "count": 81,
+    "kind": "decision_conflict",
+    "rule": "R6_ENDPOINT"
+  },
+  {
+    "count": 12,
+    "kind": "provisional_anomaly",
+    "rule": "LEGACY_RAW_PAIR_SPEED_ANOMALY"
+  },
+  {
+    "count": 12,
+    "kind": "provisional_anomaly",
+    "rule": "RAW_PAIR_SPEED_ANOMALY"
+  },
+  {
+    "count": 12,
+    "kind": "rule_violation",
+    "rule": "INPUT"
+  },
+  {
+    "count": 9,
+    "kind": "rule_violation",
+    "rule": "R1"
+  }
+]

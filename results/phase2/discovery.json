@@ -1,0 +1,4918 @@
+{
+  "counts": {
+    "characterization": 6,
+    "control": 21,
+    "discrepancy": 42
+  },
+  "decisions_sha256": "09223d1c07034df260d0896df2aeff6588b43e6021f20fe83ef288f4cd272107",
+  "examples": [
+    {
+      "days": [
+        {
+          "actual_legacy_m": 5900.000006,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 2950.000006,
+          "driver_id": "SYN-S7-00",
+          "expected_legacy_m": 5900,
+          "expected_m": 2950,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S7"
+        },
+        {
+          "actual_legacy_m": 0.0,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": -2950.0,
+          "driver_id": "SYN-S7-00",
+          "expected_legacy_m": 0,
+          "expected_m": 2950,
+          "report_day_utc9": "2026-11-05",
+          "scenario": "S7"
+        }
+      ],
+      "defect": "D-R5-UTC-DAY",
+      "driver_id": "SYN-S7-00",
+      "scenario": "S7",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 684,
+            "from_time": "2026-11-04T14:55:00+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 671,
+            "to_id": "SYN-S7-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 685,
+            "to_time": "2026-11-04T14:55:10+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 671
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P040",
+            "from_lat": 37.4803412499,
+            "from_lon": 127.020761624,
+            "from_row": 714,
+            "from_time": "2026-11-04T15:00:00+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 701,
+            "to_id": "SYN-S7-00-P041",
+            "to_lat": 37.4803601874,
+            "to_lon": 127.0218920003,
+            "to_row": 715,
+            "to_time": "2026-11-04T15:00:10+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 701,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P041",
+            "from_lat": 37.4803601874,
+            "from_lon": 127.0218920003,
+            "from_row": 715,
+            "from_time": "2026-11-04T15:00:10+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 702,
+            "to_id": "SYN-S7-00-P042",
+            "to_lat": 37.480379114,
+            "to_lon": 127.0230223776,
+            "to_row": 716,
+            "to_time": "2026-11-04T15:00:20+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 702,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P042",
+            "from_lat": 37.480379114,
+            "from_lon": 127.0230223776,
+            "from_row": 716,
+            "from_time": "2026-11-04T15:00:20+00:00",
+            "included_m": 99.999995,
+            "length_m": 99.999995,
+            "report_date": "2026-11-04",
+            "segment": 703,
+            "to_id": "SYN-S7-00-P043",
+            "to_lat": 37.4803980299,
+            "to_lon": 127.0241527559,
+            "to_row": 717,
+            "to_time": "2026-11-04T15:00:30+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999995,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999995,
+            "segment": 703,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P043",
+            "from_lat": 37.4803980299,
+            "from_lon": 127.0241527559,
+            "from_row": 717,
+            "from_time": "2026-11-04T15:00:30+00:00",
+            "included_m": 99.999998,
+            "length_m": 99.999998,
+            "report_date": "2026-11-04",
+            "segment": 704,
+            "to_id": "SYN-S7-00-P044",
+            "to_lat": 37.4804169349,
+            "to_lon": 127.0252831353,
+            "to_row": 718,
+            "to_time": "2026-11-04T15:00:40+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999998,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999998,
+            "segment": 704,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P044",
+            "from_lat": 37.4804169349,
+            "from_lon": 127.0252831353,
+            "from_row": 718,
+            "from_time": "2026-11-04T15:00:40+00:00",
+            "included_m": 100.000003,
+            "length_m": 100.000003,
+            "report_date": "2026-11-04",
+            "segment": 705,
+            "to_id": "SYN-S7-00-P045",
+            "to_lat": 37.4804358292,
+            "to_lon": 127.0264135158,
+            "to_row": 719,
+            "to_time": "2026-11-04T15:00:50+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000003,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000003,
+            "segment": 705,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P045",
+            "from_lat": 37.4804358292,
+            "from_lon": 127.0264135158,
+            "from_row": 719,
+            "from_time": "2026-11-04T15:00:50+00:00",
+            "included_m": 99.999998,
+            "length_m": 99.999998,
+            "report_date": "2026-11-04",
+            "segment": 706,
+            "to_id": "SYN-S7-00-P046",
+            "to_lat": 37.4804547126,
+            "to_lon": 127.0275438973,
+            "to_row": 720,
+            "to_time": "2026-11-04T15:01:00+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999998,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999998,
+            "segment": 706,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P046",
+            "from_lat": 37.4804547126,
+            "from_lon": 127.0275438973,
+            "from_row": 720,
+            "from_time": "2026-11-04T15:01:00+00:00",
+            "included_m": 100.000002,
+            "length_m": 100.000002,
+            "report_date": "2026-11-04",
+            "segment": 707,
+            "to_id": "SYN-S7-00-P047",
+            "to_lat": 37.4804735852,
+            "to_lon": 127.0286742799,
+            "to_row": 721,
+            "to_time": "2026-11-04T15:01:10+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000002,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000002,
+            "segment": 707,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P047",
+            "from_lat": 37.4804735852,
+            "from_lon": 127.0286742799,
+            "from_row": 721,
+            "from_time": "2026-11-04T15:01:10+00:00",
+            "included_m": 99.999997,
+            "length_m": 99.999997,
+            "report_date": "2026-11-04",
+            "segment": 708,
+            "to_id": "SYN-S7-00-P048",
+            "to_lat": 37.480492447,
+            "to_lon": 127.0298046635,
+            "to_row": 722,
+            "to_time": "2026-11-04T15:01:20+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999997,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999997,
+            "segment": 708,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P048",
+            "from_lat": 37.480492447,
+            "from_lon": 127.0298046635,
+            "from_row": 722,
+            "from_time": "2026-11-04T15:01:20+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 709,
+            "to_id": "SYN-S7-00-P049",
+            "to_lat": 37.480511298,
+            "to_lon": 127.0309350482,
+            "to_row": 723,
+            "to_time": "2026-11-04T15:01:30+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 709,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P049",
+            "from_lat": 37.480511298,
+            "from_lon": 127.0309350482,
+            "from_row": 723,
+            "from_time": "2026-11-04T15:01:30+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 710,
+            "to_id": "SYN-S7-00-P050",
+            "to_lat": 37.4805301382,
+            "to_lon": 127.032065434,
+            "to_row": 724,
+            "to_time": "2026-11-04T15:01:40+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 710,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P050",
+            "from_lat": 37.4805301382,
+            "from_lon": 127.032065434,
+            "from_row": 724,
+            "from_time": "2026-11-04T15:01:40+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 711,
+            "to_id": "SYN-S7-00-P051",
+            "to_lat": 37.4805489676,
+            "to_lon": 127.0331958208,
+            "to_row": 725,
+            "to_time": "2026-11-04T15:01:50+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 711,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P051",
+            "from_lat": 37.4805489676,
+            "from_lon": 127.0331958208,
+            "from_row": 725,
+            "from_time": "2026-11-04T15:01:50+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 712,
+            "to_id": "SYN-S7-00-P052",
+            "to_lat": 37.4805677862,
+            "to_lon": 127.0343262086,
+            "to_row": 726,
+            "to_time": "2026-11-04T15:02:00+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 712,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P052",
+            "from_lat": 37.4805677862,
+            "from_lon": 127.0343262086,
+            "from_row": 726,
+            "from_time": "2026-11-04T15:02:00+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 713,
+            "to_id": "SYN-S7-00-P053",
+            "to_lat": 37.480586594,
+            "to_lon": 127.0354565975,
+            "to_row": 727,
+            "to_time": "2026-11-04T15:02:10+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 713,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P053",
+            "from_lat": 37.480586594,
+            "from_lon": 127.0354565975,
+            "from_row": 727,
+            "from_time": "2026-11-04T15:02:10+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 714,
+            "to_id": "SYN-S7-00-P054",
+            "to_lat": 37.480605391,
+            "to_lon": 127.0365869875,
+            "to_row": 728,
+            "to_time": "2026-11-04T15:02:20+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 714,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P054",
+            "from_lat": 37.480605391,
+            "from_lon": 127.0365869875,
+            "from_row": 728,
+            "from_time": "2026-11-04T15:02:20+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 715,
+            "to_id": "SYN-S7-00-P055",
+            "to_lat": 37.4806241771,
+            "to_lon": 127.0377173785,
+            "to_row": 729,
+            "to_time": "2026-11-04T15:02:30+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 715,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P055",
+            "from_lat": 37.4806241771,
+            "from_lon": 127.0377173785,
+            "from_row": 729,
+            "from_time": "2026-11-04T15:02:30+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 716,
+            "to_id": "SYN-S7-00-P056",
+            "to_lat": 37.4806429525,
+            "to_lon": 127.0388477705,
+            "to_row": 730,
+            "to_time": "2026-11-04T15:02:40+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 716,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P056",
+            "from_lat": 37.4806429525,
+            "from_lon": 127.0388477705,
+            "from_row": 730,
+            "from_time": "2026-11-04T15:02:40+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 717,
+            "to_id": "SYN-S7-00-P057",
+            "to_lat": 37.4806617171,
+            "to_lon": 127.0399781636,
+            "to_row": 731,
+            "to_time": "2026-11-04T15:02:50+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 717,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P057",
+            "from_lat": 37.4806617171,
+            "from_lon": 127.0399781636,
+            "from_row": 731,
+            "from_time": "2026-11-04T15:02:50+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 718,
+            "to_id": "SYN-S7-00-P058",
+            "to_lat": 37.4806804708,
+            "to_lon": 127.0411085577,
+            "to_row": 732,
+            "to_time": "2026-11-04T15:03:00+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 718,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P058",
+            "from_lat": 37.4806804708,
+            "from_lon": 127.0411085577,
+            "from_row": 732,
+            "from_time": "2026-11-04T15:03:00+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 719,
+            "to_id": "SYN-S7-00-P059",
+            "to_lat": 37.4806992138,
+            "to_lon": 127.0422389529,
+            "to_row": 733,
+            "to_time": "2026-11-04T15:03:10+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 719,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P059",
+            "from_lat": 37.4806992138,
+            "from_lon": 127.0422389529,
+            "from_row": 733,
+            "from_time": "2026-11-04T15:03:10+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 720,
+            "to_id": "SYN-S7-00-P060",
+            "to_lat": 37.4807179459,
+            "to_lon": 127.0433693492,
+            "to_row": 734,
+            "to_time": "2026-11-04T15:03:20+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 720,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P060",
+            "from_lat": 37.4807179459,
+            "from_lon": 127.0433693492,
+            "from_row": 734,
+            "from_time": "2026-11-04T15:03:20+00:00",
+            "included_m": 99.999993,
+            "length_m": 99.999993,
+            "report_date": "2026-11-04",
+            "segment": 721,
+            "to_id": "SYN-S7-00-P061",
+            "to_lat": 37.4807366672,
+            "to_lon": 127.0444997464,
+            "to_row": 735,
+            "to_time": "2026-11-04T15:03:30+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999993,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999993,
+            "segment": 721,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P061",
+            "from_lat": 37.4807366672,
+            "from_lon": 127.0444997464,
+            "from_row": 735,
+            "from_time": "2026-11-04T15:03:30+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 722,
+            "to_id": "SYN-S7-00-P062",
+            "to_lat": 37.4807553777,
+            "to_lon": 127.0456301448,
+            "to_row": 736,
+            "to_time": "2026-11-04T15:03:40+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 722,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P062",
+            "from_lat": 37.4807553777,
+            "from_lon": 127.0456301448,
+            "from_row": 736,
+            "from_time": "2026-11-04T15:03:40+00:00",
+            "included_m": 99.999994,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 723,
+            "to_id": "SYN-S7-00-P063",
+            "to_lat": 37.4807740775,
+            "to_lon": 127.0467605441,
+            "to_row": 737,
+            "to_time": "2026-11-04T15:03:50+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999994,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999994,
+            "segment": 723,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P063",
+            "from_lat": 37.4807740775,
+            "from_lon": 127.0467605441,
+            "from_row": 737,
+            "from_time": "2026-11-04T15:03:50+00:00",
+            "included_m": 100.000007,
+            "length_m": 100.000007,
+            "report_date": "2026-11-04",
+            "segment": 724,
+            "to_id": "SYN-S7-00-P064",
+            "to_lat": 37.4807927664,
+            "to_lon": 127.0478909446,
+            "to_row": 738,
+            "to_time": "2026-11-04T15:04:00+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000007,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000007,
+            "segment": 724,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P064",
+            "from_lat": 37.4807927664,
+            "from_lon": 127.0478909446,
+            "from_row": 738,
+            "from_time": "2026-11-04T15:04:00+00:00",
+            "included_m": 99.999995,
+            "length_m": 99.999995,
+            "report_date": "2026-11-04",
+            "segment": 725,
+            "to_id": "SYN-S7-00-P065",
+            "to_lat": 37.4808114445,
+            "to_lon": 127.049021346,
+            "to_row": 739,
+            "to_time": "2026-11-04T15:04:10+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999995,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999995,
+            "segment": 725,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P065",
+            "from_lat": 37.4808114445,
+            "from_lon": 127.049021346,
+            "from_row": 739,
+            "from_time": "2026-11-04T15:04:10+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 726,
+            "to_id": "SYN-S7-00-P066",
+            "to_lat": 37.4808301118,
+            "to_lon": 127.0501517485,
+            "to_row": 740,
+            "to_time": "2026-11-04T15:04:20+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 726,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P066",
+            "from_lat": 37.4808301118,
+            "from_lon": 127.0501517485,
+            "from_row": 740,
+            "from_time": "2026-11-04T15:04:20+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 727,
+            "to_id": "SYN-S7-00-P067",
+            "to_lat": 37.4808487682,
+            "to_lon": 127.0512821521,
+            "to_row": 741,
+            "to_time": "2026-11-04T15:04:30+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 727,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P067",
+            "from_lat": 37.4808487682,
+            "from_lon": 127.0512821521,
+            "from_row": 741,
+            "from_time": "2026-11-04T15:04:30+00:00",
+            "included_m": 99.999992,
+            "length_m": 99.999992,
+            "report_date": "2026-11-04",
+            "segment": 728,
+            "to_id": "SYN-S7-00-P068",
+            "to_lat": 37.4808674139,
+            "to_lon": 127.0524125566,
+            "to_row": 742,
+            "to_time": "2026-11-04T15:04:40+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999992,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999992,
+            "segment": 728,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S7-00-P068",
+            "from_lat": 37.4808674139,
+            "from_lon": 127.0524125566,
+            "from_row": 742,
+            "from_time": "2026-11-04T15:04:40+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 729,
+            "to_id": "SYN-S7-00-P069",
+            "to_lat": 37.4808860488,
+            "to_lon": 127.0535429623,
+            "to_row": 743,
+            "to_time": "2026-11-04T15:04:50+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 729,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S7-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 743,
+            "from_time": "2026-11-04T15:04:50+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 730,
+            "to_id": "SYN-S7-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 744,
+            "to_time": "2026-11-04T15:05:00+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 730
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 5900.000006,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 5880.000006,
+          "driver_id": "SYN-S8-00",
+          "expected_legacy_m": 5900,
+          "expected_m": 20,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S8"
+        },
+        {
+          "actual_legacy_m": 0.0,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": -5880.0,
+          "driver_id": "SYN-S8-00",
+          "expected_legacy_m": 0,
+          "expected_m": 5880,
+          "report_day_utc9": "2026-11-05",
+          "scenario": "S8"
+        }
+      ],
+      "defect": "D-R5-UTC-DAY",
+      "driver_id": "SYN-S8-00",
+      "scenario": "S8",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 765,
+            "from_time": "2026-11-04T14:59:53+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 751,
+            "to_id": "SYN-S8-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 766,
+            "to_time": "2026-11-04T15:00:03+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 751
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 765,
+            "from_time": "2026-11-04T14:59:53+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 751,
+            "to_id": "SYN-S8-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 766,
+            "to_time": "2026-11-04T15:00:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 751,
+            "utc9_days": [
+              "2026-11-04",
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P011",
+            "from_lat": 37.479787363,
+            "from_lon": 126.9879811756,
+            "from_row": 766,
+            "from_time": "2026-11-04T15:00:03+00:00",
+            "included_m": 99.999999,
+            "length_m": 99.999999,
+            "report_date": "2026-11-04",
+            "segment": 752,
+            "to_id": "SYN-S8-00-P012",
+            "to_lat": 37.4798066139,
+            "to_lon": 126.9891115209,
+            "to_row": 767,
+            "to_time": "2026-11-04T15:00:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999999,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999999,
+            "segment": 752,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P012",
+            "from_lat": 37.4798066139,
+            "from_lon": 126.9891115209,
+            "from_row": 767,
+            "from_time": "2026-11-04T15:00:13+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 753,
+            "to_id": "SYN-S8-00-P013",
+            "to_lat": 37.4798258539,
+            "to_lon": 126.9902418673,
+            "to_row": 768,
+            "to_time": "2026-11-04T15:00:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 753,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P013",
+            "from_lat": 37.4798258539,
+            "from_lon": 126.9902418673,
+            "from_row": 768,
+            "from_time": "2026-11-04T15:00:23+00:00",
+            "included_m": 100.000003,
+            "length_m": 100.000003,
+            "report_date": "2026-11-04",
+            "segment": 754,
+            "to_id": "SYN-S8-00-P014",
+            "to_lat": 37.4798450831,
+            "to_lon": 126.9913722148,
+            "to_row": 769,
+            "to_time": "2026-11-04T15:00:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000003,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000003,
+            "segment": 754,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P014",
+            "from_lat": 37.4798450831,
+            "from_lon": 126.9913722148,
+            "from_row": 769,
+            "from_time": "2026-11-04T15:00:33+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 755,
+            "to_id": "SYN-S8-00-P015",
+            "to_lat": 37.4798643015,
+            "to_lon": 126.9925025633,
+            "to_row": 770,
+            "to_time": "2026-11-04T15:00:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 755,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P015",
+            "from_lat": 37.4798643015,
+            "from_lon": 126.9925025633,
+            "from_row": 770,
+            "from_time": "2026-11-04T15:00:43+00:00",
+            "included_m": 99.999999,
+            "length_m": 99.999999,
+            "report_date": "2026-11-04",
+            "segment": 756,
+            "to_id": "SYN-S8-00-P016",
+            "to_lat": 37.4798835091,
+            "to_lon": 126.9936329129,
+            "to_row": 771,
+            "to_time": "2026-11-04T15:00:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999999,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999999,
+            "segment": 756,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P016",
+            "from_lat": 37.4798835091,
+            "from_lon": 126.9936329129,
+            "from_row": 771,
+            "from_time": "2026-11-04T15:00:53+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 757,
+            "to_id": "SYN-S8-00-P017",
+            "to_lat": 37.4799027059,
+            "to_lon": 126.9947632636,
+            "to_row": 772,
+            "to_time": "2026-11-04T15:01:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 757,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P017",
+            "from_lat": 37.4799027059,
+            "from_lon": 126.9947632636,
+            "from_row": 772,
+            "from_time": "2026-11-04T15:01:03+00:00",
+            "included_m": 100.000004,
+            "length_m": 100.000004,
+            "report_date": "2026-11-04",
+            "segment": 758,
+            "to_id": "SYN-S8-00-P018",
+            "to_lat": 37.4799218919,
+            "to_lon": 126.9958936154,
+            "to_row": 773,
+            "to_time": "2026-11-04T15:01:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000004,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000004,
+            "segment": 758,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P018",
+            "from_lat": 37.4799218919,
+            "from_lon": 126.9958936154,
+            "from_row": 773,
+            "from_time": "2026-11-04T15:01:13+00:00",
+            "included_m": 99.999997,
+            "length_m": 99.999997,
+            "report_date": "2026-11-04",
+            "segment": 759,
+            "to_id": "SYN-S8-00-P019",
+            "to_lat": 37.4799410671,
+            "to_lon": 126.9970239682,
+            "to_row": 774,
+            "to_time": "2026-11-04T15:01:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999997,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999997,
+            "segment": 759,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P019",
+            "from_lat": 37.4799410671,
+            "from_lon": 126.9970239682,
+            "from_row": 774,
+            "from_time": "2026-11-04T15:01:23+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 760,
+            "to_id": "SYN-S8-00-P020",
+            "to_lat": 37.4799602315,
+            "to_lon": 126.9981543221,
+            "to_row": 775,
+            "to_time": "2026-11-04T15:01:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 760,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P020",
+            "from_lat": 37.4799602315,
+            "from_lon": 126.9981543221,
+            "from_row": 775,
+            "from_time": "2026-11-04T15:01:33+00:00",
+            "included_m": 100.000003,
+            "length_m": 100.000003,
+            "report_date": "2026-11-04",
+            "segment": 761,
+            "to_id": "SYN-S8-00-P021",
+            "to_lat": 37.4799793851,
+            "to_lon": 126.9992846771,
+            "to_row": 776,
+            "to_time": "2026-11-04T15:01:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000003,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000003,
+            "segment": 761,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P021",
+            "from_lat": 37.4799793851,
+            "from_lon": 126.9992846771,
+            "from_row": 776,
+            "from_time": "2026-11-04T15:01:43+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 762,
+            "to_id": "SYN-S8-00-P022",
+            "to_lat": 37.4799985278,
+            "to_lon": 127.0004150331,
+            "to_row": 777,
+            "to_time": "2026-11-04T15:01:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 762,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P022",
+            "from_lat": 37.4799985278,
+            "from_lon": 127.0004150331,
+            "from_row": 777,
+            "from_time": "2026-11-04T15:01:53+00:00",
+            "included_m": 99.999999,
+            "length_m": 99.999999,
+            "report_date": "2026-11-04",
+            "segment": 763,
+            "to_id": "SYN-S8-00-P023",
+            "to_lat": 37.4800176598,
+            "to_lon": 127.0015453902,
+            "to_row": 778,
+            "to_time": "2026-11-04T15:02:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999999,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999999,
+            "segment": 763,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P023",
+            "from_lat": 37.4800176598,
+            "from_lon": 127.0015453902,
+            "from_row": 778,
+            "from_time": "2026-11-04T15:02:03+00:00",
+            "included_m": 100.000002,
+            "length_m": 100.000002,
+            "report_date": "2026-11-04",
+            "segment": 764,
+            "to_id": "SYN-S8-00-P024",
+            "to_lat": 37.480036781,
+            "to_lon": 127.0026757484,
+            "to_row": 779,
+            "to_time": "2026-11-04T15:02:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000002,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000002,
+            "segment": 764,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P024",
+            "from_lat": 37.480036781,
+            "from_lon": 127.0026757484,
+            "from_row": 779,
+            "from_time": "2026-11-04T15:02:13+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 765,
+            "to_id": "SYN-S8-00-P025",
+            "to_lat": 37.4800558913,
+            "to_lon": 127.0038061076,
+            "to_row": 780,
+            "to_time": "2026-11-04T15:02:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 765,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P025",
+            "from_lat": 37.4800558913,
+            "from_lon": 127.0038061076,
+            "from_row": 780,
+            "from_time": "2026-11-04T15:02:23+00:00",
+            "included_m": 99.999999,
+            "length_m": 99.999999,
+            "report_date": "2026-11-04",
+            "segment": 766,
+            "to_id": "SYN-S8-00-P026",
+            "to_lat": 37.4800749909,
+            "to_lon": 127.0049364679,
+            "to_row": 781,
+            "to_time": "2026-11-04T15:02:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999999,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999999,
+            "segment": 766,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P026",
+            "from_lat": 37.4800749909,
+            "from_lon": 127.0049364679,
+            "from_row": 781,
+            "from_time": "2026-11-04T15:02:33+00:00",
+            "included_m": 100.000002,
+            "length_m": 100.000002,
+            "report_date": "2026-11-04",
+            "segment": 767,
+            "to_id": "SYN-S8-00-P027",
+            "to_lat": 37.4800940796,
+            "to_lon": 127.0060668293,
+            "to_row": 782,
+            "to_time": "2026-11-04T15:02:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000002,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000002,
+            "segment": 767,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P027",
+            "from_lat": 37.4800940796,
+            "from_lon": 127.0060668293,
+            "from_row": 782,
+            "from_time": "2026-11-04T15:02:43+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 768,
+            "to_id": "SYN-S8-00-P028",
+            "to_lat": 37.4801131575,
+            "to_lon": 127.0071971918,
+            "to_row": 783,
+            "to_time": "2026-11-04T15:02:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 768,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P028",
+            "from_lat": 37.4801131575,
+            "from_lon": 127.0071971918,
+            "from_row": 783,
+            "from_time": "2026-11-04T15:02:53+00:00",
+            "included_m": 99.999999,
+            "length_m": 99.999999,
+            "report_date": "2026-11-04",
+            "segment": 769,
+            "to_id": "SYN-S8-00-P029",
+            "to_lat": 37.4801322247,
+            "to_lon": 127.0083275553,
+            "to_row": 784,
+            "to_time": "2026-11-04T15:03:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999999,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999999,
+            "segment": 769,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P029",
+            "from_lat": 37.4801322247,
+            "from_lon": 127.0083275553,
+            "from_row": 784,
+            "from_time": "2026-11-04T15:03:03+00:00",
+            "included_m": 99.999993,
+            "length_m": 99.999993,
+            "report_date": "2026-11-04",
+            "segment": 770,
+            "to_id": "SYN-S8-00-P030",
+            "to_lat": 37.480151281,
+            "to_lon": 127.0094579198,
+            "to_row": 785,
+            "to_time": "2026-11-04T15:03:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999993,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999993,
+            "segment": 770,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P030",
+            "from_lat": 37.480151281,
+            "from_lon": 127.0094579198,
+            "from_row": 785,
+            "from_time": "2026-11-04T15:03:13+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 771,
+            "to_id": "SYN-S8-00-P031",
+            "to_lat": 37.4801703265,
+            "to_lon": 127.0105882855,
+            "to_row": 786,
+            "to_time": "2026-11-04T15:03:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 771,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P031",
+            "from_lat": 37.4801703265,
+            "from_lon": 127.0105882855,
+            "from_row": 786,
+            "from_time": "2026-11-04T15:03:23+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 772,
+            "to_id": "SYN-S8-00-P032",
+            "to_lat": 37.4801893612,
+            "to_lon": 127.0117186522,
+            "to_row": 787,
+            "to_time": "2026-11-04T15:03:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 772,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P032",
+            "from_lat": 37.4801893612,
+            "from_lon": 127.0117186522,
+            "from_row": 787,
+            "from_time": "2026-11-04T15:03:33+00:00",
+            "included_m": 99.999994,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 773,
+            "to_id": "SYN-S8-00-P033",
+            "to_lat": 37.4802083851,
+            "to_lon": 127.0128490199,
+            "to_row": 788,
+            "to_time": "2026-11-04T15:03:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999994,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999994,
+            "segment": 773,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P033",
+            "from_lat": 37.4802083851,
+            "from_lon": 127.0128490199,
+            "from_row": 788,
+            "from_time": "2026-11-04T15:03:43+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 774,
+            "to_id": "SYN-S8-00-P034",
+            "to_lat": 37.4802273982,
+            "to_lon": 127.0139793888,
+            "to_row": 789,
+            "to_time": "2026-11-04T15:03:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 774,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P034",
+            "from_lat": 37.4802273982,
+            "from_lon": 127.0139793888,
+            "from_row": 789,
+            "from_time": "2026-11-04T15:03:53+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 775,
+            "to_id": "SYN-S8-00-P035",
+            "to_lat": 37.4802464005,
+            "to_lon": 127.0151097587,
+            "to_row": 790,
+            "to_time": "2026-11-04T15:04:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 775,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P035",
+            "from_lat": 37.4802464005,
+            "from_lon": 127.0151097587,
+            "from_row": 790,
+            "from_time": "2026-11-04T15:04:03+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 776,
+            "to_id": "SYN-S8-00-P036",
+            "to_lat": 37.480265392,
+            "to_lon": 127.0162401296,
+            "to_row": 791,
+            "to_time": "2026-11-04T15:04:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 776,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P036",
+            "from_lat": 37.480265392,
+            "from_lon": 127.0162401296,
+            "from_row": 791,
+            "from_time": "2026-11-04T15:04:13+00:00",
+            "included_m": 99.999999,
+            "length_m": 99.999999,
+            "report_date": "2026-11-04",
+            "segment": 777,
+            "to_id": "SYN-S8-00-P037",
+            "to_lat": 37.4802843727,
+            "to_lon": 127.0173705016,
+            "to_row": 792,
+            "to_time": "2026-11-04T15:04:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999999,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999999,
+            "segment": 777,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P037",
+            "from_lat": 37.4802843727,
+            "from_lon": 127.0173705016,
+            "from_row": 792,
+            "from_time": "2026-11-04T15:04:23+00:00",
+            "included_m": 100.000003,
+            "length_m": 100.000003,
+            "report_date": "2026-11-04",
+            "segment": 778,
+            "to_id": "SYN-S8-00-P038",
+            "to_lat": 37.4803033426,
+            "to_lon": 127.0185008747,
+            "to_row": 793,
+            "to_time": "2026-11-04T15:04:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000003,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000003,
+            "segment": 778,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P038",
+            "from_lat": 37.4803033426,
+            "from_lon": 127.0185008747,
+            "from_row": 793,
+            "from_time": "2026-11-04T15:04:33+00:00",
+            "included_m": 99.999997,
+            "length_m": 99.999997,
+            "report_date": "2026-11-04",
+            "segment": 779,
+            "to_id": "SYN-S8-00-P039",
+            "to_lat": 37.4803223017,
+            "to_lon": 127.0196312488,
+            "to_row": 794,
+            "to_time": "2026-11-04T15:04:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999997,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999997,
+            "segment": 779,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P039",
+            "from_lat": 37.4803223017,
+            "from_lon": 127.0196312488,
+            "from_row": 794,
+            "from_time": "2026-11-04T15:04:43+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 780,
+            "to_id": "SYN-S8-00-P040",
+            "to_lat": 37.4803412499,
+            "to_lon": 127.020761624,
+            "to_row": 795,
+            "to_time": "2026-11-04T15:04:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 780,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P040",
+            "from_lat": 37.4803412499,
+            "from_lon": 127.020761624,
+            "from_row": 795,
+            "from_time": "2026-11-04T15:04:53+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 781,
+            "to_id": "SYN-S8-00-P041",
+            "to_lat": 37.4803601874,
+            "to_lon": 127.0218920003,
+            "to_row": 796,
+            "to_time": "2026-11-04T15:05:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 781,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P041",
+            "from_lat": 37.4803601874,
+            "from_lon": 127.0218920003,
+            "from_row": 796,
+            "from_time": "2026-11-04T15:05:03+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 782,
+            "to_id": "SYN-S8-00-P042",
+            "to_lat": 37.480379114,
+            "to_lon": 127.0230223776,
+            "to_row": 797,
+            "to_time": "2026-11-04T15:05:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 782,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P042",
+            "from_lat": 37.480379114,
+            "from_lon": 127.0230223776,
+            "from_row": 797,
+            "from_time": "2026-11-04T15:05:13+00:00",
+            "included_m": 99.999995,
+            "length_m": 99.999995,
+            "report_date": "2026-11-04",
+            "segment": 783,
+            "to_id": "SYN-S8-00-P043",
+            "to_lat": 37.4803980299,
+            "to_lon": 127.0241527559,
+            "to_row": 798,
+            "to_time": "2026-11-04T15:05:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999995,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999995,
+            "segment": 783,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P043",
+            "from_lat": 37.4803980299,
+            "from_lon": 127.0241527559,
+            "from_row": 798,
+            "from_time": "2026-11-04T15:05:23+00:00",
+            "included_m": 99.999998,
+            "length_m": 99.999998,
+            "report_date": "2026-11-04",
+            "segment": 784,
+            "to_id": "SYN-S8-00-P044",
+            "to_lat": 37.4804169349,
+            "to_lon": 127.0252831353,
+            "to_row": 799,
+            "to_time": "2026-11-04T15:05:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999998,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999998,
+            "segment": 784,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P044",
+            "from_lat": 37.4804169349,
+            "from_lon": 127.0252831353,
+            "from_row": 799,
+            "from_time": "2026-11-04T15:05:33+00:00",
+            "included_m": 100.000003,
+            "length_m": 100.000003,
+            "report_date": "2026-11-04",
+            "segment": 785,
+            "to_id": "SYN-S8-00-P045",
+            "to_lat": 37.4804358292,
+            "to_lon": 127.0264135158,
+            "to_row": 800,
+            "to_time": "2026-11-04T15:05:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000003,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000003,
+            "segment": 785,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P045",
+            "from_lat": 37.4804358292,
+            "from_lon": 127.0264135158,
+            "from_row": 800,
+            "from_time": "2026-11-04T15:05:43+00:00",
+            "included_m": 99.999998,
+            "length_m": 99.999998,
+            "report_date": "2026-11-04",
+            "segment": 786,
+            "to_id": "SYN-S8-00-P046",
+            "to_lat": 37.4804547126,
+            "to_lon": 127.0275438973,
+            "to_row": 801,
+            "to_time": "2026-11-04T15:05:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999998,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999998,
+            "segment": 786,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P046",
+            "from_lat": 37.4804547126,
+            "from_lon": 127.0275438973,
+            "from_row": 801,
+            "from_time": "2026-11-04T15:05:53+00:00",
+            "included_m": 100.000002,
+            "length_m": 100.000002,
+            "report_date": "2026-11-04",
+            "segment": 787,
+            "to_id": "SYN-S8-00-P047",
+            "to_lat": 37.4804735852,
+            "to_lon": 127.0286742799,
+            "to_row": 802,
+            "to_time": "2026-11-04T15:06:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000002,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000002,
+            "segment": 787,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P047",
+            "from_lat": 37.4804735852,
+            "from_lon": 127.0286742799,
+            "from_row": 802,
+            "from_time": "2026-11-04T15:06:03+00:00",
+            "included_m": 99.999997,
+            "length_m": 99.999997,
+            "report_date": "2026-11-04",
+            "segment": 788,
+            "to_id": "SYN-S8-00-P048",
+            "to_lat": 37.480492447,
+            "to_lon": 127.0298046635,
+            "to_row": 803,
+            "to_time": "2026-11-04T15:06:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999997,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999997,
+            "segment": 788,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P048",
+            "from_lat": 37.480492447,
+            "from_lon": 127.0298046635,
+            "from_row": 803,
+            "from_time": "2026-11-04T15:06:13+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 789,
+            "to_id": "SYN-S8-00-P049",
+            "to_lat": 37.480511298,
+            "to_lon": 127.0309350482,
+            "to_row": 804,
+            "to_time": "2026-11-04T15:06:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 789,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P049",
+            "from_lat": 37.480511298,
+            "from_lon": 127.0309350482,
+            "from_row": 804,
+            "from_time": "2026-11-04T15:06:23+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 790,
+            "to_id": "SYN-S8-00-P050",
+            "to_lat": 37.4805301382,
+            "to_lon": 127.032065434,
+            "to_row": 805,
+            "to_time": "2026-11-04T15:06:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 790,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P050",
+            "from_lat": 37.4805301382,
+            "from_lon": 127.032065434,
+            "from_row": 805,
+            "from_time": "2026-11-04T15:06:33+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 791,
+            "to_id": "SYN-S8-00-P051",
+            "to_lat": 37.4805489676,
+            "to_lon": 127.0331958208,
+            "to_row": 806,
+            "to_time": "2026-11-04T15:06:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 791,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P051",
+            "from_lat": 37.4805489676,
+            "from_lon": 127.0331958208,
+            "from_row": 806,
+            "from_time": "2026-11-04T15:06:43+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 792,
+            "to_id": "SYN-S8-00-P052",
+            "to_lat": 37.4805677862,
+            "to_lon": 127.0343262086,
+            "to_row": 807,
+            "to_time": "2026-11-04T15:06:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 792,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P052",
+            "from_lat": 37.4805677862,
+            "from_lon": 127.0343262086,
+            "from_row": 807,
+            "from_time": "2026-11-04T15:06:53+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 793,
+            "to_id": "SYN-S8-00-P053",
+            "to_lat": 37.480586594,
+            "to_lon": 127.0354565975,
+            "to_row": 808,
+            "to_time": "2026-11-04T15:07:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 793,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P053",
+            "from_lat": 37.480586594,
+            "from_lon": 127.0354565975,
+            "from_row": 808,
+            "from_time": "2026-11-04T15:07:03+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 794,
+            "to_id": "SYN-S8-00-P054",
+            "to_lat": 37.480605391,
+            "to_lon": 127.0365869875,
+            "to_row": 809,
+            "to_time": "2026-11-04T15:07:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 794,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P054",
+            "from_lat": 37.480605391,
+            "from_lon": 127.0365869875,
+            "from_row": 809,
+            "from_time": "2026-11-04T15:07:13+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 795,
+            "to_id": "SYN-S8-00-P055",
+            "to_lat": 37.4806241771,
+            "to_lon": 127.0377173785,
+            "to_row": 810,
+            "to_time": "2026-11-04T15:07:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 795,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P055",
+            "from_lat": 37.4806241771,
+            "from_lon": 127.0377173785,
+            "from_row": 810,
+            "from_time": "2026-11-04T15:07:23+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 796,
+            "to_id": "SYN-S8-00-P056",
+            "to_lat": 37.4806429525,
+            "to_lon": 127.0388477705,
+            "to_row": 811,
+            "to_time": "2026-11-04T15:07:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 796,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P056",
+            "from_lat": 37.4806429525,
+            "from_lon": 127.0388477705,
+            "from_row": 811,
+            "from_time": "2026-11-04T15:07:33+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 797,
+            "to_id": "SYN-S8-00-P057",
+            "to_lat": 37.4806617171,
+            "to_lon": 127.0399781636,
+            "to_row": 812,
+            "to_time": "2026-11-04T15:07:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 797,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P057",
+            "from_lat": 37.4806617171,
+            "from_lon": 127.0399781636,
+            "from_row": 812,
+            "from_time": "2026-11-04T15:07:43+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 798,
+            "to_id": "SYN-S8-00-P058",
+            "to_lat": 37.4806804708,
+            "to_lon": 127.0411085577,
+            "to_row": 813,
+            "to_time": "2026-11-04T15:07:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999996,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999996,
+            "segment": 798,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P058",
+            "from_lat": 37.4806804708,
+            "from_lon": 127.0411085577,
+            "from_row": 813,
+            "from_time": "2026-11-04T15:07:53+00:00",
+            "included_m": 100.000001,
+            "length_m": 100.000001,
+            "report_date": "2026-11-04",
+            "segment": 799,
+            "to_id": "SYN-S8-00-P059",
+            "to_lat": 37.4806992138,
+            "to_lon": 127.0422389529,
+            "to_row": 814,
+            "to_time": "2026-11-04T15:08:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000001,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000001,
+            "segment": 799,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P059",
+            "from_lat": 37.4806992138,
+            "from_lon": 127.0422389529,
+            "from_row": 814,
+            "from_time": "2026-11-04T15:08:03+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 800,
+            "to_id": "SYN-S8-00-P060",
+            "to_lat": 37.4807179459,
+            "to_lon": 127.0433693492,
+            "to_row": 815,
+            "to_time": "2026-11-04T15:08:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 800,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P060",
+            "from_lat": 37.4807179459,
+            "from_lon": 127.0433693492,
+            "from_row": 815,
+            "from_time": "2026-11-04T15:08:13+00:00",
+            "included_m": 99.999993,
+            "length_m": 99.999993,
+            "report_date": "2026-11-04",
+            "segment": 801,
+            "to_id": "SYN-S8-00-P061",
+            "to_lat": 37.4807366672,
+            "to_lon": 127.0444997464,
+            "to_row": 816,
+            "to_time": "2026-11-04T15:08:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999993,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999993,
+            "segment": 801,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P061",
+            "from_lat": 37.4807366672,
+            "from_lon": 127.0444997464,
+            "from_row": 816,
+            "from_time": "2026-11-04T15:08:23+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 802,
+            "to_id": "SYN-S8-00-P062",
+            "to_lat": 37.4807553777,
+            "to_lon": 127.0456301448,
+            "to_row": 817,
+            "to_time": "2026-11-04T15:08:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 802,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P062",
+            "from_lat": 37.4807553777,
+            "from_lon": 127.0456301448,
+            "from_row": 817,
+            "from_time": "2026-11-04T15:08:33+00:00",
+            "included_m": 99.999994,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 803,
+            "to_id": "SYN-S8-00-P063",
+            "to_lat": 37.4807740775,
+            "to_lon": 127.0467605441,
+            "to_row": 818,
+            "to_time": "2026-11-04T15:08:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999994,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999994,
+            "segment": 803,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P063",
+            "from_lat": 37.4807740775,
+            "from_lon": 127.0467605441,
+            "from_row": 818,
+            "from_time": "2026-11-04T15:08:43+00:00",
+            "included_m": 100.000007,
+            "length_m": 100.000007,
+            "report_date": "2026-11-04",
+            "segment": 804,
+            "to_id": "SYN-S8-00-P064",
+            "to_lat": 37.4807927664,
+            "to_lon": 127.0478909446,
+            "to_row": 819,
+            "to_time": "2026-11-04T15:08:53+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000007,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000007,
+            "segment": 804,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P064",
+            "from_lat": 37.4807927664,
+            "from_lon": 127.0478909446,
+            "from_row": 819,
+            "from_time": "2026-11-04T15:08:53+00:00",
+            "included_m": 99.999995,
+            "length_m": 99.999995,
+            "report_date": "2026-11-04",
+            "segment": 805,
+            "to_id": "SYN-S8-00-P065",
+            "to_lat": 37.4808114445,
+            "to_lon": 127.049021346,
+            "to_row": 820,
+            "to_time": "2026-11-04T15:09:03+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999995,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999995,
+            "segment": 805,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P065",
+            "from_lat": 37.4808114445,
+            "from_lon": 127.049021346,
+            "from_row": 820,
+            "from_time": "2026-11-04T15:09:03+00:00",
+            "included_m": 100.0,
+            "length_m": 100.0,
+            "report_date": "2026-11-04",
+            "segment": 806,
+            "to_id": "SYN-S8-00-P066",
+            "to_lat": 37.4808301118,
+            "to_lon": 127.0501517485,
+            "to_row": 821,
+            "to_time": "2026-11-04T15:09:13+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.0,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.0,
+            "segment": 806,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P066",
+            "from_lat": 37.4808301118,
+            "from_lon": 127.0501517485,
+            "from_row": 821,
+            "from_time": "2026-11-04T15:09:13+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 807,
+            "to_id": "SYN-S8-00-P067",
+            "to_lat": 37.4808487682,
+            "to_lon": 127.0512821521,
+            "to_row": 822,
+            "to_time": "2026-11-04T15:09:23+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000005,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000005,
+            "segment": 807,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P067",
+            "from_lat": 37.4808487682,
+            "from_lon": 127.0512821521,
+            "from_row": 822,
+            "from_time": "2026-11-04T15:09:23+00:00",
+            "included_m": 99.999992,
+            "length_m": 99.999992,
+            "report_date": "2026-11-04",
+            "segment": 808,
+            "to_id": "SYN-S8-00-P068",
+            "to_lat": 37.4808674139,
+            "to_lon": 127.0524125566,
+            "to_row": 823,
+            "to_time": "2026-11-04T15:09:33+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 99.999992,
+            "legacy_date": "2026-11-04",
+            "length_m": 99.999992,
+            "segment": 808,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S8-00-P068",
+            "from_lat": 37.4808674139,
+            "from_lon": 127.0524125566,
+            "from_row": 823,
+            "from_time": "2026-11-04T15:09:33+00:00",
+            "included_m": 100.000006,
+            "length_m": 100.000006,
+            "report_date": "2026-11-04",
+            "segment": 809,
+            "to_id": "SYN-S8-00-P069",
+            "to_lat": 37.4808860488,
+            "to_lon": 127.0535429623,
+            "to_row": 824,
+            "to_time": "2026-11-04T15:09:43+00:00"
+          },
+          "measurements": {
+            "decision": "distance labelled with end point's UTC date",
+            "included_m": 100.000006,
+            "legacy_date": "2026-11-04",
+            "length_m": 100.000006,
+            "segment": 809,
+            "utc9_days": [
+              "2026-11-05"
+            ]
+          },
+          "rule": "R5_UTC_DATE",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S8-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 824,
+            "from_time": "2026-11-04T15:09:43+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 810,
+            "to_id": "SYN-S8-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 825,
+            "to_time": "2026-11-04T15:09:53+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 810
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 6336.120005,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 436.120005,
+          "driver_id": "SYN-S6b-00",
+          "expected_legacy_m": 6336.12,
+          "expected_m": 5900,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S6b"
+        }
+      ],
+      "defect": "D-R2-SPEED",
+      "driver_id": "SYN-S6b-00",
+      "scenario": "S6b",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S6b-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 522,
+            "from_time": "2026-11-04T03:01:40+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 511,
+            "to_id": "SYN-S6b-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 523,
+            "to_time": "2026-11-04T03:01:50+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 511
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        },
+        {
+          "kind": "provisional_anomaly",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S6b-00-P039",
+            "from_lat": 37.4803223017,
+            "from_lon": 127.0196312488,
+            "from_row": 551,
+            "from_time": "2026-11-04T03:06:30+00:00",
+            "included_m": 418.060005,
+            "length_m": 418.060005,
+            "report_date": "2026-11-04",
+            "segment": 540,
+            "to_id": "SYN-S6b-00-P040",
+            "to_lat": 37.4804014449,
+            "to_lon": 127.0243569024,
+            "to_row": 552,
+            "to_time": "2026-11-04T03:06:40+00:00"
+          },
+          "measurements": {
+            "decision": "billed raw pair exceeds threshold; neither endpoint is classified",
+            "included_m": 418.060005,
+            "length_m": 418.060005,
+            "note": "road and duplicate selection precede last-accepted speed decisions in Phase 3",
+            "segment": 540,
+            "speed_kmh": 150.501602
+          },
+          "rule": "LEGACY_RAW_PAIR_SPEED_ANOMALY",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S6b-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 581,
+            "from_time": "2026-11-04T03:11:30+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 570,
+            "to_id": "SYN-S6b-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 582,
+            "to_time": "2026-11-04T03:11:40+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 570
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 7700.000001,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 1800.000001,
+          "driver_id": "SYN-S6c-00",
+          "expected_legacy_m": 7700,
+          "expected_m": 5900,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S6c"
+        }
+      ],
+      "defect": "D-R2-SPEED",
+      "driver_id": "SYN-S6c-00",
+      "scenario": "S6c",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S6c-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 603,
+            "from_time": "2026-11-04T03:01:40+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 591,
+            "to_id": "SYN-S6c-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 604,
+            "to_time": "2026-11-04T03:01:50+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 591
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        },
+        {
+          "kind": "provisional_anomaly",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S6c-00-P039",
+            "from_lat": 37.4803223017,
+            "from_lon": 127.0196312488,
+            "from_row": 632,
+            "from_time": "2026-11-04T03:06:30+00:00",
+            "included_m": 1100.000003,
+            "length_m": 1100.000003,
+            "report_date": "2026-11-04",
+            "segment": 620,
+            "to_id": "SYN-S6c-00-P040",
+            "to_lat": 37.4805301382,
+            "to_lon": 127.032065434,
+            "to_row": 633,
+            "to_time": "2026-11-04T03:06:40+00:00"
+          },
+          "measurements": {
+            "decision": "billed raw pair exceeds threshold; neither endpoint is classified",
+            "included_m": 1100.000003,
+            "length_m": 1100.000003,
+            "note": "road and duplicate selection precede last-accepted speed decisions in Phase 3",
+            "segment": 620,
+            "speed_kmh": 396.000001
+          },
+          "rule": "LEGACY_RAW_PAIR_SPEED_ANOMALY",
+          "selected_category": true
+        },
+        {
+          "kind": "provisional_anomaly",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S6c-00-P040",
+            "from_lat": 37.4805301382,
+            "from_lon": 127.032065434,
+            "from_row": 633,
+            "from_time": "2026-11-04T03:06:40+00:00",
+            "included_m": 899.999997,
+            "length_m": 899.999997,
+            "report_date": "2026-11-04",
+            "segment": 621,
+            "to_id": "SYN-S6c-00-P041",
+            "to_lat": 37.4803601874,
+            "to_lon": 127.0218920003,
+            "to_row": 634,
+            "to_time": "2026-11-04T03:06:50+00:00"
+          },
+          "measurements": {
+            "decision": "billed raw pair exceeds threshold; neither endpoint is classified",
+            "included_m": 899.999997,
+            "length_m": 899.999997,
+            "note": "road and duplicate selection precede last-accepted speed decisions in Phase 3",
+            "segment": 621,
+            "speed_kmh": 323.999999
+          },
+          "rule": "LEGACY_RAW_PAIR_SPEED_ANOMALY",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S6c-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 662,
+            "from_time": "2026-11-04T03:11:30+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 650,
+            "to_id": "SYN-S6c-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 663,
+            "to_time": "2026-11-04T03:11:40+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 650
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 299.999995,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 99.999995,
+          "driver_id": "SYN-S2b-00",
+          "expected_legacy_m": 300,
+          "expected_m": 200,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S2b"
+        }
+      ],
+      "defect": "D-R3-DUPLICATE",
+      "driver_id": "SYN-S2b-00",
+      "scenario": "S2b",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S2b-00-P002",
+            "from_lat": 37.4799985278,
+            "from_lon": 127.0004150331,
+            "from_row": 175,
+            "from_time": "2026-11-04T03:00:20+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 172,
+            "to_id": "SYN-S2b-00-D001",
+            "to_lat": 37.4799793851,
+            "to_lon": 126.9992846771,
+            "to_row": 176,
+            "to_time": "2026-11-04T03:00:10+00:00"
+          },
+          "measurements": {
+            "decision": "segment joins rows in file order, not device-time order",
+            "elapsed_s": -10.0,
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "segment": 172
+          },
+          "rule": "R3_R4_FILE_ORDER",
+          "selected_category": true
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 276.619037,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 76.619037,
+          "driver_id": "SYN-S3-00",
+          "expected_legacy_m": 276.619037896906,
+          "expected_m": 200,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S3"
+        }
+      ],
+      "defect": "D-R3-DUPLICATE",
+      "driver_id": "SYN-S3-00",
+      "scenario": "S3",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S3-00-P001",
+            "from_lat": 37.4799793851,
+            "from_lon": 126.9992846771,
+            "from_row": 178,
+            "from_time": "2026-11-04T03:00:10+00:00",
+            "included_m": 59.999995,
+            "length_m": 59.999995,
+            "report_date": "2026-11-04",
+            "segment": 174,
+            "to_id": "SYN-S3-00-D001",
+            "to_lat": 37.4805198763,
+            "to_lon": 126.9992702605,
+            "to_row": 179,
+            "to_time": "2026-11-04T03:00:10+00:00"
+          },
+          "measurements": {
+            "decision": "segment joins rows in file order, not device-time order",
+            "elapsed_s": 0.0,
+            "included_m": 59.999995,
+            "length_m": 59.999995,
+            "segment": 174
+          },
+          "rule": "R3_R4_FILE_ORDER",
+          "selected_category": true
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 430.277572,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 230.277572,
+          "driver_id": "SYN-S3b-00",
+          "expected_legacy_m": 430.277563773199,
+          "expected_m": 200,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S3b"
+        }
+      ],
+      "defect": "D-R3-DUPLICATE",
+      "driver_id": "SYN-S3b-00",
+      "scenario": "S3b",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S3b-00-P001",
+            "from_lat": 37.4799793851,
+            "from_lon": 126.9992846771,
+            "from_row": 182,
+            "from_time": "2026-11-04T03:00:10+00:00",
+            "included_m": 149.999999,
+            "length_m": 149.999999,
+            "report_date": "2026-11-04",
+            "segment": 177,
+            "to_id": "SYN-S3b-00-D001",
+            "to_lat": 37.4813306131,
+            "to_lon": 126.9992486349,
+            "to_row": 183,
+            "to_time": "2026-11-04T03:00:10+00:00"
+          },
+          "measurements": {
+            "decision": "segment joins rows in file order, not device-time order",
+            "elapsed_s": 0.0,
+            "included_m": 149.999999,
+            "length_m": 149.999999,
+            "segment": 177
+          },
+          "rule": "R3_R4_FILE_ORDER",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S3b-00-P001",
+            "from_lat": 37.4799793851,
+            "from_lon": 126.9992846771,
+            "from_row": 182,
+            "from_time": "2026-11-04T03:00:10+00:00",
+            "included_m": 149.999999,
+            "length_m": 149.999999,
+            "report_date": "2026-11-04",
+            "segment": 177,
+            "to_id": "SYN-S3b-00-D001",
+            "to_lat": 37.4813306131,
+            "to_lon": 126.9992486349,
+            "to_row": 183,
+            "to_time": "2026-11-04T03:00:10+00:00"
+          },
+          "measurements": {
+            "decision": "segment uses an off-road observation",
+            "included_m": 149.999999,
+            "length_m": 149.999999,
+            "road_distance_m": {
+              "from": 4e-06,
+              "to": 150.000004
+            },
+            "segment": 177
+          },
+          "rule": "R1_OFF_ROAD",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S3b-00-D001",
+            "from_lat": 37.4813306131,
+            "from_lon": 126.9992486349,
+            "from_row": 183,
+            "from_time": "2026-11-04T03:00:10+00:00",
+            "included_m": 180.27757,
+            "length_m": 180.27757,
+            "report_date": "2026-11-04",
+            "segment": 178,
+            "to_id": "SYN-S3b-00-P002",
+            "to_lat": 37.4799985278,
+            "to_lon": 127.0004150331,
+            "to_row": 184,
+            "to_time": "2026-11-04T03:00:20+00:00"
+          },
+          "measurements": {
+            "decision": "segment uses an off-road observation",
+            "included_m": 180.27757,
+            "length_m": 180.27757,
+            "road_distance_m": {
+              "from": 150.000004,
+              "to": 4e-06
+            },
+            "segment": 178
+          },
+          "rule": "R1_OFF_ROAD",
+          "selected_category": true
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 6060.555128,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 160.555128,
+          "driver_id": "SYN-S5a-00",
+          "expected_legacy_m": 6060.555127546399,
+          "expected_m": 5900,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S5a"
+        }
+      ],
+      "defect": "D-R1-OFF-ROAD",
+      "driver_id": "SYN-S5a-00",
+      "scenario": "S5a",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S5a-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 198,
+            "from_time": "2026-11-04T03:01:40+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 191,
+            "to_id": "SYN-S5a-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 199,
+            "to_time": "2026-11-04T03:01:50+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 191
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S5a-00-P039",
+            "from_lat": 37.4803223017,
+            "from_lon": 127.0196312488,
+            "from_row": 227,
+            "from_time": "2026-11-04T03:06:30+00:00",
+            "included_m": 180.27756,
+            "length_m": 180.27756,
+            "report_date": "2026-11-04",
+            "segment": 220,
+            "to_id": "SYN-S5a-00-P040",
+            "to_lat": 37.4816924955,
+            "to_lon": 127.0207259681,
+            "to_row": 228,
+            "to_time": "2026-11-04T03:06:40+00:00"
+          },
+          "measurements": {
+            "decision": "segment uses an off-road observation",
+            "included_m": 180.27756,
+            "length_m": 180.27756,
+            "road_distance_m": {
+              "from": 4e-06,
+              "to": 150.0
+            },
+            "segment": 220
+          },
+          "rule": "R1_OFF_ROAD",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S5a-00-P040",
+            "from_lat": 37.4816924955,
+            "from_lon": 127.0207259681,
+            "from_row": 228,
+            "from_time": "2026-11-04T03:06:40+00:00",
+            "included_m": 180.277567,
+            "length_m": 180.277567,
+            "report_date": "2026-11-04",
+            "segment": 221,
+            "to_id": "SYN-S5a-00-P041",
+            "to_lat": 37.4803601874,
+            "to_lon": 127.0218920003,
+            "to_row": 229,
+            "to_time": "2026-11-04T03:06:50+00:00"
+          },
+          "measurements": {
+            "decision": "segment uses an off-road observation",
+            "included_m": 180.277567,
+            "length_m": 180.277567,
+            "road_distance_m": {
+              "from": 150.0,
+              "to": 1e-06
+            },
+            "segment": 221
+          },
+          "rule": "R1_OFF_ROAD",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S5a-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 257,
+            "from_time": "2026-11-04T03:11:30+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 250,
+            "to_id": "SYN-S5a-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 258,
+            "to_time": "2026-11-04T03:11:40+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 250
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 5983.550702,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 83.550702,
+          "driver_id": "SYN-S5c-00",
+          "expected_legacy_m": 5983.550700933713,
+          "expected_m": 5900,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S5c"
+        }
+      ],
+      "defect": "D-R1-OFF-ROAD",
+      "driver_id": "SYN-S5c-00",
+      "scenario": "S5c",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S5c-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 360,
+            "from_time": "2026-11-04T03:01:40+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 351,
+            "to_id": "SYN-S5c-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 361,
+            "to_time": "2026-11-04T03:01:50+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 351
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S5c-00-P039",
+            "from_lat": 37.4803223017,
+            "from_lon": 127.0196312488,
+            "from_row": 389,
+            "from_time": "2026-11-04T03:06:30+00:00",
+            "included_m": 141.775347,
+            "length_m": 141.775347,
+            "report_date": "2026-11-04",
+            "segment": 380,
+            "to_id": "SYN-S5c-00-P040",
+            "to_lat": 37.4812465845,
+            "to_lon": 127.0207377348,
+            "to_row": 390,
+            "to_time": "2026-11-04T03:06:40+00:00"
+          },
+          "measurements": {
+            "decision": "segment uses an off-road observation",
+            "included_m": 141.775347,
+            "length_m": 141.775347,
+            "road_distance_m": {
+              "from": 4e-06,
+              "to": 100.5
+            },
+            "segment": 380
+          },
+          "rule": "R1_OFF_ROAD",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S5c-00-P040",
+            "from_lat": 37.4812465845,
+            "from_lon": 127.0207377348,
+            "from_row": 390,
+            "from_time": "2026-11-04T03:06:40+00:00",
+            "included_m": 141.775355,
+            "length_m": 141.775355,
+            "report_date": "2026-11-04",
+            "segment": 381,
+            "to_id": "SYN-S5c-00-P041",
+            "to_lat": 37.4803601874,
+            "to_lon": 127.0218920003,
+            "to_row": 391,
+            "to_time": "2026-11-04T03:06:50+00:00"
+          },
+          "measurements": {
+            "decision": "segment uses an off-road observation",
+            "included_m": 141.775355,
+            "length_m": 141.775355,
+            "road_distance_m": {
+              "from": 100.5,
+              "to": 1e-06
+            },
+            "segment": 381
+          },
+          "rule": "R1_OFF_ROAD",
+          "selected_category": true
+        },
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S5c-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 419,
+            "from_time": "2026-11-04T03:11:30+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 410,
+            "to_id": "SYN-S5c-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 420,
+            "to_time": "2026-11-04T03:11:40+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 410
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": false
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 2900.000003,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": -49.999997,
+          "driver_id": "SYN-S9a-00",
+          "expected_legacy_m": 2900,
+          "expected_m": 2950,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S9a"
+        }
+      ],
+      "defect": "D-R6-ZONE-ENDPOINT",
+      "driver_id": "SYN-S9a-00",
+      "scenario": "S9a",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": false,
+            "from_id": "SYN-S9a-00-P069",
+            "from_lat": 37.4808860488,
+            "from_lon": 127.0535429623,
+            "from_row": 865,
+            "from_time": "2026-11-04T03:11:30+00:00",
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "report_date": "2026-11-04",
+            "segment": 850,
+            "to_id": "SYN-S9a-00-P070",
+            "to_lat": 37.4809046729,
+            "to_lon": 127.0546733689,
+            "to_row": 866,
+            "to_time": "2026-11-04T03:11:40+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": false,
+            "in_zone_length_m": 49.999998,
+            "included_m": 0.0,
+            "length_m": 99.999994,
+            "segment": 850
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": true
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 3000.000004,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 50.000004,
+          "driver_id": "SYN-S9b-00",
+          "expected_legacy_m": 3000,
+          "expected_m": 2950,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S9b"
+        }
+      ],
+      "defect": "D-R6-ZONE-ENDPOINT",
+      "driver_id": "SYN-S9b-00",
+      "scenario": "S9b",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S9b-00-P010",
+            "from_lat": 37.4797681014,
+            "from_lon": 126.9868508313,
+            "from_row": 887,
+            "from_time": "2026-11-04T03:01:40+00:00",
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "report_date": "2026-11-04",
+            "segment": 871,
+            "to_id": "SYN-S9b-00-P011",
+            "to_lat": 37.479787363,
+            "to_lon": 126.9879811756,
+            "to_row": 888,
+            "to_time": "2026-11-04T03:01:50+00:00"
+          },
+          "measurements": {
+            "decision": "whole segment included or excluded by end point only",
+            "endpoint_inside": true,
+            "in_zone_length_m": 50.000001,
+            "included_m": 100.000005,
+            "length_m": 100.000005,
+            "segment": 871
+          },
+          "rule": "R6_ENDPOINT",
+          "selected_category": true
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "actual_legacy_m": 299.999995,
+          "classification": "discrepancy",
+          "copy": 0,
+          "difference_m": 99.999995,
+          "driver_id": "SYN-S4-00",
+          "expected_legacy_m": 300,
+          "expected_m": 200,
+          "report_day_utc9": "2026-11-04",
+          "scenario": "S4"
+        }
+      ],
+      "defect": "D-R4-FILE-ORDER",
+      "driver_id": "SYN-S4-00",
+      "scenario": "S4",
+      "segments": [
+        {
+          "kind": "decision_conflict",
+          "ledger": {
+            "endpoint_inside": true,
+            "from_id": "SYN-S4-00-P002",
+            "from_lat": 37.4799985278,
+            "from_lon": 127.0004150331,
+            "from_row": 186,
+            "from_time": "2026-11-04T03:00:20+00:00",
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "report_date": "2026-11-04",
+            "segment": 180,
+            "to_id": "SYN-S4-00-P001",
+            "to_lat": 37.4799793851,
+            "to_lon": 126.9992846771,
+            "to_row": 187,
+            "to_time": "2026-11-04T03:00:10+00:00"
+          },
+          "measurements": {
+            "decision": "segment joins rows in file order, not device-time order",
+            "elapsed_s": -10.0,
+            "included_m": 99.999996,
+            "length_m": 99.999996,
+            "segment": 180
+          },
+          "rule": "R3_R4_FILE_ORDER",
+          "selected_category": true
+        }
+      ]
+    }
+  ],
+  "expectations_sha256": "6c1b31b0134e3f7860ccfdbad70ea9658d00e0665c24374e7c3781ef01658da0",
+  "flags_without_discrepancy": [
+    {
+      "conflicts": 6,
+      "rule": "R6_ENDPOINT",
+      "scenario": "S1"
+    },
+    {
+      "conflicts": 6,
+      "rule": "R6_ENDPOINT",
+      "scenario": "S10"
+    },
+    {
+      "conflicts": 6,
+      "rule": "R6_ENDPOINT",
+      "scenario": "S12"
+    },
+    {
+      "conflicts": 30,
+      "rule": "R3_R4_FILE_ORDER",
+      "scenario": "S2a"
+    },
+    {
+      "conflicts": 6,
+      "rule": "R6_ENDPOINT",
+      "scenario": "S2a"
+    },
+    {
+      "conflicts": 6,
+      "rule": "R6_ENDPOINT",
+      "scenario": "S5b"
+    },
+    {
+      "conflicts": 6,
+      "rule": "R6_ENDPOINT",
+      "scenario": "S6a"
+    }
+  ],
+  "input_sha256": "04795f4c5bbb19aef1b272b3c7d48d05b4741646a809cd076f603fac838720df",
+  "legacy_gate": "PASS: every legacy driver/day total equals its analytic legacy expectation",
+  "measurements": [
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S1-00",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S1"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S2a-00",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S2a"
+    },
+    {
+      "actual_legacy_m": 299.999995,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 99.999995,
+      "driver_id": "SYN-S2b-00",
+      "expected_legacy_m": 300,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S2b"
+    },
+    {
+      "actual_legacy_m": 276.619037,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 76.619037,
+      "driver_id": "SYN-S3-00",
+      "expected_legacy_m": 276.619037896906,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S3"
+    },
+    {
+      "actual_legacy_m": 430.277572,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 230.277572,
+      "driver_id": "SYN-S3b-00",
+      "expected_legacy_m": 430.277563773199,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S3b"
+    },
+    {
+      "actual_legacy_m": 299.999995,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 99.999995,
+      "driver_id": "SYN-S4-00",
+      "expected_legacy_m": 300,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S4"
+    },
+    {
+      "actual_legacy_m": 6060.555128,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 160.555128,
+      "driver_id": "SYN-S5a-00",
+      "expected_legacy_m": 6060.555127546399,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S5a"
+    },
+    {
+      "actual_legacy_m": 5982.136494,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": 2e-06,
+      "driver_id": "SYN-S5b-00",
+      "expected_legacy_m": 5982.136491790764,
+      "expected_m": 5982.136491790764,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S5b"
+    },
+    {
+      "actual_legacy_m": 5983.550702,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 83.550702,
+      "driver_id": "SYN-S5c-00",
+      "expected_legacy_m": 5983.550700933713,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S5c"
+    },
+    {
+      "actual_legacy_m": 6330.559994,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": -6e-06,
+      "driver_id": "SYN-S6a-00",
+      "expected_legacy_m": 6330.56,
+      "expected_m": 6330.56,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S6a"
+    },
+    {
+      "actual_legacy_m": 6336.120005,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 436.120005,
+      "driver_id": "SYN-S6b-00",
+      "expected_legacy_m": 6336.12,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S6b"
+    },
+    {
+      "actual_legacy_m": 7700.000001,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 1800.000001,
+      "driver_id": "SYN-S6c-00",
+      "expected_legacy_m": 7700,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S6c"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 2950.000006,
+      "driver_id": "SYN-S7-00",
+      "expected_legacy_m": 5900,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S7"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": -2950.0,
+      "driver_id": "SYN-S7-00",
+      "expected_legacy_m": 0,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S7"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 5880.000006,
+      "driver_id": "SYN-S8-00",
+      "expected_legacy_m": 5900,
+      "expected_m": 20,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S8"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": -5880.0,
+      "driver_id": "SYN-S8-00",
+      "expected_legacy_m": 0,
+      "expected_m": 5880,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S8"
+    },
+    {
+      "actual_legacy_m": 2900.000003,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": -49.999997,
+      "driver_id": "SYN-S9a-00",
+      "expected_legacy_m": 2900,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S9a"
+    },
+    {
+      "actual_legacy_m": 3000.000004,
+      "classification": "discrepancy",
+      "copy": 0,
+      "difference_m": 50.000004,
+      "driver_id": "SYN-S9b-00",
+      "expected_legacy_m": 3000,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S9b"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S10-00",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S10"
+    },
+    {
+      "actual_legacy_m": 600.000341,
+      "classification": "characterization",
+      "copy": 0,
+      "difference_m": 0.000341,
+      "driver_id": "SYN-S11-00",
+      "expected_legacy_m": 600,
+      "expected_m": 600,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S11"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S12-00",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S12"
+    },
+    {
+      "actual_legacy_m": 6099.999999,
+      "classification": "characterization",
+      "copy": 0,
+      "difference_m": 6099.999999,
+      "driver_id": "SYN-S13-00",
+      "expected_legacy_m": 6100,
+      "expected_m": 0,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S13"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "control",
+      "copy": 0,
+      "difference_m": 0.0,
+      "driver_id": "SYN-S14-00",
+      "expected_legacy_m": 0,
+      "expected_m": 0,
+      "report_day_utc9": "2026-11-04",
+      "scenario": "S14"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S1-01",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S1"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S2a-01",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S2a"
+    },
+    {
+      "actual_legacy_m": 299.999995,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 99.999995,
+      "driver_id": "SYN-S2b-01",
+      "expected_legacy_m": 300,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S2b"
+    },
+    {
+      "actual_legacy_m": 276.619037,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 76.619037,
+      "driver_id": "SYN-S3-01",
+      "expected_legacy_m": 276.619037896906,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S3"
+    },
+    {
+      "actual_legacy_m": 430.277572,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 230.277572,
+      "driver_id": "SYN-S3b-01",
+      "expected_legacy_m": 430.277563773199,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S3b"
+    },
+    {
+      "actual_legacy_m": 299.999995,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 99.999995,
+      "driver_id": "SYN-S4-01",
+      "expected_legacy_m": 300,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S4"
+    },
+    {
+      "actual_legacy_m": 6060.555128,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 160.555128,
+      "driver_id": "SYN-S5a-01",
+      "expected_legacy_m": 6060.555127546399,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S5a"
+    },
+    {
+      "actual_legacy_m": 5982.136494,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": 2e-06,
+      "driver_id": "SYN-S5b-01",
+      "expected_legacy_m": 5982.136491790764,
+      "expected_m": 5982.136491790764,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S5b"
+    },
+    {
+      "actual_legacy_m": 5983.550702,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 83.550702,
+      "driver_id": "SYN-S5c-01",
+      "expected_legacy_m": 5983.550700933713,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S5c"
+    },
+    {
+      "actual_legacy_m": 6330.559994,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": -6e-06,
+      "driver_id": "SYN-S6a-01",
+      "expected_legacy_m": 6330.56,
+      "expected_m": 6330.56,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S6a"
+    },
+    {
+      "actual_legacy_m": 6336.120005,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 436.120005,
+      "driver_id": "SYN-S6b-01",
+      "expected_legacy_m": 6336.12,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S6b"
+    },
+    {
+      "actual_legacy_m": 7700.000001,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 1800.000001,
+      "driver_id": "SYN-S6c-01",
+      "expected_legacy_m": 7700,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S6c"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 2950.000006,
+      "driver_id": "SYN-S7-01",
+      "expected_legacy_m": 5900,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S7"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": -2950.0,
+      "driver_id": "SYN-S7-01",
+      "expected_legacy_m": 0,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S7"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 5880.000006,
+      "driver_id": "SYN-S8-01",
+      "expected_legacy_m": 5900,
+      "expected_m": 20,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S8"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": -5880.0,
+      "driver_id": "SYN-S8-01",
+      "expected_legacy_m": 0,
+      "expected_m": 5880,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S8"
+    },
+    {
+      "actual_legacy_m": 2900.000003,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": -49.999997,
+      "driver_id": "SYN-S9a-01",
+      "expected_legacy_m": 2900,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S9a"
+    },
+    {
+      "actual_legacy_m": 3000.000004,
+      "classification": "discrepancy",
+      "copy": 1,
+      "difference_m": 50.000004,
+      "driver_id": "SYN-S9b-01",
+      "expected_legacy_m": 3000,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S9b"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S10-01",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S10"
+    },
+    {
+      "actual_legacy_m": 600.000341,
+      "classification": "characterization",
+      "copy": 1,
+      "difference_m": 0.000341,
+      "driver_id": "SYN-S11-01",
+      "expected_legacy_m": 600,
+      "expected_m": 600,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S11"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S12-01",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S12"
+    },
+    {
+      "actual_legacy_m": 6099.999999,
+      "classification": "characterization",
+      "copy": 1,
+      "difference_m": 6099.999999,
+      "driver_id": "SYN-S13-01",
+      "expected_legacy_m": 6100,
+      "expected_m": 0,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S13"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "control",
+      "copy": 1,
+      "difference_m": 0.0,
+      "driver_id": "SYN-S14-01",
+      "expected_legacy_m": 0,
+      "expected_m": 0,
+      "report_day_utc9": "2026-11-05",
+      "scenario": "S14"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S1-02",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S1"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S2a-02",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S2a"
+    },
+    {
+      "actual_legacy_m": 299.999995,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 99.999995,
+      "driver_id": "SYN-S2b-02",
+      "expected_legacy_m": 300,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S2b"
+    },
+    {
+      "actual_legacy_m": 276.619037,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 76.619037,
+      "driver_id": "SYN-S3-02",
+      "expected_legacy_m": 276.619037896906,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S3"
+    },
+    {
+      "actual_legacy_m": 430.277572,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 230.277572,
+      "driver_id": "SYN-S3b-02",
+      "expected_legacy_m": 430.277563773199,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S3b"
+    },
+    {
+      "actual_legacy_m": 299.999995,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 99.999995,
+      "driver_id": "SYN-S4-02",
+      "expected_legacy_m": 300,
+      "expected_m": 200,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S4"
+    },
+    {
+      "actual_legacy_m": 6060.555128,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 160.555128,
+      "driver_id": "SYN-S5a-02",
+      "expected_legacy_m": 6060.555127546399,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S5a"
+    },
+    {
+      "actual_legacy_m": 5982.136494,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": 2e-06,
+      "driver_id": "SYN-S5b-02",
+      "expected_legacy_m": 5982.136491790764,
+      "expected_m": 5982.136491790764,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S5b"
+    },
+    {
+      "actual_legacy_m": 5983.550702,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 83.550702,
+      "driver_id": "SYN-S5c-02",
+      "expected_legacy_m": 5983.550700933713,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S5c"
+    },
+    {
+      "actual_legacy_m": 6330.559994,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": -6e-06,
+      "driver_id": "SYN-S6a-02",
+      "expected_legacy_m": 6330.56,
+      "expected_m": 6330.56,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S6a"
+    },
+    {
+      "actual_legacy_m": 6336.120005,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 436.120005,
+      "driver_id": "SYN-S6b-02",
+      "expected_legacy_m": 6336.12,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S6b"
+    },
+    {
+      "actual_legacy_m": 7700.000001,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 1800.000001,
+      "driver_id": "SYN-S6c-02",
+      "expected_legacy_m": 7700,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S6c"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 2950.000006,
+      "driver_id": "SYN-S7-02",
+      "expected_legacy_m": 5900,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S7"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": -2950.0,
+      "driver_id": "SYN-S7-02",
+      "expected_legacy_m": 0,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-07",
+      "scenario": "S7"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 5880.000006,
+      "driver_id": "SYN-S8-02",
+      "expected_legacy_m": 5900,
+      "expected_m": 20,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S8"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": -5880.0,
+      "driver_id": "SYN-S8-02",
+      "expected_legacy_m": 0,
+      "expected_m": 5880,
+      "report_day_utc9": "2026-11-07",
+      "scenario": "S8"
+    },
+    {
+      "actual_legacy_m": 2900.000003,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": -49.999997,
+      "driver_id": "SYN-S9a-02",
+      "expected_legacy_m": 2900,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S9a"
+    },
+    {
+      "actual_legacy_m": 3000.000004,
+      "classification": "discrepancy",
+      "copy": 2,
+      "difference_m": 50.000004,
+      "driver_id": "SYN-S9b-02",
+      "expected_legacy_m": 3000,
+      "expected_m": 2950,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S9b"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S10-02",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S10"
+    },
+    {
+      "actual_legacy_m": 600.000341,
+      "classification": "characterization",
+      "copy": 2,
+      "difference_m": 0.000341,
+      "driver_id": "SYN-S11-02",
+      "expected_legacy_m": 600,
+      "expected_m": 600,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S11"
+    },
+    {
+      "actual_legacy_m": 5900.000006,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": 6e-06,
+      "driver_id": "SYN-S12-02",
+      "expected_legacy_m": 5900,
+      "expected_m": 5900,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S12"
+    },
+    {
+      "actual_legacy_m": 6099.999999,
+      "classification": "characterization",
+      "copy": 2,
+      "difference_m": 6099.999999,
+      "driver_id": "SYN-S13-02",
+      "expected_legacy_m": 6100,
+      "expected_m": 0,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S13"
+    },
+    {
+      "actual_legacy_m": 0.0,
+      "classification": "control",
+      "copy": 2,
+      "difference_m": 0.0,
+      "driver_id": "SYN-S14-02",
+      "expected_legacy_m": 0,
+      "expected_m": 0,
+      "report_day_utc9": "2026-11-06",
+      "scenario": "S14"
+    }
+  ],
+  "r5_attribution": {
+    "basis": "analytic; date correction first with endpoint policy held fixed",
+    "date_only_vectors": {
+      "S7": [
+        3000,
+        2900
+      ],
+      "S8": [
+        70,
+        5830
+      ]
+    },
+    "isolated_r5_absolute_m": 52380.0,
+    "negative_m": -26490.0,
+    "net_m": 3.6e-05,
+    "observed_absolute_m": 52980.000036,
+    "positive_m": 26490.000036,
+    "r5_moved_m": 26190.0,
+    "r6_interaction_absolute_m": 600.0
+  },
+  "ranking": [
+    {
+      "absolute_m": 52980.000036,
+      "by_scenario": {
+        "S7": {
+          "absolute_m": 17700.000018,
+          "driver_days": 6
+        },
+        "S8": {
+          "absolute_m": 35280.000018,
+          "driver_days": 6
+        }
+      },
+      "checker_rules": [
+        "R5_UTC_DATE"
+      ],
+      "defect": "D-R5-UTC-DAY",
+      "driver_days": 12,
+      "drivers": 6,
+      "legacy_behavior": "Each segment is labelled with its end point's UTC date.",
+      "net_m": 3.6e-05,
+      "overcount_m": 26490.000036,
+      "rank": 1,
+      "rule": "R5",
+      "scenarios": [
+        "S7",
+        "S8"
+      ],
+      "title": "Distance is dated by UTC calendar day, not the UTC+9 report day",
+      "undercount_m": 26490.0,
+      "unexplained": []
+    },
+    {
+      "absolute_m": 6708.360018,
+      "by_scenario": {
+        "S6b": {
+          "absolute_m": 1308.360015,
+          "driver_days": 3
+        },
+        "S6c": {
+          "absolute_m": 5400.000003,
+          "driver_days": 3
+        }
+      },
+      "checker_rules": [
+        "LEGACY_RAW_PAIR_SPEED_ANOMALY"
+      ],
+      "defect": "D-R2-SPEED",
+      "driver_days": 6,
+      "drivers": 6,
+      "legacy_behavior": "No speed filter; the spike's out-and-back chords are both counted.",
+      "net_m": 6708.360018,
+      "overcount_m": 6708.360018,
+      "rank": 2,
+      "rule": "R2",
+      "scenarios": [
+        "S6b",
+        "S6c"
+      ],
+      "title": "Speed spikes above 150 km/h are billed",
+      "undercount_m": 0.0,
+      "unexplained": []
+    },
+    {
+      "absolute_m": 1220.689812,
+      "by_scenario": {
+        "S2b": {
+          "absolute_m": 299.999985,
+          "driver_days": 3
+        },
+        "S3": {
+          "absolute_m": 229.857111,
+          "driver_days": 3
+        },
+        "S3b": {
+          "absolute_m": 690.832716,
+          "driver_days": 3
+        }
+      },
+      "checker_rules": [
+        "R3_R4_FILE_ORDER",
+        "R1_OFF_ROAD"
+      ],
+      "defect": "D-R3-DUPLICATE",
+      "driver_days": 9,
+      "drivers": 9,
+      "legacy_behavior": "No dedupe; a late or conflicting copy becomes a new segment end.",
+      "net_m": 1220.689812,
+      "overcount_m": 1220.689812,
+      "rank": 3,
+      "rule": "R3",
+      "scenarios": [
+        "S2b",
+        "S3",
+        "S3b"
+      ],
+      "title": "Duplicate pings (same driver and timestamp) are counted again",
+      "undercount_m": 0.0,
+      "unexplained": []
+    },
+    {
+      "absolute_m": 732.31749,
+      "by_scenario": {
+        "S5a": {
+          "absolute_m": 481.665384,
+          "driver_days": 3
+        },
+        "S5c": {
+          "absolute_m": 250.652106,
+          "driver_days": 3
+        }
+      },
+      "checker_rules": [
+        "R1_OFF_ROAD"
+      ],
+      "defect": "D-R1-OFF-ROAD",
+      "driver_days": 6,
+      "drivers": 6,
+      "legacy_behavior": "No road filter; the detour to the noisy ping is counted.",
+      "net_m": 732.31749,
+      "overcount_m": 732.31749,
+      "rank": 4,
+      "rule": "R1",
+      "scenarios": [
+        "S5a",
+        "S5c"
+      ],
+      "title": "Pings more than 100 m off the road are billed",
+      "undercount_m": 0.0,
+      "unexplained": []
+    },
+    {
+      "absolute_m": 300.000003,
+      "by_scenario": {
+        "S9a": {
+          "absolute_m": 149.999991,
+          "driver_days": 3
+        },
+        "S9b": {
+          "absolute_m": 150.000012,
+          "driver_days": 3
+        }
+      },
+      "checker_rules": [
+        "R6_ENDPOINT"
+      ],
+      "defect": "D-R6-ZONE-ENDPOINT",
+      "driver_days": 6,
+      "drivers": 6,
+      "legacy_behavior": "Entry segment counted whole; exit segment dropped whole.",
+      "net_m": 2.1e-05,
+      "overcount_m": 150.000012,
+      "rank": 5,
+      "rule": "R6",
+      "scenarios": [
+        "S9a",
+        "S9b"
+      ],
+      "title": "Zone membership decided by segment end point only",
+      "undercount_m": 149.999991,
+      "unexplained": []
+    },
+    {
+      "absolute_m": 299.999985,
+      "by_scenario": {
+        "S4": {
+          "absolute_m": 299.999985,
+          "driver_days": 3
+        }
+      },
+      "checker_rules": [
+        "R3_R4_FILE_ORDER"
+      ],
+      "defect": "D-R4-FILE-ORDER",
+      "driver_days": 3,
+      "drivers": 3,
+      "legacy_behavior": "An out-of-order row creates a backward segment.",
+      "net_m": 299.999985,
+      "overcount_m": 299.999985,
+      "rank": 6,
+      "rule": "R4",
+      "scenarios": [
+        "S4"
+      ],
+      "title": "Late pings are joined in file order, not by their own timestamp",
+      "undercount_m": 0.0,
+      "unexplained": []
+    }
+  ],
+  "speed_basis": "S6b: 418.06/10*3.6=150.5016; S6c: 1100/10*3.6=396. Both spikes rejected by independent fixture arithmetic; next anchor leg 200/20*3.6=36. Raw-pair flags alone do not prove this."
+}

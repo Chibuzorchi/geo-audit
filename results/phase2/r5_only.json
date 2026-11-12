@@ -1,0 +1,107 @@
+{
+  "actual_legacy_m": [
+    100.00000273383924,
+    0
+  ],
+  "conflicts": [
+    {
+      "driver": "SYN-R5-ONLY",
+      "ids": [
+        "SYN-R5-ONLY-P0",
+        "SYN-R5-ONLY-P1"
+      ],
+      "kind": "decision_conflict",
+      "measurements": {
+        "decision": "distance labelled with end point's UTC date",
+        "included_m": 100.00000273383924,
+        "legacy_date": "2026-11-04",
+        "length_m": 100.00000273383924,
+        "segment": 0,
+        "utc9_days": [
+          "2026-11-04",
+          "2026-11-05"
+        ]
+      },
+      "rows": [
+        1,
+        2
+      ],
+      "rule": "R5_UTC_DATE",
+      "timestamps": [
+        "2026-11-04T14:59:55+00:00",
+        "2026-11-04T15:00:05+00:00"
+      ]
+    }
+  ],
+  "fixture": {
+    "dates": [
+      "2026-11-04",
+      "2026-11-05"
+    ],
+    "derivation": "100 m wholly inside zone; 5 seconds of 10 on each reporting day; 36 km/h",
+    "legacy_m": [
+      100,
+      0
+    ],
+    "local_positions_m": [
+      [
+        3000,
+        0
+      ],
+      [
+        3100,
+        0
+      ]
+    ],
+    "required_m": [
+      50,
+      50
+    ],
+    "scenario": "R5-only supplemental fixture; not added to bulk dataset",
+    "timestamps": [
+      "2026-11-04T14:59:55Z",
+      "2026-11-04T15:00:05Z"
+    ]
+  },
+  "raw_rows": [
+    {
+      "driver_id": "SYN-R5-ONLY",
+      "is_synthetic": "true",
+      "lat": "37.4799602315",
+      "lon": "126.9981543221",
+      "ping_id": "SYN-R5-ONLY-P0",
+      "received_at_utc": "2026-11-04T14:59:56+00:00",
+      "ts_utc": "2026-11-04T14:59:55Z"
+    },
+    {
+      "driver_id": "SYN-R5-ONLY",
+      "is_synthetic": "true",
+      "lat": "37.4799793851",
+      "lon": "126.9992846771",
+      "ping_id": "SYN-R5-ONLY-P1",
+      "received_at_utc": "2026-11-04T15:00:06+00:00",
+      "ts_utc": "2026-11-04T15:00:05Z"
+    }
+  ],
+  "required_basis": "Independent 100 * 5/10 per day; no corrected calculator executed",
+  "segments": [
+    {
+      "date_basis": "UTC endpoint",
+      "driver_id": "SYN-R5-ONLY",
+      "endpoint_inside": true,
+      "from_id": "SYN-R5-ONLY-P0",
+      "from_lat": 37.4799602315,
+      "from_lon": 126.9981543221,
+      "from_row": 1,
+      "from_time": "2026-11-04T14:59:55+00:00",
+      "included_m": 100.00000273383924,
+      "length_m": 100.00000273383924,
+      "report_date": "2026-11-04",
+      "to_id": "SYN-R5-ONLY-P1",
+      "to_lat": 37.4799793851,
+      "to_lon": 126.9992846771,
+      "to_row": 2,
+      "to_time": "2026-11-04T15:00:05+00:00"
+    }
+  ]
+}

@@ -1,0 +1,3908 @@
+[
+  {
+    "driver": "SYN-S2b-00",
+    "ids": [
+      "SYN-S2b-00-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "lateness_s": 21.0
+    },
+    "rows": [
+      176
+    ],
+    "rule": "R4_LATE",
+    "timestamps": [
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-00",
+    "ids": [
+      "SYN-S2b-00-P002",
+      "SYN-S2b-00-D001"
+    ],
+    "kind": "condition",
+    "measurements": {},
+    "rows": [
+      175,
+      176
+    ],
+    "rule": "R4_ORDER",
+    "timestamps": [
+      "2026-11-04T03:00:20+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3b-00",
+    "ids": [
+      "SYN-S3b-00-D001"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 150.000004
+    },
+    "rows": [
+      183
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S4-00",
+    "ids": [
+      "SYN-S4-00-P001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "lateness_s": 21.0
+    },
+    "rows": [
+      187
+    ],
+    "rule": "R4_LATE",
+    "timestamps": [
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S4-00",
+    "ids": [
+      "SYN-S4-00-P002",
+      "SYN-S4-00-P001"
+    ],
+    "kind": "condition",
+    "measurements": {},
+    "rows": [
+      186,
+      187
+    ],
+    "rule": "R4_ORDER",
+    "timestamps": [
+      "2026-11-04T03:00:20+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-00",
+    "ids": [
+      "SYN-S5a-00-P040"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 150.0
+    },
+    "rows": [
+      228
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-04T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-00",
+    "ids": [
+      "SYN-S5c-00-P040"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 100.5
+    },
+    "rows": [
+      390
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-04T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-00",
+    "ids": [
+      "SYN-S12-00-Q0"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": true,
+      "reasons": [
+        "BAD_COORDINATE"
+      ]
+    },
+    "rows": [
+      1101
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      "2026-11-04T03:00:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-00",
+    "ids": [
+      "SYN-S12-00-Q1"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "ts_utc:BAD_TIMESTAMP"
+      ]
+    },
+    "rows": [
+      1102
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      null
+    ]
+  },
+  {
+    "driver": "SYN-S12-00",
+    "ids": [
+      "SYN-S12-00-Q2"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "ts_utc:NAIVE_TIMESTAMP"
+      ]
+    },
+    "rows": [
+      1103
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      null
+    ]
+  },
+  {
+    "driver": null,
+    "ids": [
+      "SYN-S12-00-Q3"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "BAD_DRIVER_ID"
+      ]
+    },
+    "rows": [
+      1104
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      "2026-11-04T03:00:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-01",
+    "ids": [
+      "SYN-S2b-01-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "lateness_s": 21.0
+    },
+    "rows": [
+      1285
+    ],
+    "rule": "R4_LATE",
+    "timestamps": [
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-01",
+    "ids": [
+      "SYN-S2b-01-P002",
+      "SYN-S2b-01-D001"
+    ],
+    "kind": "condition",
+    "measurements": {},
+    "rows": [
+      1284,
+      1285
+    ],
+    "rule": "R4_ORDER",
+    "timestamps": [
+      "2026-11-05T03:00:20+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3b-01",
+    "ids": [
+      "SYN-S3b-01-D001"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 150.000004
+    },
+    "rows": [
+      1292
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S4-01",
+    "ids": [
+      "SYN-S4-01-P001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "lateness_s": 21.0
+    },
+    "rows": [
+      1296
+    ],
+    "rule": "R4_LATE",
+    "timestamps": [
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S4-01",
+    "ids": [
+      "SYN-S4-01-P002",
+      "SYN-S4-01-P001"
+    ],
+    "kind": "condition",
+    "measurements": {},
+    "rows": [
+      1295,
+      1296
+    ],
+    "rule": "R4_ORDER",
+    "timestamps": [
+      "2026-11-05T03:00:20+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-01",
+    "ids": [
+      "SYN-S5a-01-P040"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 150.0
+    },
+    "rows": [
+      1337
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-05T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-01",
+    "ids": [
+      "SYN-S5c-01-P040"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 100.5
+    },
+    "rows": [
+      1499
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-05T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-01",
+    "ids": [
+      "SYN-S12-01-Q0"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": true,
+      "reasons": [
+        "BAD_COORDINATE"
+      ]
+    },
+    "rows": [
+      2210
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      "2026-11-05T03:00:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-01",
+    "ids": [
+      "SYN-S12-01-Q1"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "ts_utc:BAD_TIMESTAMP"
+      ]
+    },
+    "rows": [
+      2211
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      null
+    ]
+  },
+  {
+    "driver": "SYN-S12-01",
+    "ids": [
+      "SYN-S12-01-Q2"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "ts_utc:NAIVE_TIMESTAMP"
+      ]
+    },
+    "rows": [
+      2212
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      null
+    ]
+  },
+  {
+    "driver": null,
+    "ids": [
+      "SYN-S12-01-Q3"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "BAD_DRIVER_ID"
+      ]
+    },
+    "rows": [
+      2213
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      "2026-11-05T03:00:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-02",
+    "ids": [
+      "SYN-S2b-02-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "lateness_s": 21.0
+    },
+    "rows": [
+      2394
+    ],
+    "rule": "R4_LATE",
+    "timestamps": [
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-02",
+    "ids": [
+      "SYN-S2b-02-P002",
+      "SYN-S2b-02-D001"
+    ],
+    "kind": "condition",
+    "measurements": {},
+    "rows": [
+      2393,
+      2394
+    ],
+    "rule": "R4_ORDER",
+    "timestamps": [
+      "2026-11-06T03:00:20+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3b-02",
+    "ids": [
+      "SYN-S3b-02-D001"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 150.000004
+    },
+    "rows": [
+      2401
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S4-02",
+    "ids": [
+      "SYN-S4-02-P001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "lateness_s": 21.0
+    },
+    "rows": [
+      2405
+    ],
+    "rule": "R4_LATE",
+    "timestamps": [
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S4-02",
+    "ids": [
+      "SYN-S4-02-P002",
+      "SYN-S4-02-P001"
+    ],
+    "kind": "condition",
+    "measurements": {},
+    "rows": [
+      2404,
+      2405
+    ],
+    "rule": "R4_ORDER",
+    "timestamps": [
+      "2026-11-06T03:00:20+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-02",
+    "ids": [
+      "SYN-S5a-02-P040"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 150.0
+    },
+    "rows": [
+      2446
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-06T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-02",
+    "ids": [
+      "SYN-S5c-02-P040"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "road_distance_m": 100.5
+    },
+    "rows": [
+      2608
+    ],
+    "rule": "R1",
+    "timestamps": [
+      "2026-11-06T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-02",
+    "ids": [
+      "SYN-S12-02-Q0"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": true,
+      "reasons": [
+        "BAD_COORDINATE"
+      ]
+    },
+    "rows": [
+      3319
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      "2026-11-06T03:00:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-02",
+    "ids": [
+      "SYN-S12-02-Q1"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "ts_utc:BAD_TIMESTAMP"
+      ]
+    },
+    "rows": [
+      3320
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      null
+    ]
+  },
+  {
+    "driver": "SYN-S12-02",
+    "ids": [
+      "SYN-S12-02-Q2"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "ts_utc:NAIVE_TIMESTAMP"
+      ]
+    },
+    "rows": [
+      3321
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      null
+    ]
+  },
+  {
+    "driver": null,
+    "ids": [
+      "SYN-S12-02-Q3"
+    ],
+    "kind": "rule_violation",
+    "measurements": {
+      "assignable": false,
+      "reasons": [
+        "BAD_DRIVER_ID"
+      ]
+    },
+    "rows": [
+      3322
+    ],
+    "rule": "INPUT",
+    "timestamps": [
+      "2026-11-06T03:00:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P020",
+      "SYN-S2a-00-D020"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      102,
+      103
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:03:20+00:00",
+      "2026-11-04T03:03:20+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P021",
+      "SYN-S2a-00-D021"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      104,
+      105
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:03:30+00:00",
+      "2026-11-04T03:03:30+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P022",
+      "SYN-S2a-00-D022"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      106,
+      107
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:03:40+00:00",
+      "2026-11-04T03:03:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P023",
+      "SYN-S2a-00-D023"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      108,
+      109
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:03:50+00:00",
+      "2026-11-04T03:03:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P024",
+      "SYN-S2a-00-D024"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      110,
+      111
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:04:00+00:00",
+      "2026-11-04T03:04:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P025",
+      "SYN-S2a-00-D025"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      112,
+      113
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:04:10+00:00",
+      "2026-11-04T03:04:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P026",
+      "SYN-S2a-00-D026"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      114,
+      115
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:04:20+00:00",
+      "2026-11-04T03:04:20+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P027",
+      "SYN-S2a-00-D027"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      116,
+      117
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:04:30+00:00",
+      "2026-11-04T03:04:30+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P028",
+      "SYN-S2a-00-D028"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      118,
+      119
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:04:40+00:00",
+      "2026-11-04T03:04:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P029",
+      "SYN-S2a-00-D029"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      120,
+      121
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:04:50+00:00",
+      "2026-11-04T03:04:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-00",
+    "ids": [
+      "SYN-S2b-00-P001",
+      "SYN-S2b-00-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      174,
+      176
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:00:10+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3-00",
+    "ids": [
+      "SYN-S3-00-P001",
+      "SYN-S3-00-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": true,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      178,
+      179
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:00:10+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3b-00",
+    "ids": [
+      "SYN-S3b-00-P001",
+      "SYN-S3b-00-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": true,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      182,
+      183
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-04T03:00:10+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P020",
+      "SYN-S2a-01-D020"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1211,
+      1212
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:03:20+00:00",
+      "2026-11-05T03:03:20+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P021",
+      "SYN-S2a-01-D021"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1213,
+      1214
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:03:30+00:00",
+      "2026-11-05T03:03:30+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P022",
+      "SYN-S2a-01-D022"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1215,
+      1216
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:03:40+00:00",
+      "2026-11-05T03:03:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P023",
+      "SYN-S2a-01-D023"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1217,
+      1218
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:03:50+00:00",
+      "2026-11-05T03:03:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P024",
+      "SYN-S2a-01-D024"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1219,
+      1220
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:04:00+00:00",
+      "2026-11-05T03:04:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P025",
+      "SYN-S2a-01-D025"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1221,
+      1222
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:04:10+00:00",
+      "2026-11-05T03:04:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P026",
+      "SYN-S2a-01-D026"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1223,
+      1224
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:04:20+00:00",
+      "2026-11-05T03:04:20+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P027",
+      "SYN-S2a-01-D027"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1225,
+      1226
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:04:30+00:00",
+      "2026-11-05T03:04:30+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P028",
+      "SYN-S2a-01-D028"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1227,
+      1228
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:04:40+00:00",
+      "2026-11-05T03:04:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P029",
+      "SYN-S2a-01-D029"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1229,
+      1230
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:04:50+00:00",
+      "2026-11-05T03:04:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-01",
+    "ids": [
+      "SYN-S2b-01-P001",
+      "SYN-S2b-01-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1283,
+      1285
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:00:10+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3-01",
+    "ids": [
+      "SYN-S3-01-P001",
+      "SYN-S3-01-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": true,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1287,
+      1288
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:00:10+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3b-01",
+    "ids": [
+      "SYN-S3b-01-P001",
+      "SYN-S3b-01-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": true,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      1291,
+      1292
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-05T03:00:10+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P020",
+      "SYN-S2a-02-D020"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2320,
+      2321
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:03:20+00:00",
+      "2026-11-06T03:03:20+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P021",
+      "SYN-S2a-02-D021"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2322,
+      2323
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:03:30+00:00",
+      "2026-11-06T03:03:30+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P022",
+      "SYN-S2a-02-D022"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2324,
+      2325
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:03:40+00:00",
+      "2026-11-06T03:03:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P023",
+      "SYN-S2a-02-D023"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2326,
+      2327
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:03:50+00:00",
+      "2026-11-06T03:03:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P024",
+      "SYN-S2a-02-D024"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2328,
+      2329
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:04:00+00:00",
+      "2026-11-06T03:04:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P025",
+      "SYN-S2a-02-D025"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2330,
+      2331
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:04:10+00:00",
+      "2026-11-06T03:04:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P026",
+      "SYN-S2a-02-D026"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2332,
+      2333
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:04:20+00:00",
+      "2026-11-06T03:04:20+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P027",
+      "SYN-S2a-02-D027"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2334,
+      2335
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:04:30+00:00",
+      "2026-11-06T03:04:30+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P028",
+      "SYN-S2a-02-D028"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2336,
+      2337
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:04:40+00:00",
+      "2026-11-06T03:04:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P029",
+      "SYN-S2a-02-D029"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2338,
+      2339
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:04:50+00:00",
+      "2026-11-06T03:04:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2b-02",
+    "ids": [
+      "SYN-S2b-02-P001",
+      "SYN-S2b-02-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": false,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2392,
+      2394
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:00:10+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3-02",
+    "ids": [
+      "SYN-S3-02-P001",
+      "SYN-S3-02-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": true,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2396,
+      2397
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:00:10+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S3b-02",
+    "ids": [
+      "SYN-S3b-02-P001",
+      "SYN-S3b-02-D001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "conflict": true,
+      "note": "duplicate condition; billing effect not inferred"
+    },
+    "rows": [
+      2400,
+      2401
+    ],
+    "rule": "R3",
+    "timestamps": [
+      "2026-11-06T03:00:10+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S1-00",
+    "ids": [
+      "SYN-S1-00-P010",
+      "SYN-S1-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      11,
+      12
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S1-00",
+    "ids": [
+      "SYN-S1-00-P069",
+      "SYN-S1-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      70,
+      71
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P010",
+      "SYN-S2a-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      92,
+      93
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-00",
+    "ids": [
+      "SYN-S2a-00-P069",
+      "SYN-S2a-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      161,
+      162
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-00",
+    "ids": [
+      "SYN-S5a-00-P010",
+      "SYN-S5a-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      198,
+      199
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-00",
+    "ids": [
+      "SYN-S5a-00-P069",
+      "SYN-S5a-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      257,
+      258
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5b-00",
+    "ids": [
+      "SYN-S5b-00-P010",
+      "SYN-S5b-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      279,
+      280
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5b-00",
+    "ids": [
+      "SYN-S5b-00-P069",
+      "SYN-S5b-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      338,
+      339
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-00",
+    "ids": [
+      "SYN-S5c-00-P010",
+      "SYN-S5c-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      360,
+      361
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-00",
+    "ids": [
+      "SYN-S5c-00-P069",
+      "SYN-S5c-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      419,
+      420
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6a-00",
+    "ids": [
+      "SYN-S6a-00-P010",
+      "SYN-S6a-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      441,
+      442
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6a-00",
+    "ids": [
+      "SYN-S6a-00-P069",
+      "SYN-S6a-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      500,
+      501
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-00",
+    "ids": [
+      "SYN-S6b-00-P010",
+      "SYN-S6b-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      522,
+      523
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-00",
+    "ids": [
+      "SYN-S6b-00-P039",
+      "SYN-S6b-00-P040"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 150.501602
+    },
+    "rows": [
+      551,
+      552
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-04T03:06:30+00:00",
+      "2026-11-04T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-00",
+    "ids": [
+      "SYN-S6b-00-P069",
+      "SYN-S6b-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      581,
+      582
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-00",
+    "ids": [
+      "SYN-S6c-00-P010",
+      "SYN-S6c-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      603,
+      604
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-00",
+    "ids": [
+      "SYN-S6c-00-P039",
+      "SYN-S6c-00-P040"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 396.000001
+    },
+    "rows": [
+      632,
+      633
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-04T03:06:30+00:00",
+      "2026-11-04T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-00",
+    "ids": [
+      "SYN-S6c-00-P040",
+      "SYN-S6c-00-P041"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 323.999999
+    },
+    "rows": [
+      633,
+      634
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-04T03:06:40+00:00",
+      "2026-11-04T03:06:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-00",
+    "ids": [
+      "SYN-S6c-00-P069",
+      "SYN-S6c-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      662,
+      663
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S7-00",
+    "ids": [
+      "SYN-S7-00-P010",
+      "SYN-S7-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      684,
+      685
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T14:55:00+00:00",
+      "2026-11-04T14:55:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S7-00",
+    "ids": [
+      "SYN-S7-00-P069",
+      "SYN-S7-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      743,
+      744
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T15:04:50+00:00",
+      "2026-11-04T15:05:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-00",
+    "ids": [
+      "SYN-S8-00-P010",
+      "SYN-S8-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      765,
+      766
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T14:59:53+00:00",
+      "2026-11-04T15:00:03+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-00",
+    "ids": [
+      "SYN-S8-00-P010",
+      "SYN-S8-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "end_day": "2026-11-05",
+      "start_day": "2026-11-04"
+    },
+    "rows": [
+      765,
+      766
+    ],
+    "rule": "R5_CROSS",
+    "timestamps": [
+      "2026-11-04T14:59:53+00:00",
+      "2026-11-04T15:00:03+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-00",
+    "ids": [
+      "SYN-S8-00-P069",
+      "SYN-S8-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      824,
+      825
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T15:09:43+00:00",
+      "2026-11-04T15:09:53+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S9a-00",
+    "ids": [
+      "SYN-S9a-00-P069",
+      "SYN-S9a-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      865,
+      866
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S9b-00",
+    "ids": [
+      "SYN-S9b-00-P010",
+      "SYN-S9b-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      887,
+      888
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-00",
+    "ids": [
+      "SYN-S10-00-P010",
+      "SYN-S10-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      928,
+      929
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-00",
+    "ids": [
+      "SYN-S10-00-P019",
+      "SYN-S10-00-P060"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "chord_m": 4100.000003,
+      "elapsed_s": 410.0
+    },
+    "rows": [
+      937,
+      938
+    ],
+    "rule": "GAP",
+    "timestamps": [
+      "2026-11-04T03:03:10+00:00",
+      "2026-11-04T03:10:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-00",
+    "ids": [
+      "SYN-S10-00-P069",
+      "SYN-S10-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      947,
+      948
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-00",
+    "ids": [
+      "SYN-S12-00-P010",
+      "SYN-S12-00-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1030,
+      1031
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:01:40+00:00",
+      "2026-11-04T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-00",
+    "ids": [
+      "SYN-S12-00-P069",
+      "SYN-S12-00-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1089,
+      1090
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:11:30+00:00",
+      "2026-11-04T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S13-00",
+    "ids": [
+      "SYN-S13-00-P000",
+      "SYN-S13-00-P001"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 2159.999999
+    },
+    "rows": [
+      1105,
+      1106
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-04T03:00:00+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S13-00",
+    "ids": [
+      "SYN-S13-00-P000",
+      "SYN-S13-00-P001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.175,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1105,
+      1106
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-04T03:00:00+00:00",
+      "2026-11-04T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S1-01",
+    "ids": [
+      "SYN-S1-01-P010",
+      "SYN-S1-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1120,
+      1121
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S1-01",
+    "ids": [
+      "SYN-S1-01-P069",
+      "SYN-S1-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1179,
+      1180
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P010",
+      "SYN-S2a-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1201,
+      1202
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-01",
+    "ids": [
+      "SYN-S2a-01-P069",
+      "SYN-S2a-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1270,
+      1271
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-01",
+    "ids": [
+      "SYN-S5a-01-P010",
+      "SYN-S5a-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1307,
+      1308
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-01",
+    "ids": [
+      "SYN-S5a-01-P069",
+      "SYN-S5a-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1366,
+      1367
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5b-01",
+    "ids": [
+      "SYN-S5b-01-P010",
+      "SYN-S5b-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1388,
+      1389
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5b-01",
+    "ids": [
+      "SYN-S5b-01-P069",
+      "SYN-S5b-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1447,
+      1448
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-01",
+    "ids": [
+      "SYN-S5c-01-P010",
+      "SYN-S5c-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1469,
+      1470
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-01",
+    "ids": [
+      "SYN-S5c-01-P069",
+      "SYN-S5c-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1528,
+      1529
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6a-01",
+    "ids": [
+      "SYN-S6a-01-P010",
+      "SYN-S6a-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1550,
+      1551
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6a-01",
+    "ids": [
+      "SYN-S6a-01-P069",
+      "SYN-S6a-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1609,
+      1610
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-01",
+    "ids": [
+      "SYN-S6b-01-P010",
+      "SYN-S6b-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1631,
+      1632
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-01",
+    "ids": [
+      "SYN-S6b-01-P039",
+      "SYN-S6b-01-P040"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 150.501602
+    },
+    "rows": [
+      1660,
+      1661
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-05T03:06:30+00:00",
+      "2026-11-05T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-01",
+    "ids": [
+      "SYN-S6b-01-P069",
+      "SYN-S6b-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1690,
+      1691
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-01",
+    "ids": [
+      "SYN-S6c-01-P010",
+      "SYN-S6c-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1712,
+      1713
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-01",
+    "ids": [
+      "SYN-S6c-01-P039",
+      "SYN-S6c-01-P040"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 396.000001
+    },
+    "rows": [
+      1741,
+      1742
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-05T03:06:30+00:00",
+      "2026-11-05T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-01",
+    "ids": [
+      "SYN-S6c-01-P040",
+      "SYN-S6c-01-P041"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 323.999999
+    },
+    "rows": [
+      1742,
+      1743
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-05T03:06:40+00:00",
+      "2026-11-05T03:06:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-01",
+    "ids": [
+      "SYN-S6c-01-P069",
+      "SYN-S6c-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1771,
+      1772
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S7-01",
+    "ids": [
+      "SYN-S7-01-P010",
+      "SYN-S7-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1793,
+      1794
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T14:55:00+00:00",
+      "2026-11-05T14:55:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S7-01",
+    "ids": [
+      "SYN-S7-01-P069",
+      "SYN-S7-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1852,
+      1853
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T15:04:50+00:00",
+      "2026-11-05T15:05:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-01",
+    "ids": [
+      "SYN-S8-01-P010",
+      "SYN-S8-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1874,
+      1875
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T14:59:53+00:00",
+      "2026-11-05T15:00:03+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-01",
+    "ids": [
+      "SYN-S8-01-P010",
+      "SYN-S8-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "end_day": "2026-11-06",
+      "start_day": "2026-11-05"
+    },
+    "rows": [
+      1874,
+      1875
+    ],
+    "rule": "R5_CROSS",
+    "timestamps": [
+      "2026-11-05T14:59:53+00:00",
+      "2026-11-05T15:00:03+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-01",
+    "ids": [
+      "SYN-S8-01-P069",
+      "SYN-S8-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1933,
+      1934
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T15:09:43+00:00",
+      "2026-11-05T15:09:53+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S9a-01",
+    "ids": [
+      "SYN-S9a-01-P069",
+      "SYN-S9a-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      1974,
+      1975
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S9b-01",
+    "ids": [
+      "SYN-S9b-01-P010",
+      "SYN-S9b-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      1996,
+      1997
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-01",
+    "ids": [
+      "SYN-S10-01-P010",
+      "SYN-S10-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2037,
+      2038
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-01",
+    "ids": [
+      "SYN-S10-01-P019",
+      "SYN-S10-01-P060"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "chord_m": 4100.000003,
+      "elapsed_s": 410.0
+    },
+    "rows": [
+      2046,
+      2047
+    ],
+    "rule": "GAP",
+    "timestamps": [
+      "2026-11-05T03:03:10+00:00",
+      "2026-11-05T03:10:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-01",
+    "ids": [
+      "SYN-S10-01-P069",
+      "SYN-S10-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2056,
+      2057
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-01",
+    "ids": [
+      "SYN-S12-01-P010",
+      "SYN-S12-01-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2139,
+      2140
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:01:40+00:00",
+      "2026-11-05T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-01",
+    "ids": [
+      "SYN-S12-01-P069",
+      "SYN-S12-01-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2198,
+      2199
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:11:30+00:00",
+      "2026-11-05T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S13-01",
+    "ids": [
+      "SYN-S13-01-P000",
+      "SYN-S13-01-P001"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 2159.999999
+    },
+    "rows": [
+      2214,
+      2215
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-05T03:00:00+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S13-01",
+    "ids": [
+      "SYN-S13-01-P000",
+      "SYN-S13-01-P001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.175,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2214,
+      2215
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-05T03:00:00+00:00",
+      "2026-11-05T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S1-02",
+    "ids": [
+      "SYN-S1-02-P010",
+      "SYN-S1-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2229,
+      2230
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S1-02",
+    "ids": [
+      "SYN-S1-02-P069",
+      "SYN-S1-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2288,
+      2289
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P010",
+      "SYN-S2a-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2310,
+      2311
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S2a-02",
+    "ids": [
+      "SYN-S2a-02-P069",
+      "SYN-S2a-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2379,
+      2380
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-02",
+    "ids": [
+      "SYN-S5a-02-P010",
+      "SYN-S5a-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2416,
+      2417
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5a-02",
+    "ids": [
+      "SYN-S5a-02-P069",
+      "SYN-S5a-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2475,
+      2476
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5b-02",
+    "ids": [
+      "SYN-S5b-02-P010",
+      "SYN-S5b-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2497,
+      2498
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5b-02",
+    "ids": [
+      "SYN-S5b-02-P069",
+      "SYN-S5b-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2556,
+      2557
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-02",
+    "ids": [
+      "SYN-S5c-02-P010",
+      "SYN-S5c-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2578,
+      2579
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S5c-02",
+    "ids": [
+      "SYN-S5c-02-P069",
+      "SYN-S5c-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2637,
+      2638
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6a-02",
+    "ids": [
+      "SYN-S6a-02-P010",
+      "SYN-S6a-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2659,
+      2660
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6a-02",
+    "ids": [
+      "SYN-S6a-02-P069",
+      "SYN-S6a-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2718,
+      2719
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-02",
+    "ids": [
+      "SYN-S6b-02-P010",
+      "SYN-S6b-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2740,
+      2741
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-02",
+    "ids": [
+      "SYN-S6b-02-P039",
+      "SYN-S6b-02-P040"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 150.501602
+    },
+    "rows": [
+      2769,
+      2770
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-06T03:06:30+00:00",
+      "2026-11-06T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6b-02",
+    "ids": [
+      "SYN-S6b-02-P069",
+      "SYN-S6b-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2799,
+      2800
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-02",
+    "ids": [
+      "SYN-S6c-02-P010",
+      "SYN-S6c-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2821,
+      2822
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-02",
+    "ids": [
+      "SYN-S6c-02-P039",
+      "SYN-S6c-02-P040"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 396.000001
+    },
+    "rows": [
+      2850,
+      2851
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-06T03:06:30+00:00",
+      "2026-11-06T03:06:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-02",
+    "ids": [
+      "SYN-S6c-02-P040",
+      "SYN-S6c-02-P041"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 323.999999
+    },
+    "rows": [
+      2851,
+      2852
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-06T03:06:40+00:00",
+      "2026-11-06T03:06:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S6c-02",
+    "ids": [
+      "SYN-S6c-02-P069",
+      "SYN-S6c-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2880,
+      2881
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S7-02",
+    "ids": [
+      "SYN-S7-02-P010",
+      "SYN-S7-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2902,
+      2903
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T14:55:00+00:00",
+      "2026-11-06T14:55:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S7-02",
+    "ids": [
+      "SYN-S7-02-P069",
+      "SYN-S7-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      2961,
+      2962
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T15:04:50+00:00",
+      "2026-11-06T15:05:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-02",
+    "ids": [
+      "SYN-S8-02-P010",
+      "SYN-S8-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      2983,
+      2984
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T14:59:53+00:00",
+      "2026-11-06T15:00:03+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-02",
+    "ids": [
+      "SYN-S8-02-P010",
+      "SYN-S8-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "end_day": "2026-11-07",
+      "start_day": "2026-11-06"
+    },
+    "rows": [
+      2983,
+      2984
+    ],
+    "rule": "R5_CROSS",
+    "timestamps": [
+      "2026-11-06T14:59:53+00:00",
+      "2026-11-06T15:00:03+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S8-02",
+    "ids": [
+      "SYN-S8-02-P069",
+      "SYN-S8-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      3042,
+      3043
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T15:09:43+00:00",
+      "2026-11-06T15:09:53+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S9a-02",
+    "ids": [
+      "SYN-S9a-02-P069",
+      "SYN-S9a-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      3083,
+      3084
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S9b-02",
+    "ids": [
+      "SYN-S9b-02-P010",
+      "SYN-S9b-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      3105,
+      3106
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-02",
+    "ids": [
+      "SYN-S10-02-P010",
+      "SYN-S10-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      3146,
+      3147
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-02",
+    "ids": [
+      "SYN-S10-02-P019",
+      "SYN-S10-02-P060"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "chord_m": 4100.000003,
+      "elapsed_s": 410.0
+    },
+    "rows": [
+      3155,
+      3156
+    ],
+    "rule": "GAP",
+    "timestamps": [
+      "2026-11-06T03:03:10+00:00",
+      "2026-11-06T03:10:00+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S10-02",
+    "ids": [
+      "SYN-S10-02-P069",
+      "SYN-S10-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      3165,
+      3166
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-02",
+    "ids": [
+      "SYN-S12-02-P010",
+      "SYN-S12-02-P011"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.5,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      3248,
+      3249
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:01:40+00:00",
+      "2026-11-06T03:01:50+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S12-02",
+    "ids": [
+      "SYN-S12-02-P069",
+      "SYN-S12-02-P070"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.0,
+          0.5
+        ]
+      ],
+      "transition": "exit"
+    },
+    "rows": [
+      3307,
+      3308
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:11:30+00:00",
+      "2026-11-06T03:11:40+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S13-02",
+    "ids": [
+      "SYN-S13-02-P000",
+      "SYN-S13-02-P001"
+    ],
+    "kind": "provisional_anomaly",
+    "measurements": {
+      "note": "adjacent chronological raw pair; not last-accepted classification",
+      "speed_kmh": 2159.999999
+    },
+    "rows": [
+      3323,
+      3324
+    ],
+    "rule": "RAW_PAIR_SPEED_ANOMALY",
+    "timestamps": [
+      "2026-11-06T03:00:00+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  },
+  {
+    "driver": "SYN-S13-02",
+    "ids": [
+      "SYN-S13-02-P000",
+      "SYN-S13-02-P001"
+    ],
+    "kind": "condition",
+    "measurements": {
+      "intervals": [
+        [
+          0.175,
+          1.0
+        ]
+      ],
+      "transition": "entry"
+    },
+    "rows": [
+      3323,
+      3324
+    ],
+    "rule": "R6",
+    "timestamps": [
+      "2026-11-06T03:00:00+00:00",
+      "2026-11-06T03:00:10+00:00"
+    ]
+  }
+]

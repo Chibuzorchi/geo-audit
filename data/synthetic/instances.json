@@ -1,0 +1,443 @@
+[
+  {
+    "copy": 0,
+    "driver": "SYN-S1-00",
+    "first_row": 1,
+    "row_count": 81,
+    "scenario": "S1"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S2a-00",
+    "first_row": 82,
+    "row_count": 91,
+    "scenario": "S2a"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S2b-00",
+    "first_row": 173,
+    "row_count": 4,
+    "scenario": "S2b"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S3-00",
+    "first_row": 177,
+    "row_count": 4,
+    "scenario": "S3"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S3b-00",
+    "first_row": 181,
+    "row_count": 4,
+    "scenario": "S3b"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S4-00",
+    "first_row": 185,
+    "row_count": 3,
+    "scenario": "S4"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S5a-00",
+    "first_row": 188,
+    "row_count": 81,
+    "scenario": "S5a"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S5b-00",
+    "first_row": 269,
+    "row_count": 81,
+    "scenario": "S5b"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S5c-00",
+    "first_row": 350,
+    "row_count": 81,
+    "scenario": "S5c"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S6a-00",
+    "first_row": 431,
+    "row_count": 81,
+    "scenario": "S6a"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S6b-00",
+    "first_row": 512,
+    "row_count": 81,
+    "scenario": "S6b"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S6c-00",
+    "first_row": 593,
+    "row_count": 81,
+    "scenario": "S6c"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S7-00",
+    "first_row": 674,
+    "row_count": 81,
+    "scenario": "S7"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S8-00",
+    "first_row": 755,
+    "row_count": 81,
+    "scenario": "S8"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S9a-00",
+    "first_row": 836,
+    "row_count": 41,
+    "scenario": "S9a"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S9b-00",
+    "first_row": 877,
+    "row_count": 41,
+    "scenario": "S9b"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S10-00",
+    "first_row": 918,
+    "row_count": 41,
+    "scenario": "S10"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S11-00",
+    "first_row": 959,
+    "row_count": 61,
+    "scenario": "S11"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S12-00",
+    "first_row": 1020,
+    "row_count": 85,
+    "scenario": "S12"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S13-00",
+    "first_row": 1105,
+    "row_count": 3,
+    "scenario": "S13"
+  },
+  {
+    "copy": 0,
+    "driver": "SYN-S14-00",
+    "first_row": 1108,
+    "row_count": 2,
+    "scenario": "S14"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S1-01",
+    "first_row": 1110,
+    "row_count": 81,
+    "scenario": "S1"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S2a-01",
+    "first_row": 1191,
+    "row_count": 91,
+    "scenario": "S2a"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S2b-01",
+    "first_row": 1282,
+    "row_count": 4,
+    "scenario": "S2b"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S3-01",
+    "first_row": 1286,
+    "row_count": 4,
+    "scenario": "S3"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S3b-01",
+    "first_row": 1290,
+    "row_count": 4,
+    "scenario": "S3b"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S4-01",
+    "first_row": 1294,
+    "row_count": 3,
+    "scenario": "S4"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S5a-01",
+    "first_row": 1297,
+    "row_count": 81,
+    "scenario": "S5a"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S5b-01",
+    "first_row": 1378,
+    "row_count": 81,
+    "scenario": "S5b"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S5c-01",
+    "first_row": 1459,
+    "row_count": 81,
+    "scenario": "S5c"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S6a-01",
+    "first_row": 1540,
+    "row_count": 81,
+    "scenario": "S6a"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S6b-01",
+    "first_row": 1621,
+    "row_count": 81,
+    "scenario": "S6b"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S6c-01",
+    "first_row": 1702,
+    "row_count": 81,
+    "scenario": "S6c"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S7-01",
+    "first_row": 1783,
+    "row_count": 81,
+    "scenario": "S7"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S8-01",
+    "first_row": 1864,
+    "row_count": 81,
+    "scenario": "S8"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S9a-01",
+    "first_row": 1945,
+    "row_count": 41,
+    "scenario": "S9a"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S9b-01",
+    "first_row": 1986,
+    "row_count": 41,
+    "scenario": "S9b"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S10-01",
+    "first_row": 2027,
+    "row_count": 41,
+    "scenario": "S10"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S11-01",
+    "first_row": 2068,
+    "row_count": 61,
+    "scenario": "S11"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S12-01",
+    "first_row": 2129,
+    "row_count": 85,
+    "scenario": "S12"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S13-01",
+    "first_row": 2214,
+    "row_count": 3,
+    "scenario": "S13"
+  },
+  {
+    "copy": 1,
+    "driver": "SYN-S14-01",
+    "first_row": 2217,
+    "row_count": 2,
+    "scenario": "S14"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S1-02",
+    "first_row": 2219,
+    "row_count": 81,
+    "scenario": "S1"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S2a-02",
+    "first_row": 2300,
+    "row_count": 91,
+    "scenario": "S2a"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S2b-02",
+    "first_row": 2391,
+    "row_count": 4,
+    "scenario": "S2b"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S3-02",
+    "first_row": 2395,
+    "row_count": 4,
+    "scenario": "S3"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S3b-02",
+    "first_row": 2399,
+    "row_count": 4,
+    "scenario": "S3b"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S4-02",
+    "first_row": 2403,
+    "row_count": 3,
+    "scenario": "S4"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S5a-02",
+    "first_row": 2406,
+    "row_count": 81,
+    "scenario": "S5a"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S5b-02",
+    "first_row": 2487,
+    "row_count": 81,
+    "scenario": "S5b"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S5c-02",
+    "first_row": 2568,
+    "row_count": 81,
+    "scenario": "S5c"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S6a-02",
+    "first_row": 2649,
+    "row_count": 81,
+    "scenario": "S6a"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S6b-02",
+    "first_row": 2730,
+    "row_count": 81,
+    "scenario": "S6b"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S6c-02",
+    "first_row": 2811,
+    "row_count": 81,
+    "scenario": "S6c"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S7-02",
+    "first_row": 2892,
+    "row_count": 81,
+    "scenario": "S7"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S8-02",
+    "first_row": 2973,
+    "row_count": 81,
+    "scenario": "S8"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S9a-02",
+    "first_row": 3054,
+    "row_count": 41,
+    "scenario": "S9a"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S9b-02",
+    "first_row": 3095,
+    "row_count": 41,
+    "scenario": "S9b"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S10-02",
+    "first_row": 3136,
+    "row_count": 41,
+    "scenario": "S10"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S11-02",
+    "first_row": 3177,
+    "row_count": 61,
+    "scenario": "S11"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S12-02",
+    "first_row": 3238,
+    "row_count": 85,
+    "scenario": "S12"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S13-02",
+    "first_row": 3323,
+    "row_count": 3,
+    "scenario": "S13"
+  },
+  {
+    "copy": 2,
+    "driver": "SYN-S14-02",
+    "first_row": 3326,
+    "row_count": 2,
+    "scenario": "S14"
+  }
+]

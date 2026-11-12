@@ -1,0 +1,380 @@
+[
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S1-00",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S1-01",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S1-02",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S10-00",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S10-01",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S10-02",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S11-00",
+    "legacy_m": 600.000341,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S11-01",
+    "legacy_m": 600.000341,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S11-02",
+    "legacy_m": 600.000341,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S12-00",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S12-01",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S12-02",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S13-00",
+    "legacy_m": 6099.999999,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S13-01",
+    "legacy_m": 6099.999999,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S13-02",
+    "legacy_m": 6099.999999,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S14-00",
+    "legacy_m": 0.0,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S14-01",
+    "legacy_m": 0.0,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S14-02",
+    "legacy_m": 0.0,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S2a-00",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S2a-01",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S2a-02",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S2b-00",
+    "legacy_m": 299.999995,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S2b-01",
+    "legacy_m": 299.999995,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S2b-02",
+    "legacy_m": 299.999995,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S3-00",
+    "legacy_m": 276.619037,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S3-01",
+    "legacy_m": 276.619037,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S3-02",
+    "legacy_m": 276.619037,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S3b-00",
+    "legacy_m": 430.277572,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S3b-01",
+    "legacy_m": 430.277572,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S3b-02",
+    "legacy_m": 430.277572,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S4-00",
+    "legacy_m": 299.999995,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S4-01",
+    "legacy_m": 299.999995,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S4-02",
+    "legacy_m": 299.999995,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5a-00",
+    "legacy_m": 6060.555128,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5a-01",
+    "legacy_m": 6060.555128,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5a-02",
+    "legacy_m": 6060.555128,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5b-00",
+    "legacy_m": 5982.136494,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5b-01",
+    "legacy_m": 5982.136494,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5b-02",
+    "legacy_m": 5982.136494,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5c-00",
+    "legacy_m": 5983.550702,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5c-01",
+    "legacy_m": 5983.550702,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S5c-02",
+    "legacy_m": 5983.550702,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6a-00",
+    "legacy_m": 6330.559994,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6a-01",
+    "legacy_m": 6330.559994,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6a-02",
+    "legacy_m": 6330.559994,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6b-00",
+    "legacy_m": 6336.120005,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6b-01",
+    "legacy_m": 6336.120005,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6b-02",
+    "legacy_m": 6336.120005,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6c-00",
+    "legacy_m": 7700.000001,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6c-01",
+    "legacy_m": 7700.000001,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S6c-02",
+    "legacy_m": 7700.000001,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S7-00",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S7-01",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S7-02",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S8-00",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S8-01",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S8-02",
+    "legacy_m": 5900.000006,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S9a-00",
+    "legacy_m": 2900.000003,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S9a-01",
+    "legacy_m": 2900.000003,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S9a-02",
+    "legacy_m": 2900.000003,
+    "report_date": "2026-11-06"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S9b-00",
+    "legacy_m": 3000.000004,
+    "report_date": "2026-11-04"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S9b-01",
+    "legacy_m": 3000.000004,
+    "report_date": "2026-11-05"
+  },
+  {
+    "date_basis": "UTC",
+    "driver_id": "SYN-S9b-02",
+    "legacy_m": 3000.000004,
+    "report_date": "2026-11-06"
+  }
+]

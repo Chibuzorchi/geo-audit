@@ -1,0 +1,38 @@
+{
+  "hashes": {
+    "SYNTHETIC_gps_pings.csv": "04795f4c5bbb19aef1b272b3c7d48d05b4741646a809cd076f603fac838720df",
+    "fault_labels.json": "e03f59a619f3efc00c88c675a102654797d77e3836dae6fb68b3f9467a2ce2a6",
+    "instances.json": "75e2ddb97778dc5f0cd68f348552bacbded1a41f103acfd5145500de37940ed2",
+    "roads.geojson": "dc1fe9ba66c8751240fc12ff6dea8d0e53961dd685658e12c5b01f6a16c3425f",
+    "zone.geojson": "104911c2a868c804432e75610c35d6ef5d9a818b1281fd3ee8a8af96d169dd40"
+  },
+  "repeats": 3,
+  "rows": 3327,
+  "scenarios": [
+    "S1",
+    "S2a",
+    "S2b",
+    "S3",
+    "S3b",
+    "S4",
+    "S5a",
+    "S5b",
+    "S5c",
+    "S6a",
+    "S6b",
+    "S6c",
+    "S7",
+    "S8",
+    "S9a",
+    "S9b",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14"
+  ],
+  "seed": 0,
+  "structured_rows": 3315,
+  "synthetic": true,
+  "version": "analytic-v1"
+}
