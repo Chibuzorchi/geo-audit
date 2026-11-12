@@ -121,6 +121,6 @@ An earlier session left an uncommitted draft: `tests/regression/` and
   - an `Infinity` probe aimed at a value absent from corrected evidence;
   - a "legacy fixed" sabotage that actually caused a setup error;
   - a wrong ledger field name (`reporting_date` vs `report_date`) in the demo.
-- Removed a `quest_*` glob it had written into a public test.
+- Removed a glob for private planning-file names that it had written into a public test.
 
 Historical Phase 2/3 findings and expectations were not modified. Human review pending.
