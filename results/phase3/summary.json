@@ -1,0 +1,691 @@
+{
+  "absolute_date_label_difference_m": 80541.367485,
+  "assigned_states": [
+    {
+      "count": 81,
+      "driver_id": "SYN-S1-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S1-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S1-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 40,
+      "driver_id": "SYN-S10-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S10-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 40,
+      "driver_id": "SYN-S10-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S10-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 40,
+      "driver_id": "SYN-S10-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S10-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 61,
+      "driver_id": "SYN-S11-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 61,
+      "driver_id": "SYN-S11-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 61,
+      "driver_id": "SYN-S11-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S12-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S12-00",
+      "reporting_date": "2026-11-04",
+      "state": "quarantined"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S12-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S12-01",
+      "reporting_date": "2026-11-05",
+      "state": "quarantined"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S12-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S12-02",
+      "reporting_date": "2026-11-06",
+      "state": "quarantined"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S13-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S13-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S13-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S13-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S13-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S13-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S14-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S14-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S14-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S2a-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 10,
+      "driver_id": "SYN-S2a-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S2a-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 10,
+      "driver_id": "SYN-S2a-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S2a-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 10,
+      "driver_id": "SYN-S2a-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 3,
+      "driver_id": "SYN-S2b-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S2b-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 3,
+      "driver_id": "SYN-S2b-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S2b-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 3,
+      "driver_id": "SYN-S2b-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S2b-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S3-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S3-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S3-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S3b-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3b-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3b-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S3b-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3b-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3b-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S3b-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3b-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_duplicate"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S3b-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S4-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S4-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S4-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S4-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 2,
+      "driver_id": "SYN-S4-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S4-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted_warning"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S5a-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S5a-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S5a-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S5a-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S5a-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S5a-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S5b-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S5b-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S5b-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S5c-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S5c-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S5c-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S5c-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S5c-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S5c-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S6a-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S6a-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 81,
+      "driver_id": "SYN-S6a-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S6b-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S6b-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S6b-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S6b-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S6b-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S6b-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S6c-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S6c-00",
+      "reporting_date": "2026-11-04",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S6c-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S6c-01",
+      "reporting_date": "2026-11-05",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 80,
+      "driver_id": "SYN-S6c-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-S6c-02",
+      "reporting_date": "2026-11-06",
+      "state": "rejected_noise"
+    },
+    {
+      "count": 40,
+      "driver_id": "SYN-S7-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S7-00",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 40,
+      "driver_id": "SYN-S7-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S7-01",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 40,
+      "driver_id": "SYN-S7-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S7-02",
+      "reporting_date": "2026-11-07",
+      "state": "accepted"
+    },
+    {
+      "count": 11,
+      "driver_id": "SYN-S8-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 70,
+      "driver_id": "SYN-S8-00",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 11,
+      "driver_id": "SYN-S8-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 70,
+      "driver_id": "SYN-S8-01",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 11,
+      "driver_id": "SYN-S8-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 70,
+      "driver_id": "SYN-S8-02",
+      "reporting_date": "2026-11-07",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S9a-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S9a-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S9a-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S9b-00",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S9b-01",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    },
+    {
+      "count": 41,
+      "driver_id": "SYN-S9b-02",
+      "reporting_date": "2026-11-06",
+      "state": "accepted"
+    }
+  ],
+  "corrected_m": 235838.090436,
+  "driver_day_rows": 252,
+  "input_rows": 3327,
+  "input_sha256": "04795f4c5bbb19aef1b272b3c7d48d05b4741646a809cd076f603fac838720df",
+  "interpretation": "Date-label discrepancy analysis, not normalized financial settlement. Differences combine time, zone, ordering, duplicate and noise policies.",
+  "legacy_m": 263099.457927,
+  "negative_difference_m": -53901.367488,
+  "net_change_m": -27261.367491,
+  "positive_difference_m": 26639.999997,
+  "states": {
+    "accepted": 3246,
+    "accepted_warning": 9,
+    "quarantined": 12,
+    "rejected_duplicate": 39,
+    "rejected_noise": 21
+  },
+  "status": "OK",
+  "unassignable_states": {
+    "quarantined": 9
+  }
+}

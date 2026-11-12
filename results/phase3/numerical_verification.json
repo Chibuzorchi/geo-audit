@@ -1,0 +1,661 @@
+{
+  "instances_verified": 63,
+  "measurements": [
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S1-00",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-04",
+      "scenario": "S1"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S2a-00",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-04",
+      "scenario": "S2a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S2b-00",
+      "expected_m": 200,
+      "legacy_m": 299.999995,
+      "reporting_date": "2026-11-04",
+      "scenario": "S2b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S3-00",
+      "expected_m": 200,
+      "legacy_m": 276.619037,
+      "reporting_date": "2026-11-04",
+      "scenario": "S3"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S3b-00",
+      "expected_m": 200,
+      "legacy_m": 430.277572,
+      "reporting_date": "2026-11-04",
+      "scenario": "S3b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S4-00",
+      "expected_m": 200,
+      "legacy_m": 299.999995,
+      "reporting_date": "2026-11-04",
+      "scenario": "S4"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S5a-00",
+      "expected_m": 5900,
+      "legacy_m": 6060.555128,
+      "reporting_date": "2026-11-04",
+      "scenario": "S5a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5982.136487,
+      "driver_id": "SYN-S5b-00",
+      "expected_m": 5982.136491790764,
+      "legacy_m": 5982.136494,
+      "reporting_date": "2026-11-04",
+      "scenario": "S5b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S5c-00",
+      "expected_m": 5900,
+      "legacy_m": 5983.550702,
+      "reporting_date": "2026-11-04",
+      "scenario": "S5c"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 6330.559988,
+      "driver_id": "SYN-S6a-00",
+      "expected_m": 6330.56,
+      "legacy_m": 6330.559994,
+      "reporting_date": "2026-11-04",
+      "scenario": "S6a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S6b-00",
+      "expected_m": 5900,
+      "legacy_m": 6336.120005,
+      "reporting_date": "2026-11-04",
+      "scenario": "S6b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S6c-00",
+      "expected_m": 5900,
+      "legacy_m": 7700.000001,
+      "reporting_date": "2026-11-04",
+      "scenario": "S6c"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2949.999999,
+      "driver_id": "SYN-S7-00",
+      "expected_m": 2950,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-04",
+      "scenario": "S7"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2950.000001,
+      "driver_id": "SYN-S7-00",
+      "expected_m": 2950,
+      "legacy_m": 0,
+      "reporting_date": "2026-11-05",
+      "scenario": "S7"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 19.999999,
+      "driver_id": "SYN-S8-00",
+      "expected_m": 20,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-04",
+      "scenario": "S8"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5880.000001,
+      "driver_id": "SYN-S8-00",
+      "expected_m": 5880,
+      "legacy_m": 0,
+      "reporting_date": "2026-11-05",
+      "scenario": "S8"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2950.000001,
+      "driver_id": "SYN-S9a-00",
+      "expected_m": 2950,
+      "legacy_m": 2900.000003,
+      "reporting_date": "2026-11-04",
+      "scenario": "S9a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2949.999999,
+      "driver_id": "SYN-S9b-00",
+      "expected_m": 2950,
+      "legacy_m": 3000.000004,
+      "reporting_date": "2026-11-04",
+      "scenario": "S9b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S10-00",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-04",
+      "scenario": "S10"
+    },
+    {
+      "classification": "characterization",
+      "corrected_m": 600.000341,
+      "driver_id": "SYN-S11-00",
+      "expected_m": 600,
+      "legacy_m": 600.000341,
+      "reporting_date": "2026-11-04",
+      "scenario": "S11"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S12-00",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-04",
+      "scenario": "S12"
+    },
+    {
+      "classification": "characterization",
+      "corrected_m": 0.0,
+      "driver_id": "SYN-S13-00",
+      "expected_m": 0,
+      "legacy_m": 6099.999999,
+      "reporting_date": "2026-11-04",
+      "scenario": "S13"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 0.0,
+      "driver_id": "SYN-S14-00",
+      "expected_m": 0,
+      "legacy_m": 0.0,
+      "reporting_date": "2026-11-04",
+      "scenario": "S14"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S1-01",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-05",
+      "scenario": "S1"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S2a-01",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-05",
+      "scenario": "S2a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S2b-01",
+      "expected_m": 200,
+      "legacy_m": 299.999995,
+      "reporting_date": "2026-11-05",
+      "scenario": "S2b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S3-01",
+      "expected_m": 200,
+      "legacy_m": 276.619037,
+      "reporting_date": "2026-11-05",
+      "scenario": "S3"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S3b-01",
+      "expected_m": 200,
+      "legacy_m": 430.277572,
+      "reporting_date": "2026-11-05",
+      "scenario": "S3b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S4-01",
+      "expected_m": 200,
+      "legacy_m": 299.999995,
+      "reporting_date": "2026-11-05",
+      "scenario": "S4"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S5a-01",
+      "expected_m": 5900,
+      "legacy_m": 6060.555128,
+      "reporting_date": "2026-11-05",
+      "scenario": "S5a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5982.136487,
+      "driver_id": "SYN-S5b-01",
+      "expected_m": 5982.136491790764,
+      "legacy_m": 5982.136494,
+      "reporting_date": "2026-11-05",
+      "scenario": "S5b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S5c-01",
+      "expected_m": 5900,
+      "legacy_m": 5983.550702,
+      "reporting_date": "2026-11-05",
+      "scenario": "S5c"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 6330.559988,
+      "driver_id": "SYN-S6a-01",
+      "expected_m": 6330.56,
+      "legacy_m": 6330.559994,
+      "reporting_date": "2026-11-05",
+      "scenario": "S6a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S6b-01",
+      "expected_m": 5900,
+      "legacy_m": 6336.120005,
+      "reporting_date": "2026-11-05",
+      "scenario": "S6b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S6c-01",
+      "expected_m": 5900,
+      "legacy_m": 7700.000001,
+      "reporting_date": "2026-11-05",
+      "scenario": "S6c"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2949.999999,
+      "driver_id": "SYN-S7-01",
+      "expected_m": 2950,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-05",
+      "scenario": "S7"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2950.000001,
+      "driver_id": "SYN-S7-01",
+      "expected_m": 2950,
+      "legacy_m": 0,
+      "reporting_date": "2026-11-06",
+      "scenario": "S7"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 19.999999,
+      "driver_id": "SYN-S8-01",
+      "expected_m": 20,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-05",
+      "scenario": "S8"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5880.000001,
+      "driver_id": "SYN-S8-01",
+      "expected_m": 5880,
+      "legacy_m": 0,
+      "reporting_date": "2026-11-06",
+      "scenario": "S8"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2950.000001,
+      "driver_id": "SYN-S9a-01",
+      "expected_m": 2950,
+      "legacy_m": 2900.000003,
+      "reporting_date": "2026-11-05",
+      "scenario": "S9a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2949.999999,
+      "driver_id": "SYN-S9b-01",
+      "expected_m": 2950,
+      "legacy_m": 3000.000004,
+      "reporting_date": "2026-11-05",
+      "scenario": "S9b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S10-01",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-05",
+      "scenario": "S10"
+    },
+    {
+      "classification": "characterization",
+      "corrected_m": 600.000341,
+      "driver_id": "SYN-S11-01",
+      "expected_m": 600,
+      "legacy_m": 600.000341,
+      "reporting_date": "2026-11-05",
+      "scenario": "S11"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S12-01",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-05",
+      "scenario": "S12"
+    },
+    {
+      "classification": "characterization",
+      "corrected_m": 0.0,
+      "driver_id": "SYN-S13-01",
+      "expected_m": 0,
+      "legacy_m": 6099.999999,
+      "reporting_date": "2026-11-05",
+      "scenario": "S13"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 0.0,
+      "driver_id": "SYN-S14-01",
+      "expected_m": 0,
+      "legacy_m": 0.0,
+      "reporting_date": "2026-11-05",
+      "scenario": "S14"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S1-02",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-06",
+      "scenario": "S1"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S2a-02",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-06",
+      "scenario": "S2a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S2b-02",
+      "expected_m": 200,
+      "legacy_m": 299.999995,
+      "reporting_date": "2026-11-06",
+      "scenario": "S2b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S3-02",
+      "expected_m": 200,
+      "legacy_m": 276.619037,
+      "reporting_date": "2026-11-06",
+      "scenario": "S3"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S3b-02",
+      "expected_m": 200,
+      "legacy_m": 430.277572,
+      "reporting_date": "2026-11-06",
+      "scenario": "S3b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 199.999999,
+      "driver_id": "SYN-S4-02",
+      "expected_m": 200,
+      "legacy_m": 299.999995,
+      "reporting_date": "2026-11-06",
+      "scenario": "S4"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S5a-02",
+      "expected_m": 5900,
+      "legacy_m": 6060.555128,
+      "reporting_date": "2026-11-06",
+      "scenario": "S5a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5982.136487,
+      "driver_id": "SYN-S5b-02",
+      "expected_m": 5982.136491790764,
+      "legacy_m": 5982.136494,
+      "reporting_date": "2026-11-06",
+      "scenario": "S5b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S5c-02",
+      "expected_m": 5900,
+      "legacy_m": 5983.550702,
+      "reporting_date": "2026-11-06",
+      "scenario": "S5c"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 6330.559988,
+      "driver_id": "SYN-S6a-02",
+      "expected_m": 6330.56,
+      "legacy_m": 6330.559994,
+      "reporting_date": "2026-11-06",
+      "scenario": "S6a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S6b-02",
+      "expected_m": 5900,
+      "legacy_m": 6336.120005,
+      "reporting_date": "2026-11-06",
+      "scenario": "S6b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S6c-02",
+      "expected_m": 5900,
+      "legacy_m": 7700.000001,
+      "reporting_date": "2026-11-06",
+      "scenario": "S6c"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2949.999999,
+      "driver_id": "SYN-S7-02",
+      "expected_m": 2950,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-06",
+      "scenario": "S7"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2950.000001,
+      "driver_id": "SYN-S7-02",
+      "expected_m": 2950,
+      "legacy_m": 0,
+      "reporting_date": "2026-11-07",
+      "scenario": "S7"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 19.999999,
+      "driver_id": "SYN-S8-02",
+      "expected_m": 20,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-06",
+      "scenario": "S8"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5880.000001,
+      "driver_id": "SYN-S8-02",
+      "expected_m": 5880,
+      "legacy_m": 0,
+      "reporting_date": "2026-11-07",
+      "scenario": "S8"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2950.000001,
+      "driver_id": "SYN-S9a-02",
+      "expected_m": 2950,
+      "legacy_m": 2900.000003,
+      "reporting_date": "2026-11-06",
+      "scenario": "S9a"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 2949.999999,
+      "driver_id": "SYN-S9b-02",
+      "expected_m": 2950,
+      "legacy_m": 3000.000004,
+      "reporting_date": "2026-11-06",
+      "scenario": "S9b"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S10-02",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-06",
+      "scenario": "S10"
+    },
+    {
+      "classification": "characterization",
+      "corrected_m": 600.000341,
+      "driver_id": "SYN-S11-02",
+      "expected_m": 600,
+      "legacy_m": 600.000341,
+      "reporting_date": "2026-11-06",
+      "scenario": "S11"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 5900.0,
+      "driver_id": "SYN-S12-02",
+      "expected_m": 5900,
+      "legacy_m": 5900.000006,
+      "reporting_date": "2026-11-06",
+      "scenario": "S12"
+    },
+    {
+      "classification": "characterization",
+      "corrected_m": 0.0,
+      "driver_id": "SYN-S13-02",
+      "expected_m": 0,
+      "legacy_m": 6099.999999,
+      "reporting_date": "2026-11-06",
+      "scenario": "S13"
+    },
+    {
+      "classification": "billing",
+      "corrected_m": 0.0,
+      "driver_id": "SYN-S14-02",
+      "expected_m": 0,
+      "legacy_m": 0.0,
+      "reporting_date": "2026-11-06",
+      "scenario": "S14"
+    }
+  ],
+  "primary": {
+    "corrected_m": [
+      50.00000136691962,
+      50.00000136691962
+    ],
+    "independent_required_m": [
+      50.0,
+      50.0
+    ],
+    "legacy_m": [
+      100.00000273383924,
+      0
+    ],
+    "records": [
+      {
+        "driver_id": "SYN-R5-ONLY",
+        "is_synthetic": "true",
+        "lat": "37.4799602315",
+        "lon": "126.9981543221",
+        "ping_id": "SYN-R5-ONLY-P0",
+        "received_at_utc": "2026-11-04T14:59:56+00:00",
+        "ts_utc": "2026-11-04T14:59:55Z"
+      },
+      {
+        "driver_id": "SYN-R5-ONLY",
+        "is_synthetic": "true",
+        "lat": "37.4799793851",
+        "lon": "126.9992846771",
+        "ping_id": "SYN-R5-ONLY-P1",
+        "received_at_utc": "2026-11-04T15:00:06+00:00",
+        "ts_utc": "2026-11-04T15:00:05Z"
+      }
+    ]
+  },
+  "tolerance_m": 0.01
+}

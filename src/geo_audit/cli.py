@@ -1,6 +1,7 @@
-"""Phase 2 input generation and blind baseline inspection."""
+"""Generation, blind baseline inspection and reconciled comparison."""
 
 import argparse
+import csv
 import json
 from pathlib import Path
 
@@ -25,8 +26,8 @@ def main(argv: list[str] | None = None) -> int:
     if not args.command:
         parser.print_help()
         return 0
-    if args.command in ("compare", "demo"):
-        parser.error(f"{args.command} is unavailable in Phase 2")
+    if args.command == "demo":
+        parser.error(f"{args.command} is unavailable in Phase 3")
     if not args.output:
         parser.error("--output is required (empty directory)")
     try:
@@ -36,18 +37,30 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(generate(args.output), sort_keys=True))
             return 0
         if not all((args.input, args.roads, args.zone)):
-            parser.error("check requires --input, --roads and --zone")
+            parser.error("check/compare require --input, --roads and --zone")
         with args.input.open(newline="") as stream:
             rows = read_csv(stream)
-        if not any(r.ping for r in rows):
+        if args.command == "check" and not any(r.ping for r in rows):
             parser.error("NO_USABLE_DATA")
         roads = project_geojson(json.loads(args.roads.read_text()), "roads")
         zone = project_geojson(json.loads(args.zone.read_text()), "zone")
+        if args.command == "compare":
+            from geo_audit.calc_corrected import calculate as corrected_calculate
+            from geo_audit.report import write_comparison
+
+            corrected = corrected_calculate(rows, roads, zone)
+            summary = write_comparison(
+                args.output, rows, calculate(rows, zone), corrected, args.input
+            )
+            print(json.dumps(summary, sort_keys=True, indent=2))
+            return 2 if corrected.status == "NO_USABLE_DATA" else 0
         findings = inspect(rows, roads, zone)
         baseline = calculate(rows, zone)
         decisions = audit_legacy(rows, roads, zone, baseline)
         run, summary = write_baseline(args.output, rows, findings, decisions, baseline, args.input)
         print(json.dumps(dict(run=run, findings=summary), sort_keys=True, indent=2))
         return 1 if args.gate and (findings or decisions) else 0
+    except csv.Error as error:
+        parser.error(f"malformed CSV: {error}")
     except (ValueError, OSError) as error:
         parser.error(str(error))

@@ -69,3 +69,35 @@ An initial Ruff check fixed one import-order issue. No test failures were observ
 during this remediation. Prior reports were archived, not silently rewritten.
 The current evidence explicitly retracts unsupported pre-measurement freeze claims
 and the claim that S7/S8 have only one cause. Human review remains pending.
+
+
+## Phase 3 — corrected calculation
+
+The assistant implemented the corrected calculation, ID normalization/selection,
+accepted-anchor state, reporting reconciliation, compare command and 55 focused tests.
+It first executed the isolated midnight allocation primitive, then the complete
+pipeline. The original Phase 2 checker flags were not used as acceptance decisions.
+Independent literal expectations and elementary fraction/speed arithmetic verified
+the outputs; no corrected code computed its own expected answers.
+
+All 239 tests passed, including the retained 184-case suite. No failing test or
+invented AI mistake is claimed in this session. The obsolete assertion that compare
+was unavailable was updated because activation is explicitly authorized.
+Ruff reformatted new code. Two comparison runs matched byte-for-byte.
+The assistant retained S11/S13 as characterization and did not attribute the total
+distance reduction solely to R5. Human independent Phase 3 review remains pending.
+
+
+## Phase 3 audit remediation — testing the QA tool
+
+The user supplied independently reproduced F1–F3 findings. The assistant corrected
+the verifier's NaN/duplicate/missing/extra-key acceptance, strengthened source and
+spatial/time allocation integrity, and handled csv.Error specifically at the CLI.
+It added 22 focused cases, ran each separately, and executed the 261-test full suite.
+All tests passed; the first lint passes corrected import ordering, not product logic.
+
+The audit's vulnerabilities are real failures of the earlier AI-authored evidence
+validation. This session did not invent additional failed implementations or human
+verification. Fresh output matched canonical results byte-for-byte. A commit attempt
+was stopped by a gitleaks false positive on documentation prose; no hook bypass,
+staging change or commit occurred. Independent review of the remediation is pending.

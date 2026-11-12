@@ -1,0 +1,31 @@
+{
+  "description": "Phase 3 validation remediation; historical manifests and numeric evidence retained",
+  "files": {
+    "docs/ai_log.md": "f61731c7547f8d000117808129da649fb5d43b0480cea9724bc50d5db6de4fd9",
+    "docs/effort.md": "03e2ade4411cbe0890007444660021103f5f46fef664888a058f3be9261dd56e",
+    "docs/phase3_evidence.md": "df7eb5cdde10f27220ae1084030e5244dcac53c2f089fb04cfe89e084d93b9f9",
+    "scripts/verify_phase3.py": "cac2717f44f9bbecc083b7540fb49fcb640dc1d48c8f6d4d4fab694f32a1db03",
+    "src/geo_audit/cli.py": "2b27dca027264867e77fcea97a46aae2cb18ffeb5f8fd666645c3a8d97514953",
+    "src/geo_audit/report.py": "3b52d92e02eb65e15096c89d94d56ef60d55f12575fefc7b08db89b61b6986b9",
+    "tests/integration/test_evidence_validation.py": "dc369b44aa51c6acb7505ca2c40273ce466d6c0520325b4561e7f085cba0753e"
+  },
+  "head": "d193a999f0663feeade4801ddc7a2e2ed6dbf4ce",
+  "unchanged_numeric_evidence": {
+    "results/phase3/corrected_totals.json": "e06a9f5071e0883730752de4404e90e305483b905b48ba0a4160af4aa3a1ef3b",
+    "results/phase3/driver_day.csv": "0bc4a8a4a0d577f78d55ad3eb8781e6fbc3cea94736c1f35d7b3116d5d5be019",
+    "results/phase3/numerical_verification.json": "42299384cd608c2b7e863dfb0b6d7f739ef3e2965e7830bc564479a820efa953",
+    "results/phase3/ping_decisions.csv": "b7c6f98f1aa9391b9470ea3febe387b07d5bd534f9e2b4a91f475507f3e7bc87",
+    "results/phase3/ping_decisions.json": "3f10f13a7b1b9e4172bddd8825b962428fe8d31b2dcba560e94d952e3820ca03",
+    "results/phase3/r5_only/corrected_totals.json": "305ea7d8a36110dad361391e33e1c952a131a7ed359948b3cf9f0208db908793",
+    "results/phase3/r5_only/driver_day.csv": "aea8bd1a7c8eb0e55351cf72d4d2bf9983fe769a76c4dd2a7adf288cb6b7f504",
+    "results/phase3/r5_only/ping_decisions.csv": "953fc1fe50bb2923e89f48392dea7017d85bdeceffaaa9b4a6a00281c19f7ce9",
+    "results/phase3/r5_only/ping_decisions.json": "20fc6929279501952b374b3b5ce0189c8b095a89ff4d899eb1debf608b559337",
+    "results/phase3/r5_only/segments_corrected.json": "679aa79a748b9422ab7d1639ccb0fef91e8b0cd07c5389178d800cdc0619a636",
+    "results/phase3/r5_only/segments_legacy.json": "1a6bc83f6d1e0f00df17d91d9456168f7712e8d1a231282438ffb1371ed57d4e",
+    "results/phase3/r5_only/summary.json": "146f71fbd43508c4c73291b7e476ad355dbda643b693e1c699d057d727e9ca5b",
+    "results/phase3/segments_corrected.json": "416c90bcd2c207d28afa20c365dedd9842d33ce6ec3bef935368883994879dff",
+    "results/phase3/segments_legacy.json": "1576e9846431912d49b3eacec42c6a8e4e89f6fbbfa173779047640a1e75aeef",
+    "results/phase3/summary.json": "e8e088930769fafea9d6bc62a8849dcd29c35f0541963de1d6cb2a84402aa948"
+  },
+  "verified_tests": 261
+}

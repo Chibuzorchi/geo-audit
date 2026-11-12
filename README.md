@@ -1,8 +1,8 @@
 # GeoAudit
 
-GeoAudit audits distance billing on **synthetic** GPS pings. Phase 2 adds a
-deterministic dataset generator, a deliberately wrong legacy calculation, and a
-blind QA checker. No corrected calculation exists yet.
+GeoAudit audits distance billing on **synthetic** GPS pings. It includes a
+deterministic dataset generator, deliberately wrong legacy calculation, blind QA
+checker and corrected calculation with per-driver/day comparison.
 
 Requires Python 3.12 and make on POSIX. Install and verify:
 
@@ -38,8 +38,8 @@ python scripts/discover_baseline.py --data DIR/data --results DIR/results \
 
 `check` exits 0 with findings, 1 with `--gate` and findings, and 2 on bad input.
 It writes `findings.json` (observation conditions), `decision_conflicts.json`
-(legacy segment decisions that break a rule), `segments_legacy.json`,
-`legacy_totals.json` and `quarantine.json`. `compare` and `demo` still exit 2.
+(legacy rule conflicts and explicitly provisional raw-pair anomalies), `segments_legacy.json`,
+`legacy_totals.json` and `quarantine.json`. `compare` produces before/after evidence; `demo` remains unavailable.
 Reference outputs are in `data/synthetic/` and `results/phase2/`; see
 `docs/phase2_evidence.md`.
 
@@ -59,10 +59,10 @@ Reference outputs are in `data/synthetic/` and `results/phase2/`; see
   digits, underscores or hyphens. Invalid headers/syntactically broken CSV fail
   explicitly. Blank or mis-sized data records are quarantined, not dropped.
 - Parser validity is not billing acceptance. Batch ID-conflict detection,
-  duplicate selection, noise filtering and billing aggregation are later work.
+  duplicate selection, noise filtering and billing aggregation run in the corrected path.
 
 `config` holds constants, `models` immutable records, `io` parsing/serialization,
-`geo` metre geometry, `timecut` time partitions and `rules` pure thresholds.
+`geo` metre geometry, `timecut` time partitions and `rules` selection and pure thresholds.
 No tests require credentials, live services, current time or a database.
 Run one test with `.venv/bin/python -m pytest tests/unit/test_geo.py::test_triangle`.
 
@@ -74,3 +74,21 @@ UTC and UTC+9 are representable. Unsupported conversions raise
 `ValueError("TIMESTAMP_OUT_OF_RANGE")`; the parser preserves the row and
 quarantines it. An unsupported device instant is unassignable. Polygon rings
 must be explicitly closed before conversion; M, Z and ZM geometries are rejected.
+
+
+## Corrected comparison (Phase 3)
+
+Run `.venv/bin/geo-audit compare --input data/synthetic/SYNTHETIC_gps_pings.csv --roads data/synthetic/roads.geojson --zone data/synthetic/zone.geojson --output .scratch/comparison`
+with a fresh output directory. This writes driver/day CSV, per-row decisions,
+legacy and corrected ledgers and a reconciled summary. The legacy column retains
+UTC date labels; corrected dates use fixed UTC+9. This is reporting discrepancy
+analysis, not a financial settlement. Missing calculation keys carry presence flags.
+
+The corrected path quarantines conflicting IDs, deterministically selects duplicate
+survivors, sorts device instants, filters road noise then speed against the last
+accepted anchor, clips movement and splits it at reporting midnight. No label or
+answer-key access occurs in either calculation. Empty or fully quarantined input
+writes its decision evidence and returns exit 2. All-noise input can return valid
+zero totals. `demo` and the final red/green verifier remain deferred.
+
+See `docs/phase3_evidence.md` and `results/phase3/` for executed evidence.

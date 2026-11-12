@@ -79,3 +79,28 @@ def format_number(value: float, places: int) -> str:
     if not math.isfinite(value) or places not in (10, 6, 3, 2):
         raise ValueError("invalid serialization value or precision")
     return f"{value:.{places}f}"
+
+
+def normalized_payload(row: ParsedRow) -> tuple:
+    """Canonical field identity, including malformed fields for ID-conflict checks.
+
+    Valid field values normalize even when another field quarantines the row.
+    Invalid values retain their literal representation; none are silently repaired.
+    """
+    values = []
+    for field, value in sorted(row.raw):
+        canonical = ("raw", value)
+        if field in ("ts_utc", "received_at_utc"):
+            try:
+                canonical = ("instant", parse_timestamp(value).isoformat())
+            except ValueError:
+                pass
+        elif field in ("lon", "lat"):
+            try:
+                number = float(value)
+                if math.isfinite(number):
+                    canonical = ("number", number)
+            except (TypeError, ValueError):
+                pass
+        values.append((field, canonical))
+    return tuple(values)

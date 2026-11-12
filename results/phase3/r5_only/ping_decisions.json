@@ -1,0 +1,50 @@
+[
+  {
+    "anchor_id": null,
+    "anchor_row": null,
+    "assignable": true,
+    "driver_id": "SYN-R5-ONLY",
+    "duplicate_winner": null,
+    "ping_id": "SYN-R5-ONLY-P0",
+    "raw": {
+      "driver_id": "SYN-R5-ONLY",
+      "is_synthetic": "true",
+      "lat": "37.4799602315",
+      "lon": "126.9981543221",
+      "ping_id": "SYN-R5-ONLY-P0",
+      "received_at_utc": "2026-11-04T14:59:56+00:00",
+      "ts_utc": "2026-11-04T14:59:55Z"
+    },
+    "reasons": [],
+    "reporting_date": "2026-11-04",
+    "road_distance_m": 2e-06,
+    "row": 1,
+    "speed_kmh": null,
+    "state": "accepted",
+    "timestamp": "2026-11-04T14:59:55+00:00"
+  },
+  {
+    "anchor_id": "SYN-R5-ONLY-P0",
+    "anchor_row": 1,
+    "assignable": true,
+    "driver_id": "SYN-R5-ONLY",
+    "duplicate_winner": null,
+    "ping_id": "SYN-R5-ONLY-P1",
+    "raw": {
+      "driver_id": "SYN-R5-ONLY",
+      "is_synthetic": "true",
+      "lat": "37.4799793851",
+      "lon": "126.9992846771",
+      "ping_id": "SYN-R5-ONLY-P1",
+      "received_at_utc": "2026-11-04T15:00:06+00:00",
+      "ts_utc": "2026-11-04T15:00:05Z"
+    },
+    "reasons": [],
+    "reporting_date": "2026-11-05",
+    "road_distance_m": 4e-06,
+    "row": 2,
+    "speed_kmh": 36.000001,
+    "state": "accepted",
+    "timestamp": "2026-11-04T15:00:05+00:00"
+  }
+]

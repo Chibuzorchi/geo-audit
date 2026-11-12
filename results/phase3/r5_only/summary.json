@@ -1,0 +1,31 @@
+{
+  "absolute_date_label_difference_m": 100.000003,
+  "assigned_states": [
+    {
+      "count": 1,
+      "driver_id": "SYN-R5-ONLY",
+      "reporting_date": "2026-11-04",
+      "state": "accepted"
+    },
+    {
+      "count": 1,
+      "driver_id": "SYN-R5-ONLY",
+      "reporting_date": "2026-11-05",
+      "state": "accepted"
+    }
+  ],
+  "corrected_m": 100.000003,
+  "driver_day_rows": 2,
+  "input_rows": 2,
+  "input_sha256": "8cea6f1527f0f1a74273cf734ea582c116c1398a7ef3d34175c5f27a5160a65f",
+  "interpretation": "Date-label discrepancy analysis, not normalized financial settlement. Differences combine time, zone, ordering, duplicate and noise policies.",
+  "legacy_m": 100.000003,
+  "negative_difference_m": -50.000001,
+  "net_change_m": 0.0,
+  "positive_difference_m": 50.000001,
+  "states": {
+    "accepted": 2
+  },
+  "status": "OK",
+  "unassignable_states": {}
+}

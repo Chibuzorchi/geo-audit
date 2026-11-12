@@ -34,3 +34,11 @@ class DayInterval:
     day: date
     start: float
     end: float
+
+
+@dataclass(frozen=True)
+class CorrectedResult:
+    totals: dict[tuple[str, str], float]
+    decisions: tuple[dict, ...]
+    segments: tuple[dict, ...]
+    status: str

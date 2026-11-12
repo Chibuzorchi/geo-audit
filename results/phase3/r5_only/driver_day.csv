@@ -1,0 +1,3 @@
+driver_id,reporting_date,legacy_m,corrected_m,difference_m,legacy_present,corrected_present,legacy_date_basis,corrected_date_basis
+SYN-R5-ONLY,2026-11-04,100.000,50.000,-50.000,True,True,UTC endpoint,UTC+9 interval
+SYN-R5-ONLY,2026-11-05,0.000,50.000,50.000,False,True,UTC endpoint,UTC+9 interval
