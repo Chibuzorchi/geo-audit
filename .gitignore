@@ -1,11 +1,5 @@
-quest_plan.md
-quest_source.md
 private/
-assessment/
 *.local
-local_paths.*
-applications/
-case.json
 .env
 .env.*
 *credentials*

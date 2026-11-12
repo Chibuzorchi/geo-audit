@@ -1,112 +1,266 @@
 # GeoAudit
 
-GeoAudit audits distance billing on **synthetic** GPS pings. It includes a
-deterministic dataset generator, deliberately wrong legacy calculation, blind QA
-checker and corrected calculation with per-driver/day comparison.
+GeoAudit checks how GPS pings become billed distance, finds where that goes wrong,
+and proves a fix with numbers. It is an independent portfolio project. All data is
+**synthetic**; there is no real customer, driver or billing incident behind it.
 
-Requires Python 3.12 and make on POSIX. One command from a clean checkout:
+## The problem
+
+Imagine you pay by the kilometre driven inside a zone, reported per day. Raw phone
+GPS is messy:
+- noisy points far off the road;
+- impossible speed jumps;
+- duplicated or late pings;
+- trips that cross the zone edge or midnight.
+
+A naive calculation joins pings in file order, so each of these turns into wrong
+distance, on the wrong day.
+
+GeoAudit applies six rules:
+
+| Rule | Requirement |
+|---|---|
+| R1 | Ignore pings more than 100 m from the road. |
+| R2 | Ignore pings implying more than 150 km/h. |
+| R3 | Count the same driver and timestamp once. |
+| R4 | Order pings by their own timestamp, even if they arrive late. |
+| R5 | Cut the daily report at 00:00 UTC+9, which is 15:00 UTC. |
+| R6 | Count only distance travelled inside the zone. |
+
+## Run it
+
+Requirements: Python 3.12 (`python3.12` on `PATH`), `make` and a POSIX shell.
+Internet or a pip cache is needed for the first install.
 
 ```sh
-make demo      # locked install, regenerate, compare to references, strict red/green
+make demo
 ```
 
-Expected last lines (exit 0):
+This builds `.venv` from `requirements.lock`, then:
+1. Regenerates the dataset.
+2. Runs the checker, the legacy calculation and the corrected calculation.
+3. Requires every output to match the committed references byte for byte.
+4. Runs the strict red/green proof.
+
+It takes about 30 s on first run. It ends with:
 
 ```
   PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy controls green
 DEMO PASS: data, baseline and corrected results reproduced byte-for-byte; 13 legacy reds and 20 corrected greens verified.
 ```
 
-`make verify` runs only the red/green proof. It runs the same 20 named billing
-assertions with `GEO_AUDIT_TARGET=legacy` and `=corrected` in fresh pytest
-subprocesses, and validates structured evidence plus JUnit. Legacy must fail
-exactly at its 13 intended numeric assertions. See `docs/phase4_evidence.md`.
+Exit codes: 0 means every check passed, 1 means a check failed, and 2 means a prerequisite is missing.
 
-Install and verify step by step:
+Other targets:
 
-```sh
-make install
-make lint
-make test
-.venv/bin/python -m geo_audit --version
-.venv/bin/geo-audit --help
-```
+| Command | What it does |
+|---|---|
+| `make test` | 334 tests |
+| `make lint` | Ruff check and format check |
+| `make verify` | Red/green proof only |
+| `make baseline` | Discovery only |
 
-Without make, create `.venv` with `python3.12 -m venv .venv`, install
-`requirements.lock` using `.venv/bin/python -m pip install --only-binary=:all: -r requirements.lock`,
-then install the project with `.venv/bin/python -m pip install --no-deps --no-build-isolation -e .`.
-The lock pins runtime, transitive, testing and build dependencies. Updating it
-is a deliberate dependency resolution step, not part of routine installation.
+Generated output goes to `.scratch/` and never overwrites the references.
 
-Reproduce the baseline and discovery in one step:
+Single commands, after `make install`:
 
 ```sh
-make baseline            # writes .scratch/baseline/{data,results}
+.venv/bin/geo-audit generate --output OUT/data
+.venv/bin/geo-audit check   --input OUT/data/SYNTHETIC_gps_pings.csv \
+  --roads OUT/data/roads.geojson --zone OUT/data/zone.geojson --output OUT/check
+.venv/bin/geo-audit compare --input OUT/data/SYNTHETIC_gps_pings.csv \
+  --roads OUT/data/roads.geojson --zone OUT/data/zone.geojson --output OUT/compare
 ```
 
-That runs:
+## Synthetic dataset
+
+`data/synthetic/SYNTHETIC_gps_pings.csv` has 3,327 rows. It is 21 hand-defined
+scenarios × 3 copies, giving 63 drivers, with each copy shifted by one day. Every
+row has `is_synthetic=true`.
+
+- **Geography:** a straight 10 km road and a 5.9 km rectangular zone, in UTM 52N metres.
+- **Timing:** one ping every 10 s.
+- **Faults:** each scenario plants one fault, or is a control. Planted faults include
+  off-road noise, speed spikes, exact and conflicting duplicates, late and
+  out-of-order pings, zone entry and exit, midnight crossings, a long gap, and 12
+  malformed rows.
+- **Separate files:** fault labels are in `fault_labels.json`. The checker never reads them.
+- **Frequencies are synthetic.** They say nothing about real-world prevalence.
+
+Fixture formulas are in `docs/scenarios.md`.
+
+## What was found
+
+The legacy calculation joins rows in file order. It has no dedupe and no noise
+filter. It counts a whole segment if its end point is inside the zone, and it dates
+the segment by the end point's UTC date.
+
+The checker (`geo-audit check`) flags each segment decision that breaks a rule.
+The discovery step then compares legacy totals with independent expected values.
+Figures below are from `results/phase2/findings.md`, summed over all copies:
+
+| Rank | Defect | Driver-days | Absolute error m | Net error m |
+|---:|---|---:|---:|---:|
+| 1 | R5: dated by UTC, not UTC+9 | 12 | 52,980.000 | +0.000 |
+| 2 | R2: speed spikes billed | 6 | 6,708.360 | +6,708.360 |
+| 3 | R3: duplicates counted again | 9 | 1,220.690 | +1,220.690 |
+| 4 | R1: off-road pings billed | 6 | 732.317 | +732.317 |
+| 5 | R6: zone decided by end point | 6 | 300.000 | +0.000 |
+| 6 | R4: late pings joined in file order | 3 | 300.000 | +300.000 |
+
+**R5 was chosen first.**
+- It has the largest per-day error.
+- It affects every driver-day on both sides of midnight.
+- Its root cause is one visible decision, `date_basis="UTC endpoint"`.
+
+R5 moves distance between days; it does not add any.
+- 26,190 m sits on the wrong day.
+- The two-day net is zero.
+- 600 m of the 52,980 m is really R6 overlapping in the same segments.
+
+R2 is the largest true overcount. It is discussed in `intent.md`.
+
+## The primary fix, isolated
+
+One 100 m segment lies wholly inside the zone. It runs from 14:59:55Z to 15:00:05Z,
+crossing UTC+9 midnight halfway (`results/phase3/r5_only/driver_day.csv`):
+
+| Reporting day (UTC+9) | Legacy m | Corrected m |
+|---|---:|---:|
+| 2026-11-04 | 100.000 | 50.000 |
+| 2026-11-05 | 0.000 | 50.000 |
+
+The total stays 100 m. The fix only splits it by time at midnight.
+
+On the full trips, `results/phase3/driver_day.csv` shows:
+- **S7:** legacy 5,900 / 0 becomes 2,950 / 2,950.
+- **S8:** legacy 5,900 / 0 becomes 20 / 5,880.
+
+Those vectors also include the R6 zone-edge correction.
+
+## Corrected calculation
+
+`src/geo_audit/calc_corrected.py` runs these steps in order:
+1. Quarantine invalid rows and conflicting IDs.
+2. Keep one survivor per driver and timestamp.
+3. Sort by device time.
+4. Drop off-road pings.
+5. Drop speed violations, measured against the last accepted ping.
+6. Clip each segment to the zone.
+7. Split each segment at UTC+9 midnight.
+
+Each input row gets exactly one state (`results/phase3/summary.json`):
+
+| State | Rows |
+|---|---:|
+| accepted | 3,246 |
+| accepted with warning | 9 |
+| quarantined | 12 |
+| duplicate rejected | 39 |
+| noise rejected | 21 |
+| **Total** | **3,327** |
+
+Across all data, the legacy total is 263,099.458 m and the corrected total is
+235,838.090 m. That difference mixes every rule. It is a reporting comparison,
+not a financial settlement.
+
+## How correctness is proven
+
+- **Independent expected values.** `tests/expectations/analytic.json` holds literal
+  numbers derived by hand from geometry. A test re-derives them with plain `math`,
+  and no calculator computes its own answer.
+- **Red/green proof** (`make verify`).
+  - The same 20 named assertions run with `GEO_AUDIT_TARGET=legacy` and with `=corrected`, each in a fresh pytest subprocess.
+  - Corrected must pass all 20.
+  - Legacy must fail exactly 13, each at its own numeric assertion. Those are S2b, S3, S3b, S4, S5a, S5c, S6b, S6c, S7, S8, S9a, S9b and R5_ONLY.
+  - The 7 controls must pass on both: S1, S2a, S5b, S6a, S10, S12 and S14.
+  - The verifier reads structured evidence and JUnit, not exit codes alone.
+  - 47 negative tests prove it rejects corrupted, stale, skipped, setup-error or sabotaged runs.
+- **Characterization only.** S11 (stationary jitter) and S13 (a bad first anchor) are tested separately. They are not proof of a fix.
+- **Frozen evidence.** 42 hashes of data and results are checked by every demo run.
+  `scripts/verify_frozen_history.py` checks the freeze manifests against their Git
+  commits, and confirms the logs were only appended to.
+
+## Where the evidence is
+
+| Path | Contents |
+|---|---|
+| `data/synthetic/` | Input CSV, road and zone GeoJSON, fault labels, manifest |
+| `results/phase2/` | Legacy ledger, checker findings, discovery ranking (`findings.md`) |
+| `results/phase3/` | Corrected ledger, per-row decisions, `driver_day.csv` before/after |
+| `docs/phase1_evidence.md` … `docs/phase5_evidence.md` | Executed commands and results, per phase |
+| `docs/ai_log.md`, `docs/effort.md` | AI provenance and recorded time |
+| `intent.md`, `directive.md` | Problem write-up and technical handoff |
+
+## Assumptions and limitations
+
+**Assumptions:**
+- Road distance means distance to the nearest line in the supplied road file.
+- Movement between accepted pings is a straight line at constant speed. Long gaps
+  are counted as one chord, with a warning.
+- For duplicates, the earliest received copy wins, then the lowest ping ID. A
+  noisy winner is not swapped for a valid copy.
+- UTC+9 is a fixed offset, with no daylight saving.
+- Distance along the zone boundary counts.
+
+**Not solved:**
+- A bad first anchor rejects good later pings (S13).
+- Stationary jitter is billed (S11).
+- Gaps are not interpolated.
+- Late data never restates a report already issued.
+- Driver pay rules are not modelled.
+
+**Platform:** hosted CI has not run yet. The lock pins exact versions, and Linux
+wheels exist for all of them. Byte-identical output on Linux is unverified.
+
+## How AI was used
+
+An AI coding assistant (Claude) drafted most of the code, tests and documents, phase
+by phase. The author audited each phase independently and supplied findings for it
+to fix. Every number was checked against hand-derived expectations, not against the
+code's own output. Mistakes caught and corrected included:
+- A checker that could not explain *why* totals were wrong.
+- A coordinate rounding loss of about 0.1 m.
+- A ranking that credited 600 m of zone error to R5.
+- A speed diagnostic that compared raw neighbouring pings instead of the last accepted ping.
+- A verifier that accepted `NaN` and missing keys.
+- A verifier draft that rejected its own valid run.
+- A secret-scan allowlist that silently exempted a whole file.
+
+Details are in `docs/ai_log.md`.
+
+## Technical reference
+
+**Geometry**
+- Coordinates are projected EPSG:4326 → EPSG:32652 with `always_xy`.
+- Supported area: longitude 126.8–127.3, latitude 37.3–37.7.
+- Point-only zone contact has zero length.
+
+**Time**
+- Timestamps need an explicit `Z` or `±HH:MM` offset, with at most microsecond precision.
+
+**Thresholds**
+- Rejection is strictly `>` 100 m and `>` 150 km/h. Exactly 100 m or 150 km/h is kept.
+
+**Input**
+- CSV fields: `ping_id,driver_id,ts_utc,lat,lon,received_at_utc,is_synthetic`.
+- Malformed rows are quarantined, not dropped.
+
+**Modules**
+- `config`: constants.
+- `io`: parsing.
+- `geo`, `timecut`: spatial and time primitives.
+- `rules`: selection and thresholds.
+- `calc_legacy`, `calc_corrected`: the two calculators.
+- `checker`: diagnostics.
+- `report`: serialization and reconciliation.
+- `demo`: orchestration.
+
+**Without make**
 
 ```sh
-geo-audit generate --output DIR/data           # synthetic CSV, geometry, labels, manifest
-geo-audit check --input DIR/data/SYNTHETIC_gps_pings.csv \
-  --roads DIR/data/roads.geojson --zone DIR/data/zone.geojson --output DIR/results
-python scripts/discover_baseline.py --data DIR/data --results DIR/results \
-  --expectations tests/expectations/analytic.json
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --only-binary=:all: -r requirements.lock
+.venv/bin/python -m pip install --no-deps --no-build-isolation -e .
+.venv/bin/geo-audit demo --output .scratch/demo
 ```
-
-`check` exits 0 with findings, 1 with `--gate` and findings, and 2 on bad input.
-It writes `findings.json` (observation conditions), `decision_conflicts.json`
-(legacy rule conflicts and explicitly provisional raw-pair anomalies), `segments_legacy.json`,
-`legacy_totals.json` and `quarantine.json`. `compare` produces before/after evidence; `demo` runs every gate (exit 1 on a failed gate, 2 on missing prerequisites).
-Reference outputs are in `data/synthetic/` and `results/phase2/`; see
-`docs/phase2_evidence.md`.
-
-## Contracts
-
-- Geometry uses UTM 52N metres after explicit longitude/latitude projection.
-  Geographic inputs are limited to longitude 126.8–127.3, latitude 37.3–37.7.
-  Planar primitives accept metre XY coordinates; never pass raw degrees to them.
-- Zone boundaries count; point-only contact has zero length. Polygon holes and
-  multiple intersection intervals are supported.
-- Timestamps require ISO date/time with seconds and an explicit `Z` or `±HH:MM`
-  offset, at most six fractional digits. Days use fixed UTC+9.
-- Thresholds reject only road distance >100 m or speed >150 km/h.
-- Parsing preserves each CSV record with raw evidence and quarantine reasons.
-  Required fields: `ping_id,driver_id,ts_utc,lat,lon,received_at_utc,is_synthetic`.
-  Synthetic flags are literal `true` or `false`. Identifiers are ASCII letters,
-  digits, underscores or hyphens. Invalid headers/syntactically broken CSV fail
-  explicitly. Blank or mis-sized data records are quarantined, not dropped.
-- Parser validity is not billing acceptance. Batch ID-conflict detection,
-  duplicate selection, noise filtering and billing aggregation run in the corrected path.
-
-`config` holds constants, `models` immutable records, `io` parsing/serialization,
-`geo` metre geometry, `timecut` time partitions and `rules` selection and pure thresholds.
-No tests require credentials, live services, current time or a database.
-Run one test with `.venv/bin/python -m pytest tests/unit/test_geo.py::test_triangle`.
-
-See `docs/phase1_evidence.md` for measured verification and limitations.
-
-Timestamp representability: normalized UTC must fall between
-`0001-01-01T00:00:00Z` and `9999-12-31T14:59:59.999999Z`, inclusive, so both
-UTC and UTC+9 are representable. Unsupported conversions raise
-`ValueError("TIMESTAMP_OUT_OF_RANGE")`; the parser preserves the row and
-quarantines it. An unsupported device instant is unassignable. Polygon rings
-must be explicitly closed before conversion; M, Z and ZM geometries are rejected.
-
-
-## Corrected comparison (Phase 3)
-
-Run `.venv/bin/geo-audit compare --input data/synthetic/SYNTHETIC_gps_pings.csv --roads data/synthetic/roads.geojson --zone data/synthetic/zone.geojson --output .scratch/comparison`
-with a fresh output directory. This writes driver/day CSV, per-row decisions,
-legacy and corrected ledgers and a reconciled summary. The legacy column retains
-UTC date labels; corrected dates use fixed UTC+9. This is reporting discrepancy
-analysis, not a financial settlement. Missing calculation keys carry presence flags.
-
-The corrected path quarantines conflicting IDs, deterministically selects duplicate
-survivors, sorts device instants, filters road noise then speed against the last
-accepted anchor, clips movement and splits it at reporting midnight. No label or
-answer-key access occurs in either calculation. Empty or fully quarantined input
-writes its decision evidence and returns exit 2. All-noise input can return valid
-zero totals. `make verify` and `make demo` provide the red/green proof.
-
-See `docs/phase3_evidence.md` and `results/phase3/` for executed evidence.

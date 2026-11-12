@@ -1,4 +1,4 @@
-"""Strict red/green verifier for GeoAudit's named billing regressions (plan section 7).
+"""Strict red/green verifier for GeoAudit's named billing regressions (docs/phase4_evidence.md).
 
 Runs the same named assertions twice, in fresh pytest subprocesses:
   GEO_AUDIT_TARGET=corrected  -> must exit 0, every case passes.

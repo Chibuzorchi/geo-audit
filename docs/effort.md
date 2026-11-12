@@ -66,3 +66,10 @@ Human effort and the exact assessment deadline remain unknown.
 Assistant interval: scratch workspace created 22:26:37 UTC; full suite, demo,
 clean-export demo and CI-equivalent steps completed by about 22:45 UTC. This is
 assistant wall-clock time, not human effort. The earlier draft files are dated 22:21 UTC.
+
+## Phase 5A — 2026-11-12
+
+Assistant interval: first gate run at 22:55:56 UTC; documents drafted by about 23:01 UTC.
+Final gates, clean-clone check and commit follow and are recorded in docs/phase5_evidence.md.
+This is assistant wall-clock time, not human effort. Recording the video and publishing
+are still to be done by the author.

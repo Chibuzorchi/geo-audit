@@ -87,7 +87,10 @@ def check_prerequisites(root, output):
 def check_frozen_references(root):
     """Reference files read by the demo must still match their recorded hashes."""
     frozen = json.loads((root / PHASE2_FREEZE).read_text())["files"]
-    guarded = {p: h for p, h in frozen.items() if p.startswith(("data/", "results/phase2/"))}
+    # Immutable calculation evidence only: data, Phase 2 results (current and the archived
+    # pre-remediation run) and Phase 3 numeric outputs. Source and append-only logs evolve
+    # and are verified against their commits by scripts/verify_frozen_history.py instead.
+    guarded = {p: h for p, h in frozen.items() if p.startswith(("data/", "results/"))}
     manifest = json.loads((root / PHASE3_MANIFEST).read_text())
     guarded.update(manifest["unchanged_numeric_evidence"])
     for path, digest in sorted(guarded.items()):

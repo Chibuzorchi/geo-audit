@@ -141,3 +141,10 @@ This phase appended to `docs/ai_log.md`, `docs/effort.md` and `README.md`. Their
 hashes in `results/phase3_validation_manifest.json` (`files`) therefore no longer
 match HEAD. The verified earlier versions remain in commit `18d11d6`. The demo guards only the
 frozen data and numeric evidence, and those are unchanged.
+
+## 9. Later status (added 2026-11-12, Phase 5A)
+
+- The demo's frozen-hash guard grew from 31 to 42. It now also covers the 11
+  archived `results/phase2_pre_remediation/` files. Source files and append-only
+  logs are checked against their commits by `scripts/verify_frozen_history.py`.
+- Private file names moved from `.gitignore` to local-only `.git/info/exclude`.

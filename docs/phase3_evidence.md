@@ -251,3 +251,10 @@ match in the working tree. The original Phase 3 manifest is retained as the
 pre-remediation source snapshot; authorized validation-source changes are recorded
 in results/phase3_validation_manifest.json. Original result hashes remain unchanged.
 No remote, push, publication, history rewrite or Phase 4 implementation occurred.
+
+## Later status (added 2026-11-12, Phase 5A; the record above is unchanged)
+
+The blocked commit described above was later made as `cf4e41c` (Phase 2) and `18d11d6`
+(Phase 3), with a gitleaks allowlist. That allowlist turned out to exempt the whole file.
+It was narrowed to one rule and token in `6e59896`; see `docs/phase4_evidence.md`.
+Phase 4 has since delivered the strict red/green verifier and the CI workflow.

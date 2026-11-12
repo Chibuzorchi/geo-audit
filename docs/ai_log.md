@@ -124,3 +124,18 @@ An earlier session left an uncommitted draft: `tests/regression/` and
 - Removed a glob for private planning-file names that it had written into a public test.
 
 Historical Phase 2/3 findings and expectations were not modified. Human review pending.
+
+## Phase 5A — release preparation, 2026-11-12 (UTC)
+
+The assistant rewrote `README.md` for reviewers. It drafted `intent.md`,
+`directive.md` and `docs/demo_script.md` from canonical artifacts only. It also
+added `scripts/verify_frozen_history.py`, and widened the demo's frozen-hash guard
+to the 11 archived pre-remediation files that were not covered before.
+
+Corrected during drafting:
+- **An unsupported claim.** Its first `intent.md` said a "runtime file-open trace" proved the
+  checker was blind. That trace existed only in an earlier audit's scratch output, not in
+  committed evidence. It now cites `test_checker_blind_and_specific`.
+- **Privacy.** Private file names moved from `.gitignore` to local `.git/info/exclude`.
+  A "plan section 7" reference to a non-public document was removed from a non-frozen
+  script. Frozen files were left unchanged.
