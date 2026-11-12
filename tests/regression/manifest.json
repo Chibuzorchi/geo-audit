@@ -1,0 +1,511 @@
+[
+  {
+    "assertion_id": "S1_REQUIRED_DISTANCE",
+    "driver": "SYN-S1-00",
+    "first_row": 1,
+    "fixture_sha256": "1f69f0a90afa7e55be80f4fc4b9e3dc3ee3c9915ba3c9d98244f3c5870436bc8",
+    "legacy": {
+      "2026-11-04": 5900
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S1]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 81,
+    "scenario": "S1",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S2a_REQUIRED_DISTANCE",
+    "driver": "SYN-S2a-00",
+    "first_row": 82,
+    "fixture_sha256": "df9047d4d23af86d99c336d35e17b2ef5ef1af1342ef61a2c1307e08b0ffca31",
+    "legacy": {
+      "2026-11-04": 5900
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S2a]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 91,
+    "scenario": "S2a",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S2b_REQUIRED_DISTANCE",
+    "driver": "SYN-S2b-00",
+    "first_row": 173,
+    "fixture_sha256": "ae00e9fb07b79b604f2332ba25cf1a9de505b473c680843996c77f40714be9df",
+    "legacy": {
+      "2026-11-04": 300
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S2b]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 200
+    },
+    "row_count": 4,
+    "scenario": "S2b",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S3_REQUIRED_DISTANCE",
+    "driver": "SYN-S3-00",
+    "first_row": 177,
+    "fixture_sha256": "13253001c25c32d44d2cbeaa072b313596f79e52b01a764529e603f466ae5356",
+    "legacy": {
+      "2026-11-04": 276.619037896906
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S3]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 200
+    },
+    "row_count": 4,
+    "scenario": "S3",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S3b_REQUIRED_DISTANCE",
+    "driver": "SYN-S3b-00",
+    "first_row": 181,
+    "fixture_sha256": "76e362eba40b1fcaa032eb3d357c055300c83fecdfad7288e813c2886cd09975",
+    "legacy": {
+      "2026-11-04": 430.277563773199
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S3b]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 200
+    },
+    "row_count": 4,
+    "scenario": "S3b",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S4_REQUIRED_DISTANCE",
+    "driver": "SYN-S4-00",
+    "first_row": 185,
+    "fixture_sha256": "aee1c4320a1bd78442ea5a1ea24bfde7e8f36c632d9c5cbbf50dec01aad30b44",
+    "legacy": {
+      "2026-11-04": 300
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S4]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 200
+    },
+    "row_count": 3,
+    "scenario": "S4",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S5a_REQUIRED_DISTANCE",
+    "driver": "SYN-S5a-00",
+    "first_row": 188,
+    "fixture_sha256": "8a24ed9b088740c4cae99130f1587aea030625991aa8d38547de32009c858abd",
+    "legacy": {
+      "2026-11-04": 6060.555127546399
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S5a]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 81,
+    "scenario": "S5a",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S5b_REQUIRED_DISTANCE",
+    "driver": "SYN-S5b-00",
+    "first_row": 269,
+    "fixture_sha256": "62ad852df36e395f911bc43c74aed880122dd4659385b10df66824883d445eaf",
+    "legacy": {
+      "2026-11-04": 5982.136491790764
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S5b]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5982.136491790764
+    },
+    "row_count": 81,
+    "scenario": "S5b",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S5c_REQUIRED_DISTANCE",
+    "driver": "SYN-S5c-00",
+    "first_row": 350,
+    "fixture_sha256": "04aa7618b95aafa0f3b2bb0c1b31beb57e8e2809963c5a566d1934284e644b27",
+    "legacy": {
+      "2026-11-04": 5983.550700933713
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S5c]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 81,
+    "scenario": "S5c",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S6a_REQUIRED_DISTANCE",
+    "driver": "SYN-S6a-00",
+    "first_row": 431,
+    "fixture_sha256": "0ef2ac414fc178d5af37b62b1910497552bcf79b0edcbedbadcc27a0c0c4300f",
+    "legacy": {
+      "2026-11-04": 6330.56
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S6a]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 6330.56
+    },
+    "row_count": 81,
+    "scenario": "S6a",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S6b_REQUIRED_DISTANCE",
+    "driver": "SYN-S6b-00",
+    "first_row": 512,
+    "fixture_sha256": "c818a5aa14cef67c2e1496da468fd1927410d4dfa3b4c372922c2a30a78b985f",
+    "legacy": {
+      "2026-11-04": 6336.12
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S6b]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 81,
+    "scenario": "S6b",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S6c_REQUIRED_DISTANCE",
+    "driver": "SYN-S6c-00",
+    "first_row": 593,
+    "fixture_sha256": "d3d33424409cbbb9279877130240d22965f0c98f7383f226408e5e419d1bd5ba",
+    "legacy": {
+      "2026-11-04": 7700
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S6c]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 81,
+    "scenario": "S6c",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S7_REQUIRED_DISTANCE",
+    "driver": "SYN-S7-00",
+    "first_row": 674,
+    "fixture_sha256": "3728d8da6d311fca5caf1e75da90a2c71443ce0f65f4dd80e75ec87302493ada",
+    "legacy": {
+      "2026-11-04": 5900,
+      "2026-11-05": 0
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S7]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 2950,
+      "2026-11-05": 2950
+    },
+    "row_count": 81,
+    "scenario": "S7",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S8_REQUIRED_DISTANCE",
+    "driver": "SYN-S8-00",
+    "first_row": 755,
+    "fixture_sha256": "b8b3ebe4d98f3c20c13283fb555438d4622f9c63c344f31bbab8a54acf424d80",
+    "legacy": {
+      "2026-11-04": 5900,
+      "2026-11-05": 0
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S8]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 20,
+      "2026-11-05": 5880
+    },
+    "row_count": 81,
+    "scenario": "S8",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S9a_REQUIRED_DISTANCE",
+    "driver": "SYN-S9a-00",
+    "first_row": 836,
+    "fixture_sha256": "08f3e8ed037c6ef03653f0ee7c62af888790c6b6bafe9d2e9259d56d011af3cb",
+    "legacy": {
+      "2026-11-04": 2900
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S9a]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 2950
+    },
+    "row_count": 41,
+    "scenario": "S9a",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S9b_REQUIRED_DISTANCE",
+    "driver": "SYN-S9b-00",
+    "first_row": 877,
+    "fixture_sha256": "1cdf2bd8047c3a605652e62adc25926cde83610065e8470459a267e41222677d",
+    "legacy": {
+      "2026-11-04": 3000
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S9b]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 2950
+    },
+    "row_count": 41,
+    "scenario": "S9b",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S10_REQUIRED_DISTANCE",
+    "driver": "SYN-S10-00",
+    "first_row": 918,
+    "fixture_sha256": "c6f235c743f0a539ce2183ca47d135bceb551b9f5485cb93ff2329cd7757dcb8",
+    "legacy": {
+      "2026-11-04": 5900
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S10]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 41,
+    "scenario": "S10",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S12_REQUIRED_DISTANCE",
+    "driver": "SYN-S12-00",
+    "first_row": 1020,
+    "fixture_sha256": "b58f9897eea457ef3303fd44a86bb6ff7895dc78e35ce8b2675b00a99fe0e488",
+    "legacy": {
+      "2026-11-04": 5900
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S12]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 5900
+    },
+    "row_count": 85,
+    "scenario": "S12",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "S14_REQUIRED_DISTANCE",
+    "driver": "SYN-S14-00",
+    "first_row": 1108,
+    "fixture_sha256": "da8c1c840948c9033703313d2bcb0fdfaf884d8707e1c6c004ceb5457449fa40",
+    "legacy": {
+      "2026-11-04": 0
+    },
+    "legacy_status": "passed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[S14]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 0
+    },
+    "row_count": 2,
+    "scenario": "S14",
+    "tolerance_m": 0.01
+  },
+  {
+    "assertion_id": "R5_ONLY_LOCAL_DAY_ALLOCATION",
+    "driver": "SYN-R5-ONLY",
+    "first_row": null,
+    "fixture_sha256": "83f8ff9022cdc6d8cb78b7f3be380901668c71c052eabac516883074025c9896",
+    "legacy": {
+      "2026-11-04": 100,
+      "2026-11-05": 0
+    },
+    "legacy_status": "failed",
+    "nodeid": "tests/regression/test_billing.py::test_billing[R5_ONLY]",
+    "raw_dates": {
+      "corrected": [
+        "2026-11-04",
+        "2026-11-05"
+      ],
+      "legacy": [
+        "2026-11-04"
+      ]
+    },
+    "required": {
+      "2026-11-04": 50,
+      "2026-11-05": 50
+    },
+    "row_count": 2,
+    "scenario": "R5_ONLY",
+    "tolerance_m": 0.01
+  }
+]

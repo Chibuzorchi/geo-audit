@@ -4,7 +4,25 @@ GeoAudit audits distance billing on **synthetic** GPS pings. It includes a
 deterministic dataset generator, deliberately wrong legacy calculation, blind QA
 checker and corrected calculation with per-driver/day comparison.
 
-Requires Python 3.12 and make on POSIX. Install and verify:
+Requires Python 3.12 and make on POSIX. One command from a clean checkout:
+
+```sh
+make demo      # locked install, regenerate, compare to references, strict red/green
+```
+
+Expected last lines (exit 0):
+
+```
+  PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy controls green
+DEMO PASS: data, baseline and corrected results reproduced byte-for-byte; 13 legacy reds and 20 corrected greens verified.
+```
+
+`make verify` runs only the red/green proof. It runs the same 20 named billing
+assertions with `GEO_AUDIT_TARGET=legacy` and `=corrected` in fresh pytest
+subprocesses, and validates structured evidence plus JUnit. Legacy must fail
+exactly at its 13 intended numeric assertions. See `docs/phase4_evidence.md`.
+
+Install and verify step by step:
 
 ```sh
 make install
@@ -39,7 +57,7 @@ python scripts/discover_baseline.py --data DIR/data --results DIR/results \
 `check` exits 0 with findings, 1 with `--gate` and findings, and 2 on bad input.
 It writes `findings.json` (observation conditions), `decision_conflicts.json`
 (legacy rule conflicts and explicitly provisional raw-pair anomalies), `segments_legacy.json`,
-`legacy_totals.json` and `quarantine.json`. `compare` produces before/after evidence; `demo` remains unavailable.
+`legacy_totals.json` and `quarantine.json`. `compare` produces before/after evidence; `demo` runs every gate (exit 1 on a failed gate, 2 on missing prerequisites).
 Reference outputs are in `data/synthetic/` and `results/phase2/`; see
 `docs/phase2_evidence.md`.
 
@@ -89,6 +107,6 @@ survivors, sorts device instants, filters road noise then speed against the last
 accepted anchor, clips movement and splits it at reporting midnight. No label or
 answer-key access occurs in either calculation. Empty or fully quarantined input
 writes its decision evidence and returns exit 2. All-noise input can return valid
-zero totals. `demo` and the final red/green verifier remain deferred.
+zero totals. `make verify` and `make demo` provide the red/green proof.
 
 See `docs/phase3_evidence.md` and `results/phase3/` for executed evidence.

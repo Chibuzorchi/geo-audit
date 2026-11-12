@@ -101,3 +101,26 @@ validation. This session did not invent additional failed implementations or hum
 verification. Fresh output matched canonical results byte-for-byte. A commit attempt
 was stopped by a gitleaks false positive on documentation prose; no hook bypass,
 staging change or commit occurred. Independent review of the remediation is pending.
+
+## Phase 4 — 2026-11-12
+
+An earlier session left an uncommitted draft: `tests/regression/` and
+`scripts/verify_red_green.py`. This session's assistant:
+
+- Ran the draft verifier on a genuine run. It **failed its own valid evidence**: it
+  expected the JUnit message to be the bare assertion ID, but pytest writes
+  `conftest.BillingMismatch: <ID>`. Fixed to an exact match.
+- Found the draft could not name a setup failure. Setup errors skip the call phase,
+  so it reported only "missing phases". Setup/teardown/xfail checks now run first.
+- Added a manifest-versus-literal check and an independent fixture hash recompute.
+  The draft trusted the manifest as its own oracle.
+- Found the committed gitleaks allowlist exempted the whole file
+  (`docs/phase2_evidence.md`), not one token. Synthetic probes proved it. Rescoped to one rule.
+- Its own test drafts had four bugs, all fixed in tests:
+  - a keyword collision;
+  - an `Infinity` probe aimed at a value absent from corrected evidence;
+  - a "legacy fixed" sabotage that actually caused a setup error;
+  - a wrong ledger field name (`reporting_date` vs `report_date`) in the demo.
+- Removed a `quest_*` glob it had written into a public test.
+
+Historical Phase 2/3 findings and expectations were not modified. Human review pending.

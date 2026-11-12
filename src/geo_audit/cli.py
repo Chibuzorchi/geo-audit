@@ -14,7 +14,9 @@ from geo_audit.report import write_baseline
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="geo-audit", description="GeoAudit baseline discovery")
+    parser = argparse.ArgumentParser(
+        prog="geo-audit", description="GeoAudit synthetic GPS billing audit"
+    )
     parser.add_argument("--version", action="version", version=__version__)
     parser.add_argument("command", nargs="?", choices=["generate", "check", "compare", "demo"])
     parser.add_argument("--output", type=Path)
@@ -26,10 +28,12 @@ def main(argv: list[str] | None = None) -> int:
     if not args.command:
         parser.print_help()
         return 0
-    if args.command == "demo":
-        parser.error(f"{args.command} is unavailable in Phase 3")
     if not args.output:
         parser.error("--output is required (empty directory)")
+    if args.command == "demo":
+        from geo_audit.demo import main as demo
+
+        return demo(args.output)
     try:
         if args.command == "generate":
             from geo_audit_synthetic.generator import generate

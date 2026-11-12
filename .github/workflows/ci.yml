@@ -1,0 +1,52 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GEO_AUDIT_TARGET: corrected
+      EVIDENCE: .scratch/ci
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Locked install
+        run: make install PYTHON=python
+
+      - name: Lint and format
+        run: make lint
+
+      - name: Corrected unit, integration, regression, diagnostic and verifier tests
+        run: |
+          mkdir -p "$EVIDENCE"
+          .venv/bin/python -m pytest tests --junitxml="$EVIDENCE/pytest.xml"
+
+      - name: Strict red/green verification (legacy must fail only at named numeric assertions)
+        run: make verify RG_OUT="$EVIDENCE/red_green"
+
+      - name: Independent regeneration, reference comparison and evidence integrity
+        run: make demo DEMO_OUT="$EVIDENCE/demo"
+
+      - name: Canonical references were not modified
+        run: git diff --exit-code && test -z "$(git status --porcelain --untracked-files=all)"
+
+      - name: Upload evidence (also on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geo-audit-evidence
+          path: .scratch/ci
+          if-no-files-found: error
+          include-hidden-files: true

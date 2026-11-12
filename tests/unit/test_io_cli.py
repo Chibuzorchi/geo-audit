@@ -87,10 +87,10 @@ def test_cli(invocation):
     result = subprocess.run(invocation + ["--version"], capture_output=True, text=True)
     assert result.returncode == 0
     assert result.stdout.strip() == "0.1.0"
-    for command in ("demo",):
+    for command in ("demo", "generate", "check", "compare"):
         result = subprocess.run(invocation + [command], capture_output=True, text=True)
         assert result.returncode == 2
-        assert "unavailable in Phase 3" in result.stderr
+        assert "--output is required" in result.stderr
 
 
 def test_parser_does_not_select_duplicates(valid_row):

@@ -60,3 +60,9 @@ wall-clock activity, not human focused effort. It includes baseline/privacy chec
 a hook-rejected commit attempt, validation fixes, 22 new tests, the 261-test suite
 and deterministic regeneration. Final integrity checks and response follow.
 Human effort and the exact assessment deadline remain unknown.
+
+## Phase 4 — 2026-11-12
+
+Assistant interval: scratch workspace created 22:26:37 UTC; full suite, demo,
+clean-export demo and CI-equivalent steps completed by about 22:45 UTC. This is
+assistant wall-clock time, not human effort. The earlier draft files are dated 22:21 UTC.
