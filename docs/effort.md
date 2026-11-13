@@ -73,3 +73,13 @@ Assistant interval: first gate run at 22:55:56 UTC; documents drafted by about 2
 Final gates, clean-clone check and commit follow and are recorded in docs/phase5_evidence.md.
 This is assistant wall-clock time, not human effort. Recording the video and publishing
 are still to be done by the author.
+
+## Phase 5B — 2026-11-13
+
+The local scratch directory was created at 04:52:54 UTC. The initial hosted run
+began at 04:53:58 UTC; the successful correction run began at 04:59:22 UTC.
+Work included local release/security verification, private deployment, inspection
+of four actual Linux failures, a bounded precision fix, nine tests and downloaded
+artifact validation. Documentation and the final documentation-commit CI run
+followed. These are recorded execution times, not an estimate of human focused
+hours. Public release, Loom and submission have not been performed.

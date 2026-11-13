@@ -1,6 +1,6 @@
 # directive.md — GeoAudit technical handoff
 
-Status: local verification complete. Publication pending.
+Status: local and private Ubuntu hosted verification complete. Public release pending.
 All data is synthetic. Paths are relative to the repository root.
 
 ## 1. Objective
@@ -51,7 +51,7 @@ All criteria were met locally on 2026-11-12/13.
 - [x] Primary fix shown per driver and day: `results/phase3/r5_only/driver_day.csv`, `results/phase3/driver_day.csv`.
 - [x] Regression fails on legacy and passes on corrected: `make verify`, with 13 reds, 7 controls and 20 greens.
 - [x] Noise, duplicates, late pings, the UTC+9 cut and the zone boundary are all covered by named assertions.
-- [ ] Hosted CI run: **PENDING PUBLICATION**.
+- [x] [Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547); authorized access required.
 
 ## 5. QA tool and how to run it
 
@@ -153,10 +153,12 @@ prove that corrupted, stale or sabotaged evidence is rejected.
 
 It has no `continue-on-error`.
 
-**Not yet run on GitHub. Hosted CI run link: PENDING PUBLICATION.**
+**[Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547).**
 
 Linux wheels exist for every pinned version. They bundle PROJ 9.8.1 and GEOS 3.14.1,
-the same as the macOS references. Byte-identical output on Linux x86_64 is still unverified.
+the same as the macOS references. Linux x86_64 verified 29 of 31 reference files
+byte-for-byte; two supplemental unrounded JSON reports agree at six decimal places.
+See [Phase 5B evidence](docs/phase5b_evidence.md) for the original failure and correction.
 
 ## 11. Reproduction
 
@@ -165,7 +167,7 @@ Local results (macOS arm64, Python 3.12.12):
 | Command | Result |
 |---|---|
 | `make lint` | 0 |
-| `make test` | 334 passed |
+| `make test` | 343 passed |
 | `make verify` | PASS |
 | `make demo` | PASS |
 | `make demo` from a fresh clone with a new `.venv` | PASS |
@@ -180,7 +182,7 @@ Regeneration is byte-identical across hash seeds and host timezones. See
 - Long gaps counted as a straight chord.
 - No restatement of reports already issued.
 - No pay model.
-- Hosted CI and Linux byte-equality unverified.
+- Hosted links require repository access; public release and video remain pending.
 
 ## 13. AI involvement and human verification
 
@@ -205,5 +207,5 @@ Recorded assistant time is in `docs/effort.md`. Human effort was not measured th
 | Dataset | `data/synthetic/` (repo link pending) |
 | Fix | `src/geo_audit/calc_corrected.py` (repo link pending) |
 | Regression check | `scripts/verify_red_green.py`, `tests/regression/` (repo link pending) |
-| Regression results | `make verify` output; CI artifact **PENDING PUBLICATION** |
+| Regression results | `make verify` output; [private CI artifact](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547) (authorized access required) |
 | Video walkthrough | **PENDING PUBLICATION**; script in `docs/demo_script.md` |

@@ -55,7 +55,7 @@ Other targets:
 
 | Command | What it does |
 |---|---|
-| `make test` | 334 tests |
+| `make test` | 343 tests |
 | `make lint` | Ruff check and format check |
 | `make verify` | Red/green proof only |
 | `make baseline` | Discovery only |
@@ -210,8 +210,13 @@ not a financial settlement.
 - Late data never restates a report already issued.
 - Driver pay rules are not modelled.
 
-**Platform:** hosted CI has not run yet. The lock pins exact versions, and Linux
-wheels exist for all of them. Byte-identical output on Linux is unverified.
+**Platform:** [Ubuntu hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547) on Python 3.12.16:
+343 tests, 13 verified legacy reds, seven controls and 20 corrected greens.
+The repository and CI evidence are **private**, accessible only to authorized users.
+Linux reproduced 29 of 31 reference files byte-for-byte; two supplemental raw-float
+JSON reports match at six decimal places. Frozen references and numerical
+expectations are unchanged. See [hosted evidence](docs/phase5b_evidence.md).
+Public repository URL and Loom URL remain **pending public release**.
 
 ## How AI was used
 

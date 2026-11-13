@@ -154,3 +154,10 @@ validated without rewriting its historical raw floats. Nine focused tests cover
 the inverse guard and rejection of larger/nonfinite/schema differences.
 Local lint, 343 tests, strict red/green and demo passed before the next push.
 Hosted rerun results are recorded separately; local success is not hosted success.
+
+The corrected Ubuntu run 43369010547 succeeded with 343 tests. AI downloaded its
+artifact, revalidated both structured red/green runs and checked all 31 regenerated
+reference files (29 byte-identical; two supplemental raw-float reports equal at
+serialization precision). All 63 scenarios, 3,327 states and 252 driver/date rows
+reconciled. README and directive now distinguish verified private hosted access
+from pending public release. No human verification or public accessibility is claimed.
