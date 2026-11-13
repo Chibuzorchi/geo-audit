@@ -60,7 +60,7 @@ def test_primary_frozen_r5():
     dates = ["2026-11-04", "2026-11-05"]
     old = [legacy.totals.get(("SYN-R5-ONLY", d), 0) for d in dates]
     new = [fixed.totals[("SYN-R5-ONLY", d)] for d in dates]
-    assert old == frozen["actual_legacy_m"]
+    assert old == pytest.approx(frozen["actual_legacy_m"], abs=1e-6, rel=0)
     assert old == pytest.approx([100, 0], abs=0.01)
     assert new == pytest.approx([100 * 5 / 10, 100 * 5 / 10], abs=0.01)
     assert fixed.segments[0]["zone_intervals"] == ((0, 1),)

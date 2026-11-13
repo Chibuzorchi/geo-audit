@@ -13,7 +13,7 @@ from geo_audit.calc_corrected import calculate
 from geo_audit.calc_legacy import calculate as legacy_calculate
 from geo_audit.geo import project_geojson
 from geo_audit.io import parse_rows
-from geo_audit.report import write_comparison
+from geo_audit.report import _rounded, write_comparison
 
 
 def finite_number(value, context):
@@ -156,7 +156,10 @@ def main():
         raise ValueError("primary total key mismatch")
     # This fixture has exactly one UTC legacy date; the second date is explicitly absent.
     before = [legacy.totals[("SYN-R5-ONLY", dates[0])], 0]
-    if before != frozen["actual_legacy_m"] or any(abs(v - 50) > 0.01 for v in actual):
+    if any(
+        abs(finite_number(a, "primary") - finite_number(b, "frozen primary")) > 1e-6
+        for a, b in zip(before, frozen["actual_legacy_m"], strict=True)
+    ) or any(abs(finite_number(v, "primary corrected") - 50) > 0.01 for v in actual):
         raise SystemExit("primary numeric gate failed")
     with tempfile.TemporaryDirectory() as temporary:
         primary = Path(temporary) / "primary"
@@ -180,9 +183,13 @@ def main():
         tolerance_m=0.01,
         instances_verified=len(instances),
     )
-    (args.results / "numerical_verification.json").write_text(
-        json.dumps(payload, sort_keys=True, indent=2, allow_nan=False) + "\n"
-    )
+    target = args.results / "numerical_verification.json"
+    if target.exists():
+        # Retain historical raw floats; compare at the documented output precision.
+        if _rounded(load_json(target)) != _rounded(payload):
+            raise ValueError("numerical verification evidence mismatch")
+    else:
+        target.write_text(json.dumps(payload, sort_keys=True, indent=2, allow_nan=False) + "\n")
     print(f"PASS: {len(instances)} instances; isolated R5 {before} -> {actual}")
 
 

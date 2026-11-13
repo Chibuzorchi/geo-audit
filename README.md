@@ -39,14 +39,14 @@ make demo
 This builds `.venv` from `requirements.lock`, then:
 1. Regenerates the dataset.
 2. Runs the checker, the legacy calculation and the corrected calculation.
-3. Requires every output to match the committed references byte for byte.
+3. Requires outputs to match committed references: byte-for-byte except two supplemental raw-float JSON reports, compared at the documented six-decimal serialization precision. Frozen reference hashes remain exact.
 4. Runs the strict red/green proof.
 
 It takes about 30 s on first run. It ends with:
 
 ```
   PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy controls green
-DEMO PASS: data, baseline and corrected results reproduced byte-for-byte; 13 legacy reds and 20 corrected greens verified.
+DEMO PASS: data, baseline and corrected results verified at documented serialization precision; 13 legacy reds and 20 corrected greens verified.
 ```
 
 Exit codes: 0 means every check passed, 1 means a check failed, and 2 means a prerequisite is missing.

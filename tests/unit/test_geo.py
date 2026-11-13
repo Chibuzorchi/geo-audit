@@ -222,3 +222,26 @@ def test_mixed_line_point_intersection():
     assert len(result) == 1
     assert result[0] == pytest.approx((1 / 7, 3 / 7), abs=1e-12)
     assert 7 * (result[0][1] - result[0][0]) == pytest.approx(2, abs=1e-6)
+
+
+@pytest.mark.parametrize("bound,direction", [(37.3, -1), (37.7, 1)])
+@pytest.mark.parametrize("ulps,valid", [(1, True), (8, False)])
+def test_inverse_envelope_roundoff_is_bounded(monkeypatch, bound, direction, ulps, valid):
+    from types import SimpleNamespace
+
+    from geo_audit import geo
+
+    latitude = bound + direction * ulps * math.ulp(bound)
+    monkeypatch.setattr(
+        geo.Transformer,
+        "from_crs",
+        lambda *a, **k: SimpleNamespace(transform=lambda *xy: (127, latitude)),
+    )
+    if valid:
+        assert unproject(300000, 4000000) == (127, bound)
+    else:
+        with pytest.raises(ValueError, match="envelope"):
+            unproject(300000, 4000000)
+    # Raw geographic coordinates never receive the inverse-only allowance.
+    with pytest.raises(ValueError, match="envelope"):
+        project(127, latitude)

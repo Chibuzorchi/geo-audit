@@ -2,7 +2,7 @@
 
 Each step runs the real command in a subprocess with the active interpreter, writes
 into a fresh output directory, and is then checked. Regenerated artifacts must be
-byte-identical to the committed reference files, and those must still match their
+identical at their documented serialization precision to the committed reference files, and those must still match their
 recorded hashes. Reference data and results are read, never written.
 """
 
@@ -12,6 +12,8 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+
+from geo_audit.report import _rounded
 
 REFERENCE_DATA = Path("data/synthetic")
 REFERENCE_PHASE2 = Path("results/phase2")
@@ -51,15 +53,19 @@ def sha256(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def same_files(fresh, reference, names=None):
-    """Byte comparison; every compared file must exist and be nonempty on both sides."""
+def same_files(fresh, reference, names=None, *, raw_json=()):
+    """Byte comparison except explicitly named, historically unrounded JSON reports."""
     names = sorted(names or (p.name for p in Path(fresh).iterdir() if p.is_file()))
     require(names, f"no artifacts produced in {fresh}")
     for name in names:
         new, old = Path(fresh) / name, Path(reference) / name
         require(new.is_file() and new.stat().st_size > 0, f"missing or empty artifact: {new}")
         require(old.is_file() and old.stat().st_size > 0, f"missing reference artifact: {old}")
-        require(new.read_bytes() == old.read_bytes(), f"regenerated artifact differs: {new}")
+        if name in raw_json:
+            equal = _rounded(json.loads(new.read_text())) == _rounded(json.loads(old.read_text()))
+        else:
+            equal = new.read_bytes() == old.read_bytes()
+        require(equal, f"regenerated artifact differs: {new}")
     return names
 
 
@@ -162,7 +168,7 @@ def run_demo(output, root=None):
         "tests/expectations/analytic.json",
     )
     step("r5_fixture", "scripts/verify_r5_fixture.py", "--output", str(check / "r5_only.json"))
-    same_files(check, root / REFERENCE_PHASE2)
+    same_files(check, root / REFERENCE_PHASE2, raw_json=("r5_only.json",))
     step(
         "compare",
         "-m",
@@ -176,7 +182,10 @@ def run_demo(output, root=None):
     )
     step("verify_numbers", "scripts/verify_phase3.py", "--results", str(compare))
     same_files(
-        compare, root / REFERENCE_PHASE3, names=[p.name for p in compare.iterdir() if p.is_file()]
+        compare,
+        root / REFERENCE_PHASE3,
+        names=[p.name for p in compare.iterdir() if p.is_file()],
+        raw_json=("numerical_verification.json",),
     )
     same_files(compare / "r5_only", root / REFERENCE_PHASE3 / "r5_only")
     reconciliation = check_reconciliation(compare)
@@ -188,7 +197,11 @@ def run_demo(output, root=None):
         status="PASS",
         steps=log,
         frozen_reference_hashes=references,
-        reproduced_byte_identical=["data/synthetic", "results/phase2", "results/phase3"],
+        reproduction_policy="byte-identical except two supplemental raw-float JSON reports",
+        serialization_precision_reports=[
+            "results/phase2/r5_only.json",
+            "results/phase3/numerical_verification.json",
+        ],
         reconciliation=reconciliation,
         red_green=dict(
             cases=red_green_summary["cases"],
@@ -209,7 +222,7 @@ def main(output):
         print(f"DEMO FAILED: {error}", file=sys.stderr)
         return 2 if isinstance(error, PrerequisiteFailure) else 1
     print(
-        "DEMO PASS: data, baseline and corrected results reproduced byte-for-byte; "
+        "DEMO PASS: data, baseline and corrected results verified at documented serialization precision; "
         f"{summary['red_green']['legacy_red']} legacy reds and "
         f"{summary['red_green']['cases']} corrected greens verified."
     )

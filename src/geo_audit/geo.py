@@ -8,7 +8,7 @@ from shapely import get_coordinate_dimension, get_coordinates, transform
 from shapely.geometry import LineString, MultiLineString, Point, Polygon, shape
 from shapely.geometry.base import BaseGeometry
 
-from geo_audit.config import validate_coordinate
+from geo_audit.config import LATITUDE_BOUNDS, LONGITUDE_BOUNDS, validate_coordinate
 
 XY = tuple[float, float]
 Interval = tuple[float, float]
@@ -22,6 +22,17 @@ def project(lon: float, lat: float) -> XY:
 def unproject(easting: float, northing: float) -> XY:
     _point((easting, northing))
     lon, lat = Transformer.from_crs(32652, 4326, always_xy=True).transform(easting, northing)
+
+    # Inverse PROJ roundoff can escape an exact envelope edge by a few ULPs.
+    # Raw geographic inputs still undergo strict validation in project()/I/O.
+    def edge_roundoff(value, bounds):
+        for bound in bounds:
+            if abs(value - bound) <= 4 * math.ulp(bound):
+                return bound
+        return value
+
+    lon = edge_roundoff(lon, LONGITUDE_BOUNDS)
+    lat = edge_roundoff(lat, LATITUDE_BOUNDS)
     validate_coordinate(lon, lat)
     return lon, lat
 

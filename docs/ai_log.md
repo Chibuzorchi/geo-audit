@@ -139,3 +139,18 @@ Corrected during drafting:
 - **Privacy.** Private file names moved from `.gitignore` to local `.git/info/exclude`.
   A "plan section 7" reference to a non-public document was removed from a non-frozen
   script. Frozen files were left unchanged.
+
+## Phase 5B — first hosted Linux run and correction
+
+The first private Ubuntu run (43368453702) executed 334 tests: 330 passed,
+four failed. AI inspected the actual logs: inverse projection escaped the upper
+latitude bound by one floating-point step, and exact comparisons rejected R5 raw
+float differences of approximately 5.8e-11 m. No billing expectation changed.
+The correction bounds inverse-only envelope roundoff to four ULPs, retains strict
+raw-coordinate validation, and compares two supplemental unrounded JSON reports
+at the existing six-decimal serialization precision. Ordinary artifacts remain
+byte-compared and every frozen file remains hash-checked. Existing evidence is
+validated without rewriting its historical raw floats. Nine focused tests cover
+the inverse guard and rejection of larger/nonfinite/schema differences.
+Local lint, 343 tests, strict red/green and demo passed before the next push.
+Hosted rerun results are recorded separately; local success is not hosted success.

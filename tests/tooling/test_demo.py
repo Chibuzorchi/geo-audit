@@ -68,3 +68,38 @@ def test_demo_passes_in_public_project_copy(tmp_path):
         "rejected_duplicate": 39,
         "rejected_noise": 21,
     }
+
+
+@pytest.mark.parametrize("delta,passes", [(6e-11, True), (0.000002, False)])
+def test_raw_evidence_precision_is_narrow(tmp_path, delta, passes):
+    import json
+
+    from geo_audit.demo import same_files
+
+    fresh, reference = tmp_path / "fresh", tmp_path / "reference"
+    fresh.mkdir()
+    reference.mkdir()
+    (reference / "raw.json").write_text(json.dumps({"distance_m": 100.00000273383924}))
+    (fresh / "raw.json").write_text(json.dumps({"distance_m": 100.00000273383924 + delta}))
+    if passes:
+        assert same_files(fresh, reference, raw_json=("raw.json",)) == ["raw.json"]
+    else:
+        with pytest.raises(DemoFailure, match="differs"):
+            same_files(fresh, reference, raw_json=("raw.json",))
+    with pytest.raises(DemoFailure, match="differs"):
+        same_files(fresh, reference)  # Ordinary evidence retains byte comparison.
+
+
+@pytest.mark.parametrize(
+    "corrupt", ['{"distance_m": NaN}', '{"other": 100}', '{"distance_m": Infinity}']
+)
+def test_raw_evidence_corruption_rejected(tmp_path, corrupt):
+    from geo_audit.demo import same_files
+
+    fresh, reference = tmp_path / "fresh", tmp_path / "reference"
+    fresh.mkdir()
+    reference.mkdir()
+    (reference / "raw.json").write_text('{"distance_m": 100}')
+    (fresh / "raw.json").write_text(corrupt)
+    with pytest.raises((DemoFailure, ValueError)):
+        same_files(fresh, reference, raw_json=("raw.json",))
