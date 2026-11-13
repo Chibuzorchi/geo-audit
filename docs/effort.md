@@ -83,3 +83,10 @@ of four actual Linux failures, a bounded precision fix, nine tests and downloade
 artifact validation. Documentation and the final documentation-commit CI run
 followed. These are recorded execution times, not an estimate of human focused
 hours. Public release, Loom and submission have not been performed.
+
+## Phase 5C — documentation and recording preparation
+
+Actual human planning, review and recording effort remains unrecorded. Assistant
+wall-clock intervals above must not be presented as human focused hours. The
+author should supply actual time from their records, or retain this limitation.
+No human duration or completed recording is asserted by this documentation pass.

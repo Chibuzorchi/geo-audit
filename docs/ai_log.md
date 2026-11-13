@@ -161,3 +161,22 @@ reference files (29 byte-identical; two supplemental raw-float reports equal at
 serialization precision). All 63 scenarios, 3,327 states and 252 driver/date rows
 reconciled. README and directive now distinguish verified private hosted access
 from pending public release. No human verification or public accessibility is claimed.
+
+## Phase 5C — final documentation review
+
+The assistant aligned intent, directive, README and recording narration with
+successful private Ubuntu run 43369334744. It removed unsupported claims of
+personal execution of every audit and corrected provisional speed-diagnostic
+wording. The script uses the recorded NaN/key-validation failure as an AI-assisted
+engineering mistake. Historical failures and canonical artifacts were preserved.
+Human effort remains unknown. The branch migration is a recommendation only;
+no rename, visibility change, recording, submission or push is part of this phase.
+
+Phase 5C checks: `make lint` passed; `make test` reported 343 passed with no
+failures or skips; `make verify` confirmed 20 greens, 13 intended reds and seven
+controls. Historical verification matched 62 Phase 2 and 22 Phase 3 hashes.
+Relative Markdown links in the four final documents resolve to tracked files.
+The script contains 425 spoken words (about 3.54 minutes at 120 words/minute),
+not a timed human rehearsal. Canonical R5, S7/S8, state counts and S13 contribution
+were cross-checked. Full-history Gitleaks passed before the local documentation
+commit. No new hosted CI run is claimed for these unpushed documentation changes.

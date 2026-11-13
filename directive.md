@@ -51,7 +51,7 @@ All criteria were met locally on 2026-11-12/13.
 - [x] Primary fix shown per driver and day: `results/phase3/r5_only/driver_day.csv`, `results/phase3/driver_day.csv`.
 - [x] Regression fails on legacy and passes on corrected: `make verify`, with 13 reds, 7 controls and 20 greens.
 - [x] Noise, duplicates, late pings, the UTC+9 cut and the zone boundary are all covered by named assertions.
-- [x] [Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547); authorized access required.
+- [x] [Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744); authorized access required.
 
 ## 5. QA tool and how to run it
 
@@ -153,7 +153,7 @@ prove that corrupted, stale or sabotaged evidence is rejected.
 
 It has no `continue-on-error`.
 
-**[Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547).**
+**[Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).**
 
 Linux wheels exist for every pinned version. They bundle PROJ 9.8.1 and GEOS 3.14.1,
 the same as the macOS references. Linux x86_64 verified 29 of 31 reference files
@@ -186,10 +186,11 @@ Regeneration is byte-identical across hash seeds and host timezones. See
 
 ## 13. AI involvement and human verification
 
-An AI coding assistant (Claude) drafted the code, tests and documents, phase by phase.
-The author ran independent audits after Phases 1, 2 and 3, and the assistant fixed
-each reproduced finding. Expected numbers were derived by hand and rechecked with
-plain arithmetic. No calculator checks itself. AI mistakes found and corrected are
+AI assistants drafted code, tests and documents in phases. Independent audit
+findings supplied during review drove corrections. The logs record assistant-run
+checks; they do not establish personal human execution of every audit. Numerical
+expectations were derived analytically and rechecked with plain arithmetic.
+AI mistakes found and corrected are
 logged in `docs/ai_log.md`. Examples:
 - A ranking that credited 600 m of R6 error to R5.
 - A verifier that accepted `NaN` and missing keys.
@@ -202,10 +203,20 @@ Recorded assistant time is in `docs/effort.md`. Human effort was not measured th
 
 | Item | Link |
 |---|---|
-| Repository | **PENDING PUBLICATION** |
-| Tool | `src/geo_audit/checker.py`, `geo-audit check` (repo link pending) |
-| Dataset | `data/synthetic/` (repo link pending) |
-| Fix | `src/geo_audit/calc_corrected.py` (repo link pending) |
-| Regression check | `scripts/verify_red_green.py`, `tests/regression/` (repo link pending) |
-| Regression results | `make verify` output; [private CI artifact](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547) (authorized access required) |
-| Video walkthrough | **PENDING PUBLICATION**; script in `docs/demo_script.md` |
+| Private repository | [Chibuzorchi/geo-audit](https://github.com/Chibuzorchi/geo-audit) — authorized access required |
+| Public repository URL | **PENDING PUBLIC RELEASE** |
+| Tool | [Checker](src/geo_audit/checker.py), `geo-audit check` |
+| Dataset | [Synthetic data](data/synthetic/) |
+| Fix | [Corrected calculation](src/geo_audit/calc_corrected.py) |
+| Regression check | [Verifier](scripts/verify_red_green.py), [regressions](tests/regression/) |
+| Regression results | `make verify` output; [private CI artifact](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) (authorized access required) |
+| Video walkthrough | **PENDING PUBLICATION**; [recording script](docs/demo_script.md) |
+
+## 15. Branch transition recommendation (not executed)
+
+The existing default branch is `test-vault-v2api-prod-tests`. Keep it unchanged
+until the owner authorizes a transition. The safest migration preserves its tip:
+create `main` from the verified latest commit, push that branch, then change the
+GitHub default to `main`. Verify CI, branch protection, links and clone instructions
+before considering removal of the old branch. Retain the old branch during the
+transition. No rebasing, squashing or history rewrite is needed.

@@ -13,8 +13,8 @@ GPS is messy:
 - duplicated or late pings;
 - trips that cross the zone edge or midnight.
 
-A naive calculation joins pings in file order, so each of these turns into wrong
-distance, on the wrong day.
+A naive calculation can turn these conditions into incorrect distance or date allocation.
+A flag alone does not prove a numerical discrepancy; some errors cancel out.
 
 GeoAudit applies six rules:
 
@@ -42,7 +42,7 @@ This builds `.venv` from `requirements.lock`, then:
 3. Requires outputs to match committed references: byte-for-byte except two supplemental raw-float JSON reports, compared at the documented six-decimal serialization precision. Frozen reference hashes remain exact.
 4. Runs the strict red/green proof.
 
-It takes about 30 s on first run. It ends with:
+Runtime depends on installation, network and machine speed. It ends with:
 
 ```
   PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy controls green
@@ -161,8 +161,9 @@ Each input row gets exactly one state (`results/phase3/summary.json`):
 | **Total** | **3,327** |
 
 Across all data, the legacy total is 263,099.458 m and the corrected total is
-235,838.090 m. That difference mixes every rule. It is a reporting comparison,
-not a financial settlement.
+235,838.090 m. That difference mixes rule corrections and characterization effects. Three S13
+bad-anchor cases contribute 18,300 m of the reduction; they are not proof of a
+mandated rule fix. This is a reporting comparison, not a financial settlement.
 
 ## How correctness is proven
 
@@ -210,7 +211,7 @@ not a financial settlement.
 - Late data never restates a report already issued.
 - Driver pay rules are not modelled.
 
-**Platform:** [Ubuntu hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369010547) on Python 3.12.16:
+**Platform:** [Ubuntu hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) on Python 3.12.16:
 343 tests, 13 verified legacy reds, seven controls and 20 corrected greens.
 The repository and CI evidence are **private**, accessible only to authorized users.
 Linux reproduced 29 of 31 reference files byte-for-byte; two supplemental raw-float
@@ -220,10 +221,11 @@ Public repository URL and Loom URL remain **pending public release**.
 
 ## How AI was used
 
-An AI coding assistant (Claude) drafted most of the code, tests and documents, phase
-by phase. The author audited each phase independently and supplied findings for it
-to fix. Every number was checked against hand-derived expectations, not against the
-code's own output. Mistakes caught and corrected included:
+AI assistants drafted code, tests and documents in phases. Independent audit
+findings supplied during review drove corrections. The engineering record includes
+assistant-executed checks; it does not establish that every audit was personally
+performed by the author. Numerical checks use analytical expectations independent
+of the calculators. Mistakes caught and corrected included:
 - A checker that could not explain *why* totals were wrong.
 - A coordinate rounding loss of about 0.1 m.
 - A ranking that credited 600 m of zone error to R5.

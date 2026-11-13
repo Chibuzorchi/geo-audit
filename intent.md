@@ -14,7 +14,7 @@ and it labels the segment with the end point's **UTC** date.
 | # | Problem | How it was found | Synthetic impact |
 |---|---|---|---|
 | 1 | **R5 — wrong reporting day.** Distance is dated by UTC, not by the UTC+9 day that starts at 15:00 UTC. | Checker rule `R5_UTC_DATE`: the segment's UTC label is not its UTC+9 day. S7/S8 day vectors are compared with hand-derived splits. | 12 driver-days; 52,980 m absolute; net ≈ 0 |
-| 2 | **R2 — speed spikes billed.** The out-and-back chords of an impossible jump are both counted. | `R2_SPEED` on billed segments; S6b/S6c totals vs expected 5,900 m. | 6 driver-days; +6,708.36 m |
+| 2 | **R2 — speed spikes billed.** The out-and-back chords of an impossible jump are both counted. | `LEGACY_RAW_PAIR_SPEED_ANOMALY` is provisional evidence; S6b/S6c totals vs independent 5,900 m expectations establish the discrepancy. | 6 driver-days; +6,708.36 m |
 | 3 | **R3 — duplicates counted again.** A late or conflicting copy becomes a new segment end. | `R3_R4_FILE_ORDER` (segments with zero or negative elapsed time); S2b/S3/S3b. | 9 driver-days; +1,220.69 m |
 | 4 | **R1 — off-road pings billed.** The detour to a noisy point is counted. | `R1_OFF_ROAD`; S5a/S5c. | 6 driver-days; +732.32 m |
 | 5 | **R6 — zone decided by end point.** An entry segment counts whole; an exit segment counts zero. | `R6_ENDPOINT`: the clipped in-zone length differs from the included length; S9a/S9b. | 6 driver-days; 300 m absolute; net ≈ 0 |
@@ -47,7 +47,8 @@ R5 was chosen first because:
 - The root cause is a single decision visible on every ledger row (`date_basis="UTC endpoint"`). That makes it easy to explain and to lock in.
 
 **The case against R5.** R2 is the largest *net* overcount (+6,708 m).
-If only period totals were billed, R2 would matter more in money terms. That
+If only period distance totals mattered, R2 would take priority on net overcount.
+No monetary impact can be inferred without a payment model. That
 trade-off was recorded before the fix was written.
 
 ## Interactions
@@ -79,4 +80,13 @@ trade-off was recorded before the fix was written.
 - **Long gaps** are counted as a straight chord, with a warning only.
 - **Late data** does not restate reports that were already issued.
 - **Driver pay** and monetary rates are not modelled. "Driver impact" means recorded distance only.
-- **Hosted CI** has not run yet.
+
+## Verified hosted execution
+
+[GitHub Actions run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744)
+passed on Ubuntu 24.04.5 x64 with Python 3.12.16 at commit
+`f2f9bfedc150065ff9bc9cc32acb05d2daf76a3e`: 343 tests passed, none failed or skipped.
+Strict verification confirmed 13 intended legacy failures, seven controls and
+20 corrected passes. The repository and run remain private.
+Earlier failures and their corrections remain in [Phase 5B evidence](docs/phase5b_evidence.md).
+Public release and the Loom recording are pending.
