@@ -212,11 +212,8 @@ Recorded assistant time is in `docs/effort.md`. Human effort was not measured th
 | Regression results | `make verify` output; [private CI artifact](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) (authorized access required) |
 | Video walkthrough | **PENDING PUBLICATION**; [recording script](docs/demo_script.md) |
 
-## 15. Branch transition recommendation (not executed)
+## 15. Branch transition (done)
 
-The existing default branch is `test-vault-v2api-prod-tests`. Keep it unchanged
-until the owner authorizes a transition. The safest migration preserves its tip:
-create `main` from the verified latest commit, push that branch, then change the
-GitHub default to `main`. Verify CI, branch protection, links and clone instructions
-before considering removal of the old branch. Retain the old branch during the
-transition. No rebasing, squashing or history rewrite is needed.
+The old default branch `test-vault-v2api-prod-tests` was renamed to `main`. `main` is
+now the GitHub default and keeps the full history. No rebase, squash or rewrite.
+[CI passed on `main`](https://github.com/Chibuzorchi/geo-audit/actions/runs/43886706417).
