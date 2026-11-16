@@ -6,7 +6,7 @@
 > - **Fixed:** an isolated 100 m segment across midnight goes from 100 / 0 to 50 / 50. Driver S8 goes from 5,900 / 0 to 20 / 5,880.
 > - **Proof:** 20 named checks. Corrected passes all 20; legacy fails 13 at the expected numbers; 7 controls pass on both.
 > - **Run it:** `make demo` (one command, exits 0 only if everything passes).
-> - **Read:** [intent.md](intent.md) (what and why) · [directive.md](directive.md) (handoff and links) · [Loom walkthrough](LOOM_URL_HERE) · [CI run](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744)
+> - **Read:** [intent.md](intent.md) (what and why) · [directive.md](directive.md) (handoff and links) · [Loom walkthrough](LOOM_URL_HERE) · [CI run](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309)
 
 GeoAudit checks how GPS pings become billed distance, finds where that goes wrong,
 and proves a fix with numbers. It is an independent portfolio project. All data is
@@ -265,7 +265,7 @@ My effort was about 24 hours ([breakdown](docs/effort.md#actual-author-effort)).
 - `demo`: orchestration.
 
 **Platform**
-- [Hosted CI](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) passed on Ubuntu 24.04 with Python 3.12.16: 343 tests, 13 legacy reds, 7 controls, 20 corrected greens.
+- [Hosted CI](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309) passed on Ubuntu 24.04 with Python 3.12.16: 343 tests, 13 legacy reds, 7 controls, 20 corrected greens.
 - Linux reproduces 29 of 31 reference files byte-for-byte. Two supplemental raw-float
   JSON reports match at six decimal places. Frozen references and expectations are unchanged.
   See [hosted evidence](docs/phase5b_evidence.md).
