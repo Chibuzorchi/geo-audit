@@ -1,4 +1,5 @@
-name: ci
+name: GeoAudit CI
+run-name: GeoAudit CI · ${{ github.ref_name }}
 
 on:
   push:
@@ -10,39 +11,42 @@ permissions:
 
 jobs:
   verify:
+    name: Test, verify and build evidence
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
       GEO_AUDIT_TARGET: corrected
       EVIDENCE: .scratch/ci
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Locked install
+      - name: Install locked dependencies
         run: make install PYTHON=python
 
-      - name: Lint and format
+      - name: Lint and check formatting
         run: make lint
 
-      - name: Corrected unit, integration, regression, diagnostic and verifier tests
+      - name: Run test suite
         run: |
           mkdir -p "$EVIDENCE"
           .venv/bin/python -m pytest tests --junitxml="$EVIDENCE/pytest.xml"
 
-      - name: Strict red/green verification (legacy must fail only at named numeric assertions)
+      - name: Verify fix (legacy fails, corrected passes)
         run: make verify RG_OUT="$EVIDENCE/red_green"
 
-      - name: Independent regeneration, reference comparison and evidence integrity
+      - name: Regenerate outputs and compare to references
         run: make demo DEMO_OUT="$EVIDENCE/demo"
 
-      - name: Canonical references were not modified
+      - name: Check reference files are unchanged
         run: git diff --exit-code && test -z "$(git status --porcelain --untracked-files=all)"
 
-      - name: Upload evidence (also on failure)
+      - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
