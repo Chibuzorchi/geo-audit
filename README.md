@@ -1,5 +1,13 @@
 # GeoAudit
 
+> **For reviewers**
+> - **What:** a QA tool that audits per-driver, per-day in-zone distance from 3,327 synthetic GPS pings (63 drivers).
+> - **Found:** six measured defects, ranked. The primary one is **R5**: distance dated by UTC instead of the UTC+9 day.
+> - **Fixed:** an isolated 100 m segment across midnight goes from 100 / 0 to 50 / 50. Driver S8 goes from 5,900 / 0 to 20 / 5,880.
+> - **Proof:** 20 named checks. Corrected passes all 20; legacy fails 13 at the expected numbers; 7 controls pass on both.
+> - **Run it:** `make demo` (one command, exits 0 only if everything passes).
+> - **Read:** [intent.md](intent.md) (what and why) · [directive.md](directive.md) (handoff and links) · [Loom walkthrough](LOOM_URL_HERE) · [CI run](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744)
+
 GeoAudit checks how GPS pings become billed distance, finds where that goes wrong,
 and proves a fix with numbers. It is an independent portfolio project. All data is
 **synthetic**; there is no real customer, driver or billing incident behind it.
@@ -39,7 +47,7 @@ make demo
 This builds `.venv` from `requirements.lock`, then:
 1. Regenerates the dataset.
 2. Runs the checker, the legacy calculation and the corrected calculation.
-3. Requires outputs to match committed references: byte-for-byte except two supplemental raw-float JSON reports, compared at the documented six-decimal serialization precision. Frozen reference hashes remain exact.
+3. Checks every output against the committed references (details under **Platform** below).
 4. Runs the strict red/green proof.
 
 Runtime depends on installation, network and machine speed. It ends with:
@@ -190,7 +198,7 @@ mandated rule fix. This is a reporting comparison, not a financial settlement.
 | `results/phase2/` | Legacy ledger, checker findings, discovery ranking (`findings.md`) |
 | `results/phase3/` | Corrected ledger, per-row decisions, `driver_day.csv` before/after |
 | `docs/phase1_evidence.md` … `docs/phase5_evidence.md` | Executed commands and results, per phase |
-| `docs/ai_log.md`, `docs/effort.md` | AI provenance and recorded time |
+| `docs/ai_log.md`, `docs/effort.md` | AI log with my review summary; effort |
 | `intent.md`, `directive.md` | Problem write-up and technical handoff |
 
 ## Assumptions and limitations
@@ -211,30 +219,23 @@ mandated rule fix. This is a reporting comparison, not a financial settlement.
 - Late data never restates a report already issued.
 - Driver pay rules are not modelled.
 
-**Platform:** [Ubuntu hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) on Python 3.12.16:
-343 tests, 13 verified legacy reds, seven controls and 20 corrected greens.
-The repository and CI evidence are **private**, accessible only to authorized users.
-Linux reproduced 29 of 31 reference files byte-for-byte; two supplemental raw-float
-JSON reports match at six decimal places. Frozen references and numerical
-expectations are unchanged. See [hosted evidence](docs/phase5b_evidence.md).
-Public repository URL and Loom URL remain **pending public release**.
-
 ## How AI was used
 
-AI assistants drafted code, tests and documents in phases. Independent audit
-findings supplied during review drove corrections. The engineering record includes
-assistant-executed checks; it does not establish that every audit was personally
-performed by the author. Numerical checks use analytical expectations independent
-of the calculators. Mistakes caught and corrected included:
-- A checker that could not explain *why* totals were wrong.
-- A coordinate rounding loss of about 0.1 m.
-- A ranking that credited 600 m of zone error to R5.
-- A speed diagnostic that compared raw neighbouring pings instead of the last accepted ping.
-- A verifier that accepted `NaN` and missing keys.
-- A verifier draft that rejected its own valid run.
-- A secret-scan allowlist that silently exempted a whole file.
+I set the requirements and plan. AI assistants wrote most of the code, tests and documents. I didn't trust that output
+on its own, so I had a second AI tool (Codex) audit the implementing agent's work. I
+reproduced its findings, decided the fixes and required evidence before each next phase.
+AI made mistakes. Seven were found and corrected:
+- A ranking that credited 600 m of zone error to R5 (found by the Codex audit).
+- A speed diagnostic that compared raw neighbouring pings instead of the last accepted ping (audit).
+- A verifier that accepted `NaN` and missing keys, so it could report a false pass (audit).
+- A verifier draft that rejected its own valid run (implementing agent).
+- A coordinate rounding loss of about 0.1 m (agent).
+- A secret-scan allowlist that silently exempted a whole file (agent).
+- A checker that could not explain *why* totals were wrong (agent).
 
-Details are in `docs/ai_log.md`.
+How each was found, the fix and the proving test are in the
+[author review summary](docs/ai_log.md#author-review-summary-first-person).
+My effort was about 24 hours ([breakdown](docs/effort.md#actual-author-effort)).
 
 ## Technical reference
 
@@ -262,6 +263,12 @@ Details are in `docs/ai_log.md`.
 - `checker`: diagnostics.
 - `report`: serialization and reconciliation.
 - `demo`: orchestration.
+
+**Platform**
+- [Hosted CI](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) passed on Ubuntu 24.04 with Python 3.12.16: 343 tests, 13 legacy reds, 7 controls, 20 corrected greens.
+- Linux reproduces 29 of 31 reference files byte-for-byte. Two supplemental raw-float
+  JSON reports match at six decimal places. Frozen references and expectations are unchanged.
+  See [hosted evidence](docs/phase5b_evidence.md).
 
 **Without make**
 

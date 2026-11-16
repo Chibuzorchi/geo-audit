@@ -1,7 +1,7 @@
 # directive.md — GeoAudit technical handoff
 
-Status: local and private Ubuntu hosted verification complete. Public release pending.
-All data is synthetic. Paths are relative to the repository root.
+Status: verified locally and on [GitHub Actions](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).
+Video walkthrough: see section 14. All data is synthetic. Paths are relative to the repository root.
 
 ## 1. Objective
 
@@ -51,7 +51,7 @@ All criteria were met locally on 2026-11-12/13.
 - [x] Primary fix shown per driver and day: `results/phase3/r5_only/driver_day.csv`, `results/phase3/driver_day.csv`.
 - [x] Regression fails on legacy and passes on corrected: `make verify`, with 13 reds, 7 controls and 20 greens.
 - [x] Noise, duplicates, late pings, the UTC+9 cut and the zone boundary are all covered by named assertions.
-- [x] [Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744); authorized access required.
+- [x] [Hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) on Ubuntu.
 
 ## 5. QA tool and how to run it
 
@@ -153,12 +153,12 @@ prove that corrupted, stale or sabotaged evidence is rejected.
 
 It has no `continue-on-error`.
 
-**[Private hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).**
+**[Hosted CI passed](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).**
 
 Linux wheels exist for every pinned version. They bundle PROJ 9.8.1 and GEOS 3.14.1,
 the same as the macOS references. Linux x86_64 verified 29 of 31 reference files
 byte-for-byte; two supplemental unrounded JSON reports agree at six decimal places.
-See [Phase 5B evidence](docs/phase5b_evidence.md) for the original failure and correction.
+See [Phase 5B evidence](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/phase5b_evidence.md) for the original failure and correction.
 
 ## 11. Reproduction
 
@@ -182,38 +182,36 @@ Regeneration is byte-identical across hash seeds and host timezones. See
 - Long gaps counted as a straight chord.
 - No restatement of reports already issued.
 - No pay model.
-- Hosted links require repository access; public release and video remain pending.
 
-## 13. AI involvement and human verification
+## 13. AI involvement and my review
 
-AI assistants drafted code, tests and documents in phases. Independent audit
-findings supplied during review drove corrections. The logs record assistant-run
-checks; they do not establish personal human execution of every audit. Numerical
-expectations were derived analytically and rechecked with plain arithmetic.
-AI mistakes found and corrected are
-logged in `docs/ai_log.md`. Examples:
-- A ranking that credited 600 m of R6 error to R5.
-- A verifier that accepted `NaN` and missing keys.
-- A verifier draft that rejected its own valid run.
-- A gitleaks allowlist that exempted a whole file.
+I set the requirements and plan. AI assistants wrote most of the code, tests and documents. I didn't trust that output
+on its own, so I had a second AI tool (Codex) audit the implementing agent's work. I
+reproduced its findings, decided the fixes and required evidence before each next phase.
 
-Recorded assistant time is in `docs/effort.md`. Human effort was not measured there.
+Seven AI mistakes were found and corrected. Three came from the Codex audits;
+the implementing agent found the rest. For example:
+- A ranking that credited 600 m of R6 error to R5 (audit).
+- A speed diagnostic that compared raw neighbouring pings, not the last accepted ping (audit).
+- A verifier that accepted `NaN` and missing keys (audit).
+- A verifier draft that rejected its own valid run (agent).
+
+The full table, with how each was found and the test that proves it, is in
+[Author review summary](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/ai_log.md#author-review-summary-first-person).
+Numerical expectations were derived by hand from geometry and rechecked with plain arithmetic.
+
+**Effort:** about 24 hours of my own active work, 2026-11-12 to 2026-11-16
+([breakdown](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/effort.md#actual-author-effort)).
 
 ## 14. Links
 
 | Item | Link |
 |---|---|
-| Private repository | [Chibuzorchi/geo-audit](https://github.com/Chibuzorchi/geo-audit) — authorized access required |
-| Public repository URL | **PENDING PUBLIC RELEASE** |
-| Tool | [Checker](src/geo_audit/checker.py), `geo-audit check` |
-| Dataset | [Synthetic data](data/synthetic/) |
-| Fix | [Corrected calculation](src/geo_audit/calc_corrected.py) |
-| Regression check | [Verifier](scripts/verify_red_green.py), [regressions](tests/regression/) |
-| Regression results | `make verify` output; [private CI artifact](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) (authorized access required) |
-| Video walkthrough | **PENDING PUBLICATION**; [recording script](docs/demo_script.md) |
-
-## 15. Branch transition (done)
-
-The old default branch `test-vault-v2api-prod-tests` was renamed to `main`. `main` is
-now the GitHub default and keeps the full history. No rebase, squash or rewrite.
-[CI passed on `main`](https://github.com/Chibuzorchi/geo-audit/actions/runs/43886706417).
+| Repository | [Chibuzorchi/geo-audit](https://github.com/Chibuzorchi/geo-audit) |
+| Tool | [Checker](https://github.com/Chibuzorchi/geo-audit/blob/main/src/geo_audit/checker.py), `geo-audit check` |
+| Dataset | [Synthetic data](https://github.com/Chibuzorchi/geo-audit/tree/main/data/synthetic) |
+| Fix | [Corrected calculation](https://github.com/Chibuzorchi/geo-audit/blob/main/src/geo_audit/calc_corrected.py) |
+| Regression check | [Verifier](https://github.com/Chibuzorchi/geo-audit/blob/main/scripts/verify_red_green.py), [regressions](https://github.com/Chibuzorchi/geo-audit/tree/main/tests/regression) |
+| Results | [Before/after per driver and day](https://github.com/Chibuzorchi/geo-audit/blob/main/results/phase3/driver_day.csv), [isolated R5 fix](https://github.com/Chibuzorchi/geo-audit/blob/main/results/phase3/r5_only/driver_day.csv), [ranking](https://github.com/Chibuzorchi/geo-audit/blob/main/results/phase2/findings.md) |
+| Regression results | `make verify` output; [CI run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744) and its `geo-audit-evidence` artifact |
+| Video walkthrough | LOOM_URL_HERE ([script](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/demo_script.md)) |

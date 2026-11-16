@@ -1,97 +1,96 @@
-# Loom recording script — target 4 minutes 30 seconds
+# Loom recording script — target under 5 minutes
 
-No recording exists yet. Loom URL: **PENDING RECORDING**.
-Only blockquoted text is spoken. Rehearse with a timer; runtime is not guaranteed.
-At 120 words per minute, the narration leaves time for screen changes and commands.
-Do not claim personal verification beyond work you actually performed.
+Only blockquoted text is spoken. The file or command to show is in brackets.
+Rehearse with a timer before recording.
 
 ## Preparation (off camera)
 
-- Run `make install` and `make verify` before recording.
-- Open the [synthetic CSV](../data/synthetic/SYNTHETIC_gps_pings.csv),
-  [findings](../results/phase2/findings.md), [isolated comparison](../results/phase3/r5_only/driver_day.csv),
-  [full comparison](../results/phase3/driver_day.csv) and [AI log](ai_log.md).
-- Open [successful Ubuntu run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).
-  Access requires repository permission. Show the run summary, not account settings or credentials.
-- Prepare a fresh checker output directory using `mktemp -d .scratch/recording.XXXXXX`.
-  Set `REC` to its printed path. Do not show private files or unrelated browser tabs.
-- Keep a verified terminal run visible if a live command takes longer than rehearsed.
-  Describe prerecorded output honestly. Do not run installation during the recording.
+- Run `make install` first, so `make demo` does not install anything on camera.
+- Run `make demo` once and note how long it takes. If it is slow, keep a finished
+  run in a second terminal tab and say so on camera.
+- Open these files in tabs, in order:
+  - [synthetic CSV](../data/synthetic/SYNTHETIC_gps_pings.csv)
+  - [findings](../results/phase2/findings.md)
+  - [isolated comparison](../results/phase3/r5_only/driver_day.csv)
+  - [full comparison](../results/phase3/driver_day.csv), searched for `SYN-S8-00`
+  - [AI log, author review summary](ai_log.md#author-review-summary-first-person)
+- Optionally open [CI run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).
+- Close unrelated tabs and private files. Do not show account settings or credentials.
 
-## 0:00–0:35 — Synthetic input and discovered problems
+## 1. Problem [CSV]
 
-Show the CSV, then the ranking in `results/phase2/findings.md`.
+> Hi, I'm Emmanuel, and this is GeoAudit. Advertisers pay per kilometre that drivers
+> travel inside a campaign zone, reported per day. But phone GPS is messy. Some pings
+> are off the road. Some imply impossible speeds. Some are duplicated, some arrive
+> late, and trips cross the zone edge and the midnight cut. So I generated a synthetic
+> dataset: 3,327 pings from 63 drivers, with all of those faults planted on purpose.
+> Everything is labelled synthetic. I also wrote a legacy calculator that gets the
+> distance wrong, the way a naive one would.
 
-> GeoAudit audits GPS distance per driver and day inside a campaign zone.
-> These are 3,327 synthetic observations across 63 drivers, not a real billing incident.
-> The deliberately flawed baseline exposes six measured problems: wrong dates,
-> speed spikes, duplicates, road noise, zone boundaries and arrival ordering.
-> Conditions alone are not proof; the findings compare executed totals with independent expectations.
+## 2. Finding and ranking [results/phase2/findings.md]
 
-## 0:35–1:15 — The checker and reporting-day error
+> I didn't trust flags alone. My checker flags every segment that breaks a rule. Then
+> I compare the legacy totals against values I worked out by hand from the geometry.
+> A problem only counts if the numbers really differ. That gave me six real defects.
+> Ranked by how much distance ends up in the wrong place: one, the wrong reporting day.
+> Two, speed spikes getting billed. Three, duplicates counted twice. Then off-road
+> pings, the zone boundary, and late pings. I fixed the reporting day first. It
+> misplaces the most distance, about 26 kilometres, and it breaks every daily report,
+> so both the advertiser's report and the driver's record are wrong. To be fair, it
+> doesn't add distance. Speed spikes are the biggest real overcount, about 6.7
+> kilometres. If only the monthly total mattered, I'd fix that first.
 
-```sh
-.venv/bin/geo-audit check --input data/synthetic/SYNTHETIC_gps_pings.csv \
-  --roads data/synthetic/roads.geojson --zone data/synthetic/zone.geojson --output "$REC/check"
-```
+## 3. Root cause
 
-Show the S8 evidence in the findings file.
+> Here's why it happens. The rule says the day ends at midnight UTC+9, which is 3 PM
+> UTC. The legacy code stamps each segment with the UTC date of its end point. So
+> distance driven just after local midnight gets booked to the day before, and a
+> segment that crosses midnight lands entirely on one day.
 
-> Reporting midnight is 15:00 UTC because the reporting timezone is fixed UTC+9.
-> Legacy instead uses the endpoint's UTC date.
-> For S8, this segment crosses midnight and enters the zone. The checker exposes both conflicts,
-> with source IDs and timestamps. The full trip is incorrectly reported as 5,900 metres on
-> November fourth and zero on November fifth. This is date misallocation, not necessarily extra distance.
+## 4. Run the tool [terminal: `make demo`]
 
-## 1:15–2:00 — Isolated and combined corrections
+> Anyone can reproduce this with one command: make demo. It regenerates the data, runs
+> the checker, runs both calculators, compares them against the expected numbers, and
+> runs the regression proof… and it passes.
 
-Show the isolated CSV, then `SYN-S7-00` and `SYN-S8-00` in the full comparison.
+Expected final line starts with `DEMO PASS:`.
 
-> The isolated fixture removes the zone complication. A hundred-metre segment lies entirely
-> inside the zone and crosses midnight halfway through ten seconds.
-> Legacy reports 100 and zero. Corrected reports 50 and 50. The total stays unchanged.
-> The combined scenarios also need zone clipping: S7 becomes 2,950 and 2,950;
-> S8 becomes 20 and 5,880. These demonstrate both the date and zone rules together.
+## 5. Fix, before and after [results/phase3/r5_only/driver_day.csv, then results/phase3/driver_day.csv, search SYN-S8-00]
 
-## 2:00–2:45 — Regression proof
+> The fix splits each segment by time at local midnight and clips it to the zone. The
+> corrected calculator applies all six rules. Here's the cleanest proof: one 100-metre
+> segment inside the zone, crossing midnight halfway. Before: 100 metres on November
+> 4th, zero on the 5th. After: 50 and 50. Same total, just on the right days. On a full
+> trip, driver S8: before, 5,900 metres on the 4th and zero on the 5th. After, 20 and
+> 5,880. That one includes the zone-boundary fix too. This file has before and after
+> for every driver and every day.
 
-Run `make verify`. Expected final line:
+## 6. Lock it in [terminal: `make verify`]
+
+Expected final line:
 
 ```text
 PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy controls green
 ```
 
-> The same twenty assertions run against both calculators.
-> All twenty must pass on corrected. Legacy must fail thirteen at their designated numerical assertions;
-> seven unaffected controls must pass. A crash or setup failure does not count as a valid red.
-> The verifier checks structured evidence, fixture hashes, numerical values and complete test collection.
+> To lock it in, I run the same twenty number checks against both calculators. The
+> corrected one passes all twenty. The old one fails thirteen, each at the exact wrong
+> number I expected, and seven control cases pass on both. The checks cover GPS noise,
+> duplicates, late pings, the UTC+9 cut and the zone boundary. They also run on GitHub
+> Actions on every push.
 
-## 2:45–3:25 — One genuine AI-assisted mistake
+## 7. AI, limits, close [docs/ai_log.md, author review summary]
 
-Show the Phase 3 evidence-validation remediation section in `docs/ai_log.md`.
+> AI assistants wrote most of the code, tests and docs. I didn't trust that output on
+> its own, so I had a second AI tool audit the first one's work, then reproduced its
+> findings and decided the fixes. That review caught real mistakes. First, the ranking
+> credited the date bug with 600 metres that were really zone-boundary error, which is
+> why I proved the fix on an isolated segment. Second, the speed check compared each
+> ping to the one right before it instead of the last accepted ping, which breaks the
+> rule. Third, the verifier accepted invalid values and missing results, so it could
+> report a false pass. Each one was fixed, with tests that try to fool it. What's still
+> not solved: stationary jitter is billed, a bad first ping can reject good ones after
+> it, long gaps count as a straight line, and late data doesn't restate old reports.
+> So the reporting-day problem is gone, and the tests prove it stays gone. Thanks.
 
-> AI assistants helped draft the code, tests and documentation. Independent review found an important mistake:
-> an earlier numerical verifier accepted NaN, duplicate keys and missing required zero rows.
-> The correction checks finite numbers and the complete expected key set before comparing values.
-> Negative tests reproduce those corruptions and require rejection. Testing the QA tool itself was essential.
-> The log separates assistant-run checks from human work; it does not claim unrecorded human verification.
-
-## 3:25–4:00 — Actual hosted CI
-
-Show the successful run and its `geo-audit-evidence` artifact.
-
-> GitHub Actions passed on Ubuntu 24.04 with Python 3.12: 343 tests, no failures or skips.
-> It also passed strict regression verification, deterministic regeneration and evidence-integrity checks.
-> Linux exposed tiny projection roundoff differences, now covered by focused tests without changing billing expectations.
-> Twenty-nine reference files match byte-for-byte; two unrounded reports agree at documented serialization precision.
-> This repository and its CI evidence are currently private.
-
-## 4:00–4:30 — Limits and close
-
-> Bad initial anchors, stationary jitter and straight-line movement across long gaps remain limitations.
-> Issued reports are not restated. Synthetic fault frequency is not real-world prevalence.
-> Distance differences are not monetary losses or driver payments; no payment model exists here.
-> The input, findings, corrected figures and regression proof are all traceable in the repository.
-
-Stop recording. Review the actual duration and screen privacy before sharing.
-Public repository URL and Loom URL remain pending; do not invent either.
+After recording, replace the Loom placeholder in `README.md` and `directive.md` with the real URL.

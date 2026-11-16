@@ -81,12 +81,26 @@ trade-off was recorded before the fix was written.
 - **Late data** does not restate reports that were already issued.
 - **Driver pay** and monetary rates are not modelled. "Driver impact" means recorded distance only.
 
-## Verified hosted execution
+## Hosted CI
 
 [GitHub Actions run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744)
-passed on Ubuntu 24.04.5 x64 with Python 3.12.16 at commit
-`f2f9bfedc150065ff9bc9cc32acb05d2daf76a3e`: 343 tests passed, none failed or skipped.
-Strict verification confirmed 13 intended legacy failures, seven controls and
-20 corrected passes. The repository and run remain private.
-Earlier failures and their corrections remain in [Phase 5B evidence](docs/phase5b_evidence.md).
-Public release and the Loom recording are pending.
+passed on Ubuntu 24.04 with Python 3.12: 343 tests, 13 intended legacy reds, 7 controls
+and 20 corrected greens. CI runs on every push.
+
+## What existed before, and what I did for this Quest
+
+**Before:** my experience building QA automation (Playwright, Python, pytest, API and
+database checks, CI). I had the AI look at my earlier repositories only as references
+for structure and testing practice. No code from them, no employer code and no real
+data was reused.
+
+**Built for this Quest:** all of GeoAudit. That means:
+- the synthetic data generator and its 3,327 rows;
+- the flawed legacy calculation and the QA checker;
+- the corrected calculation and the independent expectations;
+- the regression suite, the red/green verifier and the integrity checks;
+- the CI workflow and these documents.
+
+AI assistants wrote most of it. I planned it, had a second AI tool audit the first,
+reproduced its findings, decided the fixes and checked the evidence. See the
+[author review summary](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/ai_log.md#author-review-summary-first-person).
