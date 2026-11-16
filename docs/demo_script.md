@@ -14,7 +14,7 @@ Rehearse with a timer before recording.
   - [isolated comparison](../results/phase3/r5_only/driver_day.csv)
   - [full comparison](../results/phase3/driver_day.csv), searched for `SYN-S8-00`
   - [AI log, author review summary](ai_log.md#author-review-summary-first-person)
-- Optionally open [CI run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744).
+- Optionally open [CI run 43893670309](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309).
 - Close unrelated tabs and private files. Do not show account settings or credentials.
 
 ## 1. Problem [CSV]

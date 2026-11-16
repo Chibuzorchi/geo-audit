@@ -83,7 +83,7 @@ trade-off was recorded before the fix was written.
 
 ## Hosted CI
 
-[GitHub Actions run 43369334744](https://github.com/Chibuzorchi/geo-audit/actions/runs/43369334744)
+[GitHub Actions run 43893670309](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309)
 passed on Ubuntu 24.04 with Python 3.12: 343 tests, 13 intended legacy reds, 7 controls
 and 20 corrected greens. CI runs on every push.
 
