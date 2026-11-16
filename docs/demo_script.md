@@ -3,6 +3,9 @@
 Only blockquoted text is spoken. The file or command to show is in brackets.
 Rehearse with a timer before recording.
 
+The order follows the brief: show the problem, run the tool, show the fix, show the
+before and after numbers, then explain how AI was used.
+
 ## Preparation (off camera)
 
 - Run `make install` first, so `make demo` does not install anything on camera.
@@ -10,7 +13,9 @@ Rehearse with a timer before recording.
   run in a second terminal tab and say so on camera.
 - Open these files in tabs, in order:
   - [synthetic CSV](../data/synthetic/SYNTHETIC_gps_pings.csv)
-  - [findings](../results/phase2/findings.md)
+  - `.scratch/demo/check/findings.md` (written by `make demo`; reload it after the live run)
+  - [legacy calculator, line 28](../src/geo_audit/calc_legacy.py)
+  - [the fix, `day_intervals` at line 53](../src/geo_audit/timecut.py)
   - [isolated comparison](../results/phase3/r5_only/driver_day.csv)
   - [full comparison](../results/phase3/driver_day.csv), searched for `SYN-S8-00`
   - [AI log, author review summary](ai_log.md#author-review-summary-first-person)
@@ -27,8 +32,15 @@ Rehearse with a timer before recording.
 > Everything is labelled synthetic. I also wrote a legacy calculator that gets the
 > distance wrong, the way a naive one would.
 
-## 2. Finding and ranking [results/phase2/findings.md]
+## 2. Run the tool [terminal: `make demo`, then `.scratch/demo/check/findings.md`]
 
+> Anyone can reproduce this with one command: make demo. It regenerates the data, runs
+> the checker, runs both calculators, compares them against the expected numbers, and
+> runs the regression proof… and it passes.
+
+Expected final line starts with `DEMO PASS:`. Then open the findings file it just wrote.
+
+> This is what the tool just produced.
 > I didn't trust flags alone. My checker flags every segment that breaks a rule. Then
 > I compare the legacy totals against values I worked out by hand from the geometry.
 > A problem only counts if the numbers really differ. That gave me six real defects.
@@ -40,27 +52,27 @@ Rehearse with a timer before recording.
 > doesn't add distance. Speed spikes are the biggest real overcount, about 6.7
 > kilometres. If only the monthly total mattered, I'd fix that first.
 
-## 3. Root cause
+## 3. Root cause [src/geo_audit/calc_legacy.py, line 28]
+
+Highlight `day = ping.timestamp.date().isoformat()`.
 
 > Here's why it happens. The rule says the day ends at midnight UTC+9, which is 3 PM
 > UTC. The legacy code stamps each segment with the UTC date of its end point. So
 > distance driven just after local midnight gets booked to the day before, and a
 > segment that crosses midnight lands entirely on one day.
+> Here's the line that does it.
 
-## 4. Run the tool [terminal: `make demo`]
+## 4. The fix [src/geo_audit/timecut.py, `day_intervals`, line 53]
 
-> Anyone can reproduce this with one command: make demo. It regenerates the data, runs
-> the checker, runs both calculators, compares them against the expected numbers, and
-> runs the regression proof… and it passes.
-
-Expected final line starts with `DEMO PASS:`.
-
-## 5. Fix, before and after [results/phase3/r5_only/driver_day.csv, then results/phase3/driver_day.csv, search SYN-S8-00]
+Highlight the `cut = ...` line, then `calc_corrected.py` line 12, which calls it.
 
 > The fix splits each segment by time at local midnight and clips it to the zone. The
-> corrected calculator applies all six rules. Here's the cleanest proof: one 100-metre
-> segment inside the zone, crossing midnight halfway. Before: 100 metres on November
-> 4th, zero on the 5th. After: 50 and 50. Same total, just on the right days. On a full
+> corrected calculator applies all six rules.
+
+## 5. Before and after [results/phase3/r5_only/driver_day.csv, then results/phase3/driver_day.csv, search SYN-S8-00]
+
+> Here's the cleanest proof: one 100-metre segment inside the zone, crossing midnight
+> halfway. Before: 100 metres on November 4th, zero on the 5th. After: 50 and 50. Same total, just on the right days. On a full
 > trip, driver S8: before, 5,900 metres on the 4th and zero on the 5th. After, 20 and
 > 5,880. That one includes the zone-boundary fix too. This file has before and after
 > for every driver and every day.
