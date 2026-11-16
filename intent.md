@@ -101,6 +101,6 @@ data was reused.
 - the regression suite, the red/green verifier and the integrity checks;
 - the CI workflow and these documents.
 
-AI assistants wrote most of it. I planned it, commissioned independent reviews,
-directed the fixes and checked the evidence. See the
+AI assistants wrote most of it. I planned it, had a second AI tool audit the first,
+reproduced its findings, decided the fixes and checked the evidence. See the
 [author review summary](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/ai_log.md#author-review-summary-first-person).

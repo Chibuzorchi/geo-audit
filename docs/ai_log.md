@@ -187,18 +187,18 @@ The entries above are the AI assistants' own session logs. They stay unchanged
 because this log is append-only. This section is my own account, added on 2026-11-16.
 
 **What AI produced.** AI assistants wrote most of the code, tests and documents.
-I set the requirements, constraints and plan. I used Codex as an independent
-reviewer of the implementing agent. I read its audit findings, decided what to
-fix, sent the fixes back, and required evidence before moving to the next phase.
+I set the requirements, constraints and plan. I didn't trust that output on its
+own, so I had a second AI tool (Codex) audit the implementing agent's work. I
+reproduced its findings, decided the fixes and required evidence before each next phase.
 
 **What went wrong and how it was corrected.** I did not personally discover every
 issue. The "How it was found" column says who did.
 
 | Mistake | How it was found | Fix | Proof |
 |---|---|---|---|
-| Ranking credited 600 m of R6 zone error to R5 | Independent Codex audit I commissioned (Phase 2 F1–F6). I reviewed it and directed the fix. | Reconciled R5/R6 with numbers; proved R5 on an isolated segment | `tests/unit/test_phase2_remediation.py::test_r5_only_midnight_literal_vectors`, `::test_combined_conflicts_visible_and_r5_reconciles`; `results/phase3/r5_only/driver_day.csv` |
-| Speed diagnostic compared raw neighbouring pings, not the last accepted ping | Same audit. I directed the fix. This was a diagnostic issue, not a wrong corrected total. | Diagnostic marked provisional; the corrected calculator checks speed against the last accepted ping | `test_phase2_remediation.py::test_speed_anomalies_never_assert_acceptance`, `::test_s6b_return_is_not_speed_rejection`; `tests/integration/test_corrected.py::test_offroad_precedes_speed_and_does_not_anchor` |
-| Verifier accepted NaN, duplicate, missing or extra keys, so it could report a false pass | Second independent audit I commissioned (Phase 3 F1–F3). I supplied the findings and directed the fix. | Checks finite values and the exact key set before comparing numbers | `tests/integration/test_evidence_validation.py::test_verifier_rejects_corrupt_evidence` |
+| Ranking credited 600 m of R6 zone error to R5 | Codex audit (Phase 2 F1–F6). I reproduced the finding and decided the fix. | Reconciled R5/R6 with numbers; proved R5 on an isolated segment | `tests/unit/test_phase2_remediation.py::test_r5_only_midnight_literal_vectors`, `::test_combined_conflicts_visible_and_r5_reconciles`; `results/phase3/r5_only/driver_day.csv` |
+| Speed diagnostic compared raw neighbouring pings, not the last accepted ping | Same audit. I reproduced the finding and decided the fix. This was a diagnostic issue, not a wrong corrected total. | Diagnostic marked provisional; the corrected calculator checks speed against the last accepted ping | `test_phase2_remediation.py::test_speed_anomalies_never_assert_acceptance`, `::test_s6b_return_is_not_speed_rejection`; `tests/integration/test_corrected.py::test_offroad_precedes_speed_and_does_not_anchor` |
+| Verifier accepted NaN, duplicate, missing or extra keys, so it could report a false pass | Second Codex audit (Phase 3 F1–F3). I reproduced the finding and decided the fix. | Checks finite values and the exact key set before comparing numbers | `tests/integration/test_evidence_validation.py::test_verifier_rejects_corrupt_evidence` |
 | Verifier draft rejected its own valid run | Implementing agent, Phase 4 | Matches pytest's real message, `conftest.BillingMismatch: <ID>` | `scripts/verify_red_green.py`; `tests/tooling/test_verifier.py::test_genuine_evidence_is_accepted` |
 | Coordinate rounding lost about 0.1 m | Implementing agent, Phase 2 | Coordinates serialize at 10 dp, not 6 | `src/geo_audit/report.py` |
 | Gitleaks allowlist exempted a whole file | Implementing agent, Phase 4 | Narrowed to one rule and one token | `.gitleaks.toml` |
@@ -209,7 +209,7 @@ phase evidence and entries above.
 - I rejected assuming S8 must rank first. Defects had to be grouped and ranked by
   measured discrepancy.
 - I required independent numerical expectations. No calculator may produce its own answer.
-- I kept implementation and review separate, with Codex challenging the implementing agent.
+- I kept implementation and review separate: a second AI tool audited the first.
 - I kept fixes inside the approved plan. No extra features or architecture changes.
 - I rejected counting crashes, missing tests or setup errors as valid regression reds.
 - I had unsupported claims removed, including claims about evidence that was not preserved.

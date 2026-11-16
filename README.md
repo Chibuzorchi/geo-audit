@@ -221,11 +221,11 @@ mandated rule fix. This is a reporting comparison, not a financial settlement.
 
 ## How AI was used
 
-AI assistants wrote most of the code, tests and documents. I set the requirements
-and plan, and used Codex as an independent reviewer of the implementing agent. I
-reviewed the findings, directed the fixes and required evidence before each next phase.
+I set the requirements and plan. AI assistants wrote most of the code, tests and documents. I didn't trust that output
+on its own, so I had a second AI tool (Codex) audit the implementing agent's work. I
+reproduced its findings, decided the fixes and required evidence before each next phase.
 AI made mistakes. Seven were found and corrected:
-- A ranking that credited 600 m of zone error to R5 (found by an audit I commissioned).
+- A ranking that credited 600 m of zone error to R5 (found by the Codex audit).
 - A speed diagnostic that compared raw neighbouring pings instead of the last accepted ping (audit).
 - A verifier that accepted `NaN` and missing keys, so it could report a false pass (audit).
 - A verifier draft that rejected its own valid run (implementing agent).

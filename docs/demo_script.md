@@ -37,7 +37,7 @@ Rehearse with a timer before recording.
 > pings, the zone boundary, and late pings. I fixed the reporting day first. It
 > misplaces the most distance, about 26 kilometres, and it breaks every daily report,
 > so both the advertiser's report and the driver's record are wrong. To be fair, it
-> doesn't add distance. Speed spikes are the biggest real overcharge, about 6.7
+> doesn't add distance. Speed spikes are the biggest real overcount, about 6.7
 > kilometres. If only the monthly total mattered, I'd fix that first.
 
 ## 3. Root cause
@@ -81,13 +81,14 @@ PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy 
 
 ## 7. AI, limits, close [docs/ai_log.md, author review summary]
 
-> AI assistants wrote most of the code, tests and docs. My job was to check them, and
-> they got things wrong. First, the ranking credited the date bug with 600 metres that
-> were really zone-boundary error. The review caught that, and it's why I proved the
-> fix on an isolated segment. Second, the speed check compared each ping to the one
-> right before it instead of the last accepted ping. That breaks the rule, so I had it
-> fixed. Third, the verifier accepted invalid values and missing results, so it could
-> report a false pass. I had it fixed, with tests that try to fool it. What's still
+> AI assistants wrote most of the code, tests and docs. I didn't trust that output on
+> its own, so I had a second AI tool audit the first one's work, then reproduced its
+> findings and decided the fixes. That review caught real mistakes. First, the ranking
+> credited the date bug with 600 metres that were really zone-boundary error, which is
+> why I proved the fix on an isolated segment. Second, the speed check compared each
+> ping to the one right before it instead of the last accepted ping, which breaks the
+> rule. Third, the verifier accepted invalid values and missing results, so it could
+> report a false pass. Each one was fixed, with tests that try to fool it. What's still
 > not solved: stationary jitter is billed, a bad first ping can reject good ones after
 > it, long gaps count as a straight line, and late data doesn't restate old reports.
 > So the reporting-day problem is gone, and the tests prove it stays gone. Thanks.
