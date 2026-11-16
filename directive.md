@@ -185,9 +185,10 @@ Regeneration is byte-identical across hash seeds and host timezones. See
 
 ## 13. AI involvement and my review
 
-I set the requirements and plan. AI assistants wrote most of the code, tests and documents. I didn't trust that output
-on its own, so I had a second AI tool (Codex) audit the implementing agent's work. I
-reproduced its findings, decided the fixes and required evidence before each next phase.
+I set the requirements and plan. Claude Code and Codex wrote most of the code, tests
+and documents. I didn't trust that output on its own, so I had other AI tools audit it:
+mostly Codex, with Claude Code and ChatGPT also reviewing. I reproduced the findings,
+decided the fixes and required evidence before each next phase.
 
 Seven AI mistakes were found and corrected. Three came from the Codex audits;
 the implementing agent found the rest. For example:

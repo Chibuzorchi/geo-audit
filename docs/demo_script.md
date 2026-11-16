@@ -28,29 +28,35 @@ before and after numbers, then explain how AI was used.
 > travel inside a campaign zone, reported per day. But phone GPS is messy. Some pings
 > are off the road. Some imply impossible speeds. Some are duplicated, some arrive
 > late, and trips cross the zone edge and the midnight cut. So I generated a synthetic
-> dataset: 3,327 pings from 63 drivers, with all of those faults planted on purpose.
-> Everything is labelled synthetic. I also wrote a legacy calculator that gets the
-> distance wrong, the way a naive one would.
+> dataset: 3,327 pings from 63 drivers, with all of those faults planted on purpose. I
+> also wrote a legacy calculator that gets the distance wrong, the way a naive one
+> would.
 
 ## 2. Run the tool [terminal: `make demo`, then `.scratch/demo/check/findings.md`]
 
 > Anyone can reproduce this with one command: make demo. It regenerates the data, runs
-> the checker, runs both calculators, compares them against the expected numbers, and
-> runs the regression proof… and it passes.
+> the checker and both calculators, checks the expected numbers and runs the
+> regression proof… and it passes.
 
-Expected final line starts with `DEMO PASS:`. Then open the findings file it just wrote.
+Expected final line starts with `DEMO PASS:`. Then scroll the README to **Run it**.
 
-> This is what the tool just produced.
-> I didn't trust flags alone. My checker flags every segment that breaks a rule. Then
-> I compare the legacy totals against values I worked out by hand from the geometry.
-> A problem only counts if the numbers really differ. That gave me six real defects.
-> Ranked by how much distance ends up in the wrong place: one, the wrong reporting day.
-> Two, speed spikes getting billed. Three, duplicates counted twice. Then off-road
-> pings, the zone boundary, and late pings. I fixed the reporting day first. It
-> misplaces the most distance, about 26 kilometres, and it breaks every daily report,
-> so both the advertiser's report and the driver's record are wrong. To be fair, it
-> doesn't add distance. Speed spikes are the biggest real overcount, about 6.7
-> kilometres. If only the monthly total mattered, I'd fix that first.
+> To run it yourself, you need Python 3.12 and make, and it's all in the README. make
+> install builds a locked environment once. make demo runs everything. make test runs
+> all 343 tests, make verify runs the regression proof on its own, and geo-audit check
+> runs the checker by itself.
+
+Then open the findings file `make demo` just wrote.
+
+> This is what the tool just produced. I didn't trust flags alone. My checker flags
+> every segment that breaks a rule. Then I compare the legacy totals against values I
+> worked out by hand from the geometry. A problem only counts if the numbers really
+> differ. That gave me six real defects. Ranked by how much distance ends up in the
+> wrong place: one, the wrong reporting day. Two, speed spikes getting billed. Three,
+> duplicates counted twice. Then off-road pings, the zone boundary, and late pings. I
+> fixed the reporting day first. It misplaces the most distance, about 26 kilometres,
+> and it breaks every daily report. To be fair, it doesn't add distance. Speed spikes
+> are the biggest real overcount, about 6.7 kilometres. If only the monthly total
+> mattered, I'd fix that first.
 
 ## 3. Root cause [src/geo_audit/calc_legacy.py, line 28]
 
@@ -59,8 +65,8 @@ Highlight `day = ping.timestamp.date().isoformat()`.
 > Here's why it happens. The rule says the day ends at midnight UTC+9, which is 3 PM
 > UTC. The legacy code stamps each segment with the UTC date of its end point. So
 > distance driven just after local midnight gets booked to the day before, and a
-> segment that crosses midnight lands entirely on one day.
-> Here's the line that does it.
+> segment that crosses midnight lands entirely on one day. Here's the line that does
+> it.
 
 ## 4. The fix [src/geo_audit/timecut.py, `day_intervals`, line 53]
 
@@ -72,10 +78,10 @@ Highlight the `cut = ...` line, then `calc_corrected.py` line 12, which calls it
 ## 5. Before and after [results/phase3/r5_only/driver_day.csv, then results/phase3/driver_day.csv, search SYN-S8-00]
 
 > Here's the cleanest proof: one 100-metre segment inside the zone, crossing midnight
-> halfway. Before: 100 metres on November 4th, zero on the 5th. After: 50 and 50. Same total, just on the right days. On a full
-> trip, driver S8: before, 5,900 metres on the 4th and zero on the 5th. After, 20 and
-> 5,880. That one includes the zone-boundary fix too. This file has before and after
-> for every driver and every day.
+> halfway. Before: 100 metres on November 4th, zero on the 5th. After: 50 and 50. Same
+> total, just on the right days. On a full trip, driver S8: before, 5,900 metres on
+> the 4th and zero on the 5th. After, 20 and 5,880. That one includes the zone-
+> boundary fix too. This file has before and after for every driver and every day.
 
 ## 6. Lock it in [terminal: `make verify`]
 
@@ -93,16 +99,20 @@ PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy 
 
 ## 7. AI, limits, close [docs/ai_log.md, author review summary]
 
-> AI assistants wrote most of the code, tests and docs. I didn't trust that output on
-> its own, so I had a second AI tool audit the first one's work, then reproduced its
-> findings and decided the fixes. That review caught real mistakes. First, the ranking
-> credited the date bug with 600 metres that were really zone-boundary error, which is
-> why I proved the fix on an isolated segment. Second, the speed check compared each
-> ping to the one right before it instead of the last accepted ping, which breaks the
-> rule. Third, the verifier accepted invalid values and missing results, so it could
-> report a false pass. Each one was fixed, with tests that try to fool it. What's still
-> not solved: stationary jitter is billed, a bad first ping can reject good ones after
-> it, long gaps count as a straight line, and late data doesn't restate old reports.
-> So the reporting-day problem is gone, and the tests prove it stays gone. Thanks.
+> Here's how I used AI. I wrote the requirements and the plan. Claude Code and Codex
+> wrote most of the code, tests and docs, in phases. I didn't trust that output on its
+> own, so I had other AI tools audit it: mostly Codex, with Claude Code and ChatGPT
+> also reviewing. I reproduced the findings, decided the fixes, and didn't move on
+> until tests proved them. I also set ground rules: expected numbers are worked out by
+> hand, never by the code being tested, and a crash never counts as a valid failure.
+> The Codex audits caught real mistakes. First, the ranking credited the date bug with
+> 600 metres that were really zone-boundary error, which is why I proved the fix on an
+> isolated segment. Second, the speed check compared each ping to the one right before
+> it instead of the last accepted ping, which breaks the rule. Third, the verifier
+> accepted invalid values and missing results, so it could report a false pass. Each
+> one was fixed, with tests that try to fool it. What's still not solved: stationary
+> jitter is billed, a bad first ping can reject good ones after it, long gaps count as
+> a straight line, and late data doesn't restate old reports. So the reporting-day
+> problem is gone, and the tests prove it stays gone. Thanks.
 
 After recording, replace the Loom placeholder in `README.md` and `directive.md` with the real URL.
