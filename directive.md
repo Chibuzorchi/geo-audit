@@ -215,4 +215,4 @@ Numerical expectations were derived by hand from geometry and rechecked with pla
 | Regression check | [Verifier](https://github.com/Chibuzorchi/geo-audit/blob/main/scripts/verify_red_green.py), [regressions](https://github.com/Chibuzorchi/geo-audit/tree/main/tests/regression) |
 | Results | [Before/after per driver and day](https://github.com/Chibuzorchi/geo-audit/blob/main/results/phase3/driver_day.csv), [isolated R5 fix](https://github.com/Chibuzorchi/geo-audit/blob/main/results/phase3/r5_only/driver_day.csv), [ranking](https://github.com/Chibuzorchi/geo-audit/blob/main/results/phase2/findings.md) |
 | Regression results | `make verify` output; [CI run 43893670309](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309) and its `geo-audit-evidence` artifact |
-| Video walkthrough | LOOM_URL_HERE ([script](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/demo_script.md)) |
+| Video walkthrough | [Loom](https://www.loom.com/share/3fec19e1a9d942ed899ae11a196b184d) ([script](https://github.com/Chibuzorchi/geo-audit/blob/main/docs/demo_script.md)) |

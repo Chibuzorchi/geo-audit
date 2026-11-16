@@ -6,7 +6,7 @@
 > - **Fixed:** an isolated 100 m segment across midnight goes from 100 / 0 to 50 / 50. Driver S8 goes from 5,900 / 0 to 20 / 5,880.
 > - **Proof:** 20 named checks. Corrected passes all 20; legacy fails 13 at the expected numbers; 7 controls pass on both.
 > - **Run it:** `make demo` (one command, exits 0 only if everything passes).
-> - **Read:** [intent.md](intent.md) (what and why) · [directive.md](directive.md) (handoff and links) · [Loom walkthrough](LOOM_URL_HERE) · [CI run](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309)
+> - **Read:** [intent.md](intent.md) (what and why) · [directive.md](directive.md) (handoff and links) · [Loom walkthrough](https://www.loom.com/share/3fec19e1a9d942ed899ae11a196b184d) · [CI run](https://github.com/Chibuzorchi/geo-audit/actions/runs/43893670309)
 
 GeoAudit checks how GPS pings become billed distance, finds where that goes wrong,
 and proves a fix with numbers. It is an independent portfolio project. All data is

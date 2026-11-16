@@ -111,4 +111,4 @@ PASS: 20 corrected greens; 13 legacy reds at their numeric assertions; 7 legacy 
 > a straight line, and late data doesn't restate old reports. So the reporting-day
 > problem is gone, and the tests prove it stays gone. Thanks.
 
-After recording, replace the Loom placeholder in `README.md` and `directive.md` with the real URL.
+Recorded video: https://www.loom.com/share/3fec19e1a9d942ed899ae11a196b184d
