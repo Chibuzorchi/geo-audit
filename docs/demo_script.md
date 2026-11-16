@@ -25,18 +25,14 @@ before and after numbers, then explain how AI was used.
 ## 1. Problem [CSV]
 
 > Hi, I'm Emmanuel, and this is GeoAudit. Advertisers pay per kilometre that drivers
-> travel inside a campaign zone, reported per day. But phone GPS is messy. Some pings
-> are off the road. Some imply impossible speeds. Some are duplicated, some arrive
-> late, and trips cross the zone edge and the midnight cut. So I generated a synthetic
-> dataset: 3,327 pings from 63 drivers, with all of those faults planted on purpose. I
-> also wrote a legacy calculator that gets the distance wrong, the way a naive one
-> would.
+> travel inside a campaign zone, reported per day. But phone GPS is messy. So I
+> generated a synthetic dataset: 3,327 pings from 63 drivers, with every fault in the
+> brief planted on purpose. I also wrote a legacy calculator that gets the distance
+> wrong, the way a naive one would.
 
 ## 2. Run the tool [terminal: `make demo`, then `.scratch/demo/check/findings.md`]
 
-> Anyone can reproduce this with one command: make demo. It regenerates the data, runs
-> the checker and both calculators, checks the expected numbers and runs the
-> regression proof… and it passes.
+> Anyone can reproduce this with one command: make demo… and it passes.
 
 Expected final line starts with `DEMO PASS:`. Then scroll the README to **Run it**.
 
