@@ -218,3 +218,10 @@ phase evidence and entries above.
 
 **How I verified the corrections.** For each fix, I checked the new tests and the
 updated evidence before approving the next phase. I also checked the hosted CI result.
+
+## Author note: AI tools used (2026-11-16)
+
+Claude Code and Codex wrote the code, tests and documents. Codex did the independent
+audits behind the Phase 2 F1–F6 and Phase 3 F1–F3 findings. Claude Code and ChatGPT
+also reviewed work. My summary above says I had "a second AI tool (Codex) audit the
+implementing agent's work"; this note gives the fuller picture.

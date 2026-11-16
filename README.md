@@ -221,9 +221,10 @@ mandated rule fix. This is a reporting comparison, not a financial settlement.
 
 ## How AI was used
 
-I set the requirements and plan. AI assistants wrote most of the code, tests and documents. I didn't trust that output
-on its own, so I had a second AI tool (Codex) audit the implementing agent's work. I
-reproduced its findings, decided the fixes and required evidence before each next phase.
+I set the requirements and plan. Claude Code and Codex wrote most of the code, tests
+and documents. I didn't trust that output on its own, so I had other AI tools audit it:
+mostly Codex, with Claude Code and ChatGPT also reviewing. I reproduced the findings,
+decided the fixes and required evidence before each next phase.
 AI made mistakes. Seven were found and corrected:
 - A ranking that credited 600 m of zone error to R5 (found by the Codex audit).
 - A speed diagnostic that compared raw neighbouring pings instead of the last accepted ping (audit).
