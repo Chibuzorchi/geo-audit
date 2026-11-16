@@ -90,3 +90,22 @@ Actual human planning, review and recording effort remains unrecorded. Assistant
 wall-clock intervals above must not be presented as human focused hours. The
 author should supply actual time from their records, or retain this limitation.
 No human duration or completed recording is asserted by this documentation pass.
+
+## Actual author effort
+
+The entries above are assistant session timings, not my effort. This is my own
+retrospective estimate of active work, not an exact timesheet. I started on
+Thursday 2026-11-12 at about 04:46 Nigerian time (03:46 UTC) and finished final
+checks on Monday 2026-11-16.
+
+| Activity | Hours |
+|---|---:|
+| Scoping, research and planning | 5 |
+| Reviewing AI output (including independent Codex audits) | 6 |
+| Testing and debugging (fix cycles, regression results, CI failures) | 8.5 |
+| Documentation and handoff review | 3 |
+| Video preparation (the video is not yet recorded) | 1.5 |
+| **Total** | **24** |
+
+Git history shows the implementation timeline. It does not capture planning,
+research, independent reviews or decisions made outside commits.

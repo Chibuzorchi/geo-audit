@@ -1,8 +1,8 @@
-# Phase 5B — private repository and Ubuntu verification
+# Phase 5B — first hosted Ubuntu verification
 
-Repository: https://github.com/Chibuzorchi/geo-audit — **private**. Links require
-repository access. Public repository URL and Loom URL remain pending.
-The existing branch `test-vault-v2api-prod-tests` was retained. Initial HEAD was
+Repository: https://github.com/Chibuzorchi/geo-audit. It was not yet public during
+this phase; it is public now, and the default branch has since been renamed `main`.
+The existing default branch was retained during this phase. Initial HEAD was
 `8e29cf0b4af4f2292be85c85d909038a4999776f`; inspection found seven commits,
 not the eight anticipated by the request. All seven remain intact.
 
